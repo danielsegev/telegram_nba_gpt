@@ -1,0 +1,155 @@
+version: '3.9'
+
+services:
+  minio:
+    container_name: minio
+    image: minio/minio:RELEASE.2022-11-08T05-27-07Z
+    command: server /data --console-address ":9001"
+    ports:
+      - "9001:9000"
+      - "9002:9001"
+    volumes:
+      - minio_data:/data
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:6.2.0
+    hostname: zookeeper-learn
+    container_name: zookeeper-learn
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:6.2.0
+    hostname: kafka-learn
+    container_name: kafka-learn
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  kafdrop:
+    image: obsidiandynamics/kafdrop:3.30.0
+    ports:
+      - "9003:9000"
+    environment:
+      - KAFKA_BROKERCONNECT=kafka:9092
+    depends_on:
+      - kafka
+
+  hive-metastore:
+    container_name: hive_metastore
+    image: ofrir119/hive-metastore:1.0
+    platform: linux/amd64
+    ports:
+      - "9083:9083"
+    depends_on:
+      - postgres
+
+  dev_env:
+    container_name: dev_env
+    image: ofrir119/developer_env:spark340_ssh
+    platform: linux/amd64
+    ports:
+      - "22022:22"
+      - "8888:8888"
+      - "4040:4040"
+      - "4041:4041"
+      - "4042:4042"
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  airflow-init:
+    image: apache/airflow:2.6.3
+    container_name: airflow_init
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:postgres@postgres:5432/airflow
+      - AIRFLOW__CORE__FERNET_KEY=FB0o_zt4e3Ziq3LdUUO7F2Z95cvFFx16hU8jTeR1ASM=
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__LOGGING_LEVEL=INFO
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./airflow-data/logs:/opt/airflow/logs
+      - ./airflow-data/plugins:/opt/airflow/plugins
+      - ./airflow-data/airflow.cfg:/opt/airflow/airflow.cfg
+    depends_on:
+      - postgres
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - airflow users list || ( airflow db init &&
+          airflow users create
+          --role Admin
+          --username airflow
+          --password airflow
+          --email airflow@airflow.com
+          --firstname airflow
+          --lastname airflow )
+    restart: on-failure
+
+  airflow-webserver:
+    image: apache/airflow:2.6.3
+    container_name: airflow_webserver
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:postgres@postgres:5432/airflow
+      - AIRFLOW__CORE__FERNET_KEY=FB0o_zt4e3Ziq3LdUUO7F2Z95cvFFx16hU8jTeR1ASM=
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__LOGGING_LEVEL=INFO
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./airflow-data/logs:/opt/airflow/logs
+      - ./airflow-data/plugins:/opt/airflow/plugins
+      - ./airflow-data/airflow.cfg:/opt/airflow/airflow.cfg
+    depends_on:
+      - postgres
+    command: airflow webserver
+    ports:
+      - "8082:8080"
+    restart: always
+
+  airflow-scheduler:
+    image: apache/airflow:2.6.3
+    container_name: airflow_scheduler
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:postgres@postgres:5432/airflow
+      - AIRFLOW__CORE__FERNET_KEY=FB0o_zt4e3Ziq3LdUUO7F2Z95cvFFx16hU8jTeR1ASM=
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__LOGGING_LEVEL=INFO
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./airflow-data/logs:/opt/airflow/logs
+      - ./airflow-data/plugins:/opt/airflow/plugins
+      - ./airflow-data/airflow.cfg:/opt/airflow/airflow.cfg
+    depends_on:
+      - postgres
+    command: airflow scheduler
+    restart: always
+
+volumes:
+  minio_data:
+    driver: local
+  postgres-data:
+    driver: local
