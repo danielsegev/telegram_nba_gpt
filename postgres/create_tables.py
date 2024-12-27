@@ -96,16 +96,15 @@ CREATE_TABLE_QUERIES = [
         statistics_twopointersattempted INT,
         statistics_twopointersmade INT,
         game_id VARCHAR(20)
-        --PRIMARY KEY (game_id, personId) -- Assuming each game_id/personId combination is unique
     );
     """
 ]
 
 def create_database():
+    """Ensures the 'dwh' database exists."""
     try:
-        # Connect to the default database
         conn = psycopg2.connect(**base_config)
-        conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)  # Allow database creation
+        conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
         cursor = conn.cursor()
 
         # Create the new database if it doesn't exist
@@ -118,20 +117,20 @@ def create_database():
 
     except Exception as e:
         print("Error creating database:", e)
+        raise
 
     finally:
-        if cursor:
+        if 'cursor' in locals():
             cursor.close()
-        if conn:
+        if 'conn' in locals():
             conn.close()
 
 def create_tables():
+    """Creates the required tables in the 'dwh' database."""
     try:
-        # Connect to the newly created database
         conn = psycopg2.connect(**new_db_config)
         cursor = conn.cursor()
 
-        # Execute each table creation query
         for query in CREATE_TABLE_QUERIES:
             cursor.execute(query)
         conn.commit()
@@ -140,13 +139,12 @@ def create_tables():
 
     except Exception as e:
         print("Error creating tables:", e)
+        raise
 
     finally:
-        if cursor:
+        if 'cursor' in locals():
             cursor.close()
-        if conn:
+        if 'conn' in locals():
             conn.close()
 
-if __name__ == "__main__":
-    create_database()  # Step 1: Ensure the 'dwh' database exists
-    create_tables()    # Step 2: Create tables in the 'dwh' database
+# Functions can now be used directly by external scripts
