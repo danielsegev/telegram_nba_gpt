@@ -18,10 +18,10 @@ def query_teams():
         cursor = connection.cursor(cursor_factory=RealDictCursor)
 
         # SQL query to fetch all records from the nba_teams table
-        query = "SELECT * FROM nba_games;"
+        query = "SELECT * FROM nba_teams;"
         cursor.execute(query)
 
-        # Fetch all rows from the executed query
+        # Fetch all rows from the executed queruy
         teams = cursor.fetchall()
 
         # Print the results

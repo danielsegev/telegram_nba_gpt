@@ -1,9 +1,13 @@
 import openai
-from config import OPENAI_API_KEY
+from dotenv import load_dotenv
+import os
 from database import query_postgresql
 
-# Initialize OpenAI API
-openai.api_key = OPENAI_API_KEY
+# Load environment variables from the .env file
+load_dotenv()
+
+# Retrieve the OpenAI API key from the environment variable
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def process_query_with_chatgpt(user_query):
     # System prompt with stricter guidelines for generating SQL queries
@@ -68,4 +72,3 @@ def process_query_with_chatgpt(user_query):
         # Handle unexpected errors gracefully
         print(f"Error in process_query_with_chatgpt: {e}")
         return f"Sorry, an error occurred: {e}"
-

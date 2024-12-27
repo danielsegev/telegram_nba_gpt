@@ -1,8 +1,15 @@
 # bot.py
+from dotenv import load_dotenv
+import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from chatgpt import process_query_with_chatgpt
-from config import TELEGRAM_BOT_TOKEN
+
+# Load environment variables from the .env file
+load_dotenv()
+
+# Retrieve the Telegram bot token from the environment variable
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
@@ -20,6 +27,11 @@ async def handle_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"Something went wrong: {e}")
 
 def main():
+    # Ensure the token is loaded
+    if not TELEGRAM_BOT_TOKEN:
+        print("Error: TELEGRAM_BOT_TOKEN not found. Make sure it's set in the .env file.")
+        return
+
     # Set up the Telegram bot application
     application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
 
