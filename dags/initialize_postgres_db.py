@@ -1,18 +1,42 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
-from create_tables import create_database, create_tables  # Import your functions
+from helpers.create_tables import create_database, create_tables
+import logging
+
+# Define logging
+logger = logging.getLogger("airflow.task")
+
+# Updated create_database function with logging
+def create_database_with_logging():
+    try:
+        logger.info("Starting database creation...")
+        create_database()
+        logger.info("Database creation completed successfully.")
+    except Exception as e:
+        logger.error("Database creation failed:", exc_info=True)
+        raise
+
+# Updated create_tables function with logging
+def create_tables_with_logging():
+    try:
+        logger.info("Starting table creation...")
+        create_tables()
+        logger.info("Table creation completed successfully.")
+    except Exception as e:
+        logger.error("Table creation failed:", exc_info=True)
+        raise
 
 # Define the DAG
 with DAG(
     "initialize_postgres_db",
     default_args={
-        "owner": "airflow",
+        "owner": "postgres",
         "retries": 1,
         "retry_delay": timedelta(minutes=5),
     },
     description="Initialize PostgreSQL Database and Tables",
-    schedule_interval=None,
+    schedule=None,  # Use `schedule` instead of `schedule_interval`
     start_date=datetime(2023, 12, 27),
     catchup=False,
 ) as dag:
@@ -20,13 +44,13 @@ with DAG(
     # Task to create the database
     create_db_task = PythonOperator(
         task_id="create_database",
-        python_callable=create_database,  # Use the create_database function
+        python_callable=create_database_with_logging,  # Use the updated function
     )
 
     # Task to create the tables
     create_tables_task = PythonOperator(
         task_id="create_tables",
-        python_callable=create_tables,  # Use the create_tables function
+        python_callable=create_tables_with_logging,  # Use the updated function
     )
 
     # Task dependencies
