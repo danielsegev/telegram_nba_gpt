@@ -1,8 +1,15 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
-from helpers.create_tables import create_database, create_tables
 import logging
+import sys
+import os
+
+# ✅ Add this to make the include directory discoverable
+sys.path.append(os.path.join(os.path.dirname(__file__), "include"))
+
+# ✅ Now, import the module
+from scripts.create_tables import create_database, create_tables
 
 # Define logging
 logger = logging.getLogger("airflow.task")

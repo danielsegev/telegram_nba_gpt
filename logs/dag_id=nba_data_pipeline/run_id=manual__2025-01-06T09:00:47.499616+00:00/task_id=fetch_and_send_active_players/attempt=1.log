@@ -1,0 +1,13 @@
+[2025-01-06T09:00:51.098+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.fetch_and_send_active_players manual__2025-01-06T09:00:47.499616+00:00 [queued]>
+[2025-01-06T09:00:51.109+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.fetch_and_send_active_players manual__2025-01-06T09:00:47.499616+00:00 [queued]>
+[2025-01-06T09:00:51.109+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-06T09:00:51.122+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_send_active_players> on 2025-01-06 09:00:47.499616+00:00
+[2025-01-06T09:00:51.128+0000] {standard_task_runner.py:57} INFO - Started process 67 to run task
+[2025-01-06T09:00:51.133+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'fetch_and_send_active_players', 'manual__2025-01-06T09:00:47.499616+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpwvtznlef']
+[2025-01-06T09:00:51.136+0000] {standard_task_runner.py:85} INFO - Job 113: Subtask fetch_and_send_active_players
+[2025-01-06T09:00:51.518+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.fetch_and_send_active_players manual__2025-01-06T09:00:47.499616+00:00 [running]> on host 1193c25bb614
+[2025-01-06T09:00:51.578+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='fetch_and_send_active_players' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T09:00:47.499616+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T09:00:47.499616+00:00'
+[2025-01-06T09:00:52.825+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-06T09:00:52.838+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_data_pipeline, task_id=fetch_and_send_active_players, execution_date=20250106T090047, start_date=20250106T090051, end_date=20250106T090052
+[2025-01-06T09:00:52.895+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-06T09:00:53.064+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

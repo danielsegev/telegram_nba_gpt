@@ -1,0 +1,426 @@
+[2024-12-30T18:31:00.444+0000] {processor.py:157} INFO - Started process (PID=28) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:31:00.446+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:31:00.450+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:31:00.448+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:31:03.379+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:31:03.354+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:31:03.385+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:31:03.445+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 3.007 seconds
+[2024-12-30T18:31:33.992+0000] {processor.py:157} INFO - Started process (PID=71) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:31:34.003+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:31:34.011+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:31:34.011+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:31:35.459+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:31:35.457+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:31:35.460+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:31:35.481+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 1.492 seconds
+[2024-12-30T18:32:06.201+0000] {processor.py:157} INFO - Started process (PID=112) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:32:06.217+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:32:06.227+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:32:06.226+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:32:07.774+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:32:07.756+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:32:07.778+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:32:07.867+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 1.684 seconds
+[2024-12-30T18:32:38.208+0000] {processor.py:157} INFO - Started process (PID=153) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:32:38.212+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:32:38.221+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:32:38.220+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:32:42.603+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:32:42.578+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:32:42.604+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:32:42.660+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 4.480 seconds
+[2024-12-30T18:33:12.789+0000] {processor.py:157} INFO - Started process (PID=195) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:33:12.795+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:33:12.799+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:33:12.798+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:33:16.006+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:33:15.995+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:33:16.007+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:33:16.035+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 3.259 seconds
+[2024-12-30T18:33:46.448+0000] {processor.py:157} INFO - Started process (PID=235) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:33:46.452+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:33:46.457+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:33:46.455+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:33:50.056+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:33:50.037+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:33:50.058+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:33:50.088+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 3.656 seconds
+[2024-12-30T18:34:20.843+0000] {processor.py:157} INFO - Started process (PID=276) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:34:20.973+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:34:21.009+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:34:20.994+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:34:26.690+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:34:26.679+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:34:26.692+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:34:26.735+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 6.120 seconds
+[2024-12-30T18:34:57.057+0000] {processor.py:157} INFO - Started process (PID=317) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:34:57.065+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:34:57.069+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:34:57.067+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:34:58.969+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:34:58.965+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:34:58.970+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:34:58.986+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 1.944 seconds
+[2024-12-30T18:35:29.563+0000] {processor.py:157} INFO - Started process (PID=358) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:35:29.567+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:35:29.571+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:35:29.570+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:35:30.777+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:35:30.751+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:35:30.779+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:35:30.815+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 1.258 seconds
+[2024-12-30T18:36:01.280+0000] {processor.py:157} INFO - Started process (PID=399) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:36:01.291+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:36:01.312+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:36:01.305+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:36:02.155+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:36:02.148+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:36:02.156+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:36:02.218+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.971 seconds
+[2024-12-30T18:36:32.586+0000] {processor.py:157} INFO - Started process (PID=440) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:36:32.592+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:36:32.594+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:36:32.594+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:36:34.743+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:36:34.720+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:36:34.749+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:36:34.786+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 2.213 seconds
+[2024-12-30T18:37:05.706+0000] {processor.py:157} INFO - Started process (PID=492) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:37:05.707+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:37:05.707+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:05.707+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:37:06.221+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:06.219+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/teams_kafka_to_spark.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 79, in <module>
+    spark_kafka_to_postgres_dag()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 3622, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/teams_kafka_to_spark.py", line 27, in spark_kafka_to_postgres_dag
+    @task.pyspark(conn_id="my_spark_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/__init__.py", line 69, in __getattr__
+    raise AttributeError(f"task decorator {name!r} not found")
+AttributeError: task decorator 'pyspark' not found
+[2024-12-30T18:37:06.222+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:37:06.236+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.533 seconds
+[2024-12-30T18:37:18.474+0000] {processor.py:157} INFO - Started process (PID=522) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:37:18.474+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:37:18.475+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:18.475+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:37:18.759+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:37:18.814+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:18.813+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:spark_kafka_to_postgres_dag
+[2024-12-30T18:37:18.818+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:18.818+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:spark_kafka_to_postgres_dag
+[2024-12-30T18:37:18.821+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:18.821+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:spark_kafka_to_postgres_dag
+[2024-12-30T18:37:18.828+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:18.828+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:37:18.835+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:18.835+0000] {dag.py:2763} INFO - Creating ORM DAG for spark_kafka_to_postgres_dag
+[2024-12-30T18:37:18.841+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:37:18.840+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:37:18.849+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.378 seconds
+[2024-12-30T18:38:09.058+0000] {processor.py:157} INFO - Started process (PID=28) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:38:09.063+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:38:09.068+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:38:09.067+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:38:10.818+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:38:10.914+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:38:10.913+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:38:11.008+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:38:11.008+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:38:11.058+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 2.007 seconds
+[2024-12-30T18:38:41.165+0000] {processor.py:157} INFO - Started process (PID=71) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:38:41.168+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:38:41.169+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:38:41.169+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:38:41.636+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:38:41.656+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:38:41.655+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:38:41.676+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:38:41.676+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:38:41.689+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.530 seconds
+[2024-12-30T18:39:12.724+0000] {processor.py:157} INFO - Started process (PID=112) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:39:12.725+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:39:12.727+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:39:12.727+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:39:13.092+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:39:13.110+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:39:13.110+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:39:13.125+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:39:13.125+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:39:13.135+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.416 seconds
+[2024-12-30T18:39:43.524+0000] {processor.py:157} INFO - Started process (PID=162) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:39:43.524+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:39:43.525+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:39:43.525+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:39:43.836+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:39:43.850+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:39:43.849+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:39:43.861+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:39:43.861+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:39:43.869+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.348 seconds
+[2024-12-30T18:40:14.130+0000] {processor.py:157} INFO - Started process (PID=205) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:40:14.131+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:40:14.131+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:40:14.131+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:40:14.538+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:40:14.551+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:40:14.551+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:40:14.563+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:40:14.563+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:40:14.572+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.445 seconds
+[2024-12-30T18:40:44.701+0000] {processor.py:157} INFO - Started process (PID=246) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:40:44.702+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:40:44.702+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:40:44.702+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:40:45.116+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:40:45.133+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:40:45.132+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:40:45.149+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:40:45.149+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:40:45.164+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.466 seconds
+[2024-12-30T18:41:15.295+0000] {processor.py:157} INFO - Started process (PID=287) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:41:15.296+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:41:15.296+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:41:15.296+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:41:15.577+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:41:15.590+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:41:15.589+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:41:15.600+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:41:15.600+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:41:15.608+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.316 seconds
+[2024-12-30T18:41:45.715+0000] {processor.py:157} INFO - Started process (PID=328) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:41:45.716+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:41:45.717+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:41:45.717+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:41:45.993+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:41:46.005+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:41:46.005+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:41:46.016+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:41:46.016+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:41:46.024+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.311 seconds
+[2024-12-30T18:42:16.056+0000] {processor.py:157} INFO - Started process (PID=369) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:42:16.057+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:42:16.058+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:42:16.057+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:42:16.404+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:42:16.416+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:42:16.416+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:42:16.428+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:42:16.428+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:42:16.436+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.382 seconds
+[2024-12-30T18:42:46.535+0000] {processor.py:157} INFO - Started process (PID=410) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:42:46.536+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:42:46.536+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:42:46.536+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:42:46.815+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:42:46.828+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:42:46.828+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:42:46.839+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:42:46.839+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:42:46.847+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.314 seconds
+[2024-12-30T18:43:17.783+0000] {processor.py:157} INFO - Started process (PID=442) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:43:17.785+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:43:17.786+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:43:17.786+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:43:18.130+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:43:18.145+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:43:18.145+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:43:18.161+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:43:18.161+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:43:18.176+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.397 seconds
+[2024-12-30T18:43:48.742+0000] {processor.py:157} INFO - Started process (PID=483) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:43:48.744+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:43:48.745+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:43:48.744+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:43:49.082+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:43:49.096+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:43:49.096+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:43:49.109+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:43:49.109+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:43:49.122+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.384 seconds
+[2024-12-30T18:44:19.200+0000] {processor.py:157} INFO - Started process (PID=524) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:44:19.202+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:44:19.203+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:44:19.203+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:44:19.546+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:44:19.561+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:44:19.561+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:44:19.582+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:44:19.581+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:44:19.594+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.399 seconds
+[2024-12-30T18:44:50.543+0000] {processor.py:157} INFO - Started process (PID=565) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:44:50.544+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:44:50.545+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:44:50.545+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:44:50.886+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:44:50.907+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:44:50.907+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:44:50.922+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:44:50.922+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:44:50.935+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.395 seconds
+[2024-12-30T18:45:21.453+0000] {processor.py:157} INFO - Started process (PID=606) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:45:21.454+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:45:21.456+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:45:21.455+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:45:21.777+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:45:21.805+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:45:21.805+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:45:21.818+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:45:21.818+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:45:21.830+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.382 seconds
+[2024-12-30T18:45:51.905+0000] {processor.py:157} INFO - Started process (PID=647) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:45:51.907+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:45:51.908+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:45:51.908+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:45:52.233+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:45:52.248+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:45:52.248+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:45:52.263+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:45:52.263+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:45:52.274+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.372 seconds
+[2024-12-30T18:46:22.471+0000] {processor.py:157} INFO - Started process (PID=688) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:46:22.473+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:46:22.474+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:46:22.474+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:46:22.802+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:46:22.817+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:46:22.817+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:46:22.830+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:46:22.830+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:46:22.843+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.375 seconds
+[2024-12-30T18:46:52.868+0000] {processor.py:157} INFO - Started process (PID=729) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:46:52.869+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:46:52.870+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:46:52.869+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:46:53.231+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:46:53.248+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:46:53.248+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:46:53.260+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:46:53.260+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:46:53.269+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.405 seconds
+[2024-12-30T18:47:24.260+0000] {processor.py:157} INFO - Started process (PID=770) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:47:24.262+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:47:24.263+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:47:24.263+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:47:24.689+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:47:24.707+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:47:24.706+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:47:24.721+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:47:24.721+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:47:24.737+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.483 seconds
+[2024-12-30T18:49:00.480+0000] {processor.py:157} INFO - Started process (PID=29) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:49:00.485+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:49:00.487+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:49:00.486+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:49:02.475+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:49:02.542+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:49:02.541+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:49:02.606+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:49:02.605+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:49:02.733+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 2.258 seconds
+[2024-12-30T18:49:33.274+0000] {processor.py:157} INFO - Started process (PID=72) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:49:33.279+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:49:33.280+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:49:33.279+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:49:33.776+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:49:33.797+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:49:33.796+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:49:33.813+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:49:33.813+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:49:33.835+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.565 seconds
+[2024-12-30T18:50:03.989+0000] {processor.py:157} INFO - Started process (PID=113) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:50:03.990+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:50:03.992+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:50:03.991+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:50:04.571+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:50:04.617+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:50:04.616+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:50:04.654+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:50:04.654+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:50:04.731+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.747 seconds
+[2024-12-30T18:50:34.773+0000] {processor.py:157} INFO - Started process (PID=154) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:50:34.774+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:50:34.775+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:50:34.774+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:50:35.314+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:50:35.334+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:50:35.333+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:50:35.361+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:50:35.361+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:50:35.392+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.622 seconds
+[2024-12-30T18:51:05.516+0000] {processor.py:157} INFO - Started process (PID=195) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:51:05.517+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:51:05.518+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:51:05.518+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:51:05.862+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:51:05.878+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:51:05.878+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:51:05.892+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:51:05.892+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:51:05.901+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.389 seconds
+[2024-12-30T18:51:36.476+0000] {processor.py:157} INFO - Started process (PID=236) to work on /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:51:36.477+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/teams_kafka_to_spark.py for tasks to queue
+[2024-12-30T18:51:36.479+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:51:36.478+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:51:37.083+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/teams_kafka_to_spark.py
+[2024-12-30T18:51:37.110+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:51:37.109+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-30T18:51:37.132+0000] {logging_mixin.py:150} INFO - [2024-12-30T18:51:37.132+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2024-12-30T18:51:37.154+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/teams_kafka_to_spark.py took 0.681 seconds

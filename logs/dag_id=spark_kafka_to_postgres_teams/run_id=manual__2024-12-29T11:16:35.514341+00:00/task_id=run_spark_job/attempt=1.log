@@ -1,0 +1,25 @@
+[2024-12-29T11:16:36.989+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T11:16:35.514341+00:00 [queued]>
+[2024-12-29T11:16:36.999+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T11:16:35.514341+00:00 [queued]>
+[2024-12-29T11:16:36.999+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2024-12-29T11:16:37.008+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): run_spark_job> on 2024-12-29 11:16:35.514341+00:00
+[2024-12-29T11:16:37.014+0000] {standard_task_runner.py:57} INFO - Started process 66 to run task
+[2024-12-29T11:16:37.018+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_kafka_to_postgres_teams', 'run_spark_job', 'manual__2024-12-29T11:16:35.514341+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_postgres_teams_dag.py', '--cfg-path', '/tmp/tmpny_0794n']
+[2024-12-29T11:16:37.020+0000] {standard_task_runner.py:85} INFO - Job 38: Subtask run_spark_job
+[2024-12-29T11:16:37.059+0000] {task_command.py:410} INFO - Running <TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T11:16:35.514341+00:00 [running]> on host 3715022b59e4
+[2024-12-29T11:16:37.114+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_kafka_to_postgres_teams' AIRFLOW_CTX_TASK_ID='run_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2024-12-29T11:16:35.514341+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-29T11:16:35.514341+00:00'
+[2024-12-29T11:16:37.117+0000] {logging_mixin.py:150} INFO - SSH connection closed
+[2024-12-29T11:16:37.117+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kafka_to_postgres_teams_dag.py", line 38, in run_spark_job
+    password="developer"
+  File "/home/airflow/.local/lib/python3.7/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 127.0.0.1 or ::1
+[2024-12-29T11:16:37.123+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=spark_kafka_to_postgres_teams, task_id=run_spark_job, execution_date=20241229T111635, start_date=20241229T111636, end_date=20241229T111637
+[2024-12-29T11:16:37.129+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 38 for task run_spark_job ([Errno None] Unable to connect to port 22 on 127.0.0.1 or ::1; 66)
+[2024-12-29T11:16:37.155+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2024-12-29T11:16:37.168+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

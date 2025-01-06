@@ -1,30 +1,35 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
-from helpers.kafka_helpers import initialize_producer, produce_message
 from nba_api.stats.static import teams
 import pandas as pd
 import json
+from confluent_kafka import Producer
 
 # Function to send NBA teams to Kafka
 def send_teams_to_kafka():
-    producer = initialize_producer()  # Initialize Kafka producer
+    from confluent_kafka import Producer
+    import logging
 
-    # Fetch NBA teams
+    logging.info("Initializing Kafka producer...")
+    conf = {
+        'bootstrap.servers': 'kafka-learn:9092'
+    }
+    producer = Producer(conf)
+
+    logging.info("Fetching NBA teams...")
     all_teams = teams.get_teams()
     logging.info(f"Retrieved {len(all_teams)} teams.")
 
-    # Convert the list of dictionaries to a DataFrame
-    df_teams = pd.DataFrame(all_teams)
+    for _, team_row in pd.DataFrame(all_teams).iterrows():
+        team_json = json.dumps(team_row.to_dict())
+        logging.info(f"Producing message: {team_json}")
+        producer.produce('teams', value=team_json)
 
-    # Send each team's data to Kafka
-    for _, team_row in df_teams.iterrows():
-        team_dict = team_row.to_dict()
-        team_json = json.dumps(team_dict)
-        produce_message(producer, 'teams', team_json)
+    logging.info("Flushing Kafka producer...")
+    producer.flush()
+    logging.info("All messages sent to Kafka.")
 
-    # Close the producer after all messages are sent
-    close_producer(producer)
 
 # Define the DAG
 with DAG(

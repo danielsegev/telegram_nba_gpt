@@ -1,0 +1,114 @@
+[2024-12-29T08:36:02.447+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_and_process_games.fetch_and_process_games_task manual__2024-12-29T08:36:01.177074+00:00 [queued]>
+[2024-12-29T08:36:02.453+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_and_process_games.fetch_and_process_games_task manual__2024-12-29T08:36:01.177074+00:00 [queued]>
+[2024-12-29T08:36:02.453+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2024-12-29T08:36:02.462+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_process_games_task> on 2024-12-29 08:36:01.177074+00:00
+[2024-12-29T08:36:02.466+0000] {standard_task_runner.py:57} INFO - Started process 62 to run task
+[2024-12-29T08:36:02.468+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_and_process_games', 'fetch_and_process_games_task', 'manual__2024-12-29T08:36:01.177074+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/retrieve_games_dag.py', '--cfg-path', '/tmp/tmploo2mlbe']
+[2024-12-29T08:36:02.469+0000] {standard_task_runner.py:85} INFO - Job 17: Subtask fetch_and_process_games_task
+[2024-12-29T08:36:02.499+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_and_process_games.fetch_and_process_games_task manual__2024-12-29T08:36:01.177074+00:00 [running]> on host 62d1d48b14de
+[2024-12-29T08:36:02.561+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_and_process_games' AIRFLOW_CTX_TASK_ID='fetch_and_process_games_task' AIRFLOW_CTX_EXECUTION_DATE='2024-12-29T08:36:01.177074+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-29T08:36:01.177074+00:00'
+[2024-12-29T08:36:03.759+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300405
+[2024-12-29T08:36:04.159+0000] {logging_mixin.py:150} INFO - Game 0042300405 processed successfully.
+[2024-12-29T08:36:04.159+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300405
+[2024-12-29T08:36:04.260+0000] {logging_mixin.py:150} INFO - Game 0042300405 processed successfully.
+[2024-12-29T08:36:04.261+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300404
+[2024-12-29T08:36:04.535+0000] {logging_mixin.py:150} INFO - Game 0042300404 processed successfully.
+[2024-12-29T08:36:04.535+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300404
+[2024-12-29T08:36:04.634+0000] {logging_mixin.py:150} INFO - Game 0042300404 processed successfully.
+[2024-12-29T08:36:04.635+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300403
+[2024-12-29T08:36:04.955+0000] {logging_mixin.py:150} INFO - Game 0042300403 processed successfully.
+[2024-12-29T08:36:04.955+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300403
+[2024-12-29T08:36:05.049+0000] {logging_mixin.py:150} INFO - Game 0042300403 processed successfully.
+[2024-12-29T08:36:05.050+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300402
+[2024-12-29T08:36:05.316+0000] {logging_mixin.py:150} INFO - Game 0042300402 processed successfully.
+[2024-12-29T08:36:05.316+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300402
+[2024-12-29T08:36:05.476+0000] {logging_mixin.py:150} INFO - Game 0042300402 processed successfully.
+[2024-12-29T08:36:05.476+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300401
+[2024-12-29T08:36:05.993+0000] {logging_mixin.py:150} INFO - Game 0042300401 processed successfully.
+[2024-12-29T08:36:05.993+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300401
+[2024-12-29T08:36:06.122+0000] {logging_mixin.py:150} INFO - Game 0042300401 processed successfully.
+[2024-12-29T08:36:06.123+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300315
+[2024-12-29T08:36:06.595+0000] {logging_mixin.py:150} INFO - Game 0042300315 processed successfully.
+[2024-12-29T08:36:06.595+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300315
+[2024-12-29T08:36:06.695+0000] {logging_mixin.py:150} INFO - Game 0042300315 processed successfully.
+[2024-12-29T08:36:06.696+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300314
+[2024-12-29T08:36:07.049+0000] {logging_mixin.py:150} INFO - Game 0042300314 processed successfully.
+[2024-12-29T08:36:07.050+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300314
+[2024-12-29T08:36:07.156+0000] {logging_mixin.py:150} INFO - Game 0042300314 processed successfully.
+[2024-12-29T08:36:07.157+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300304
+[2024-12-29T08:36:07.585+0000] {logging_mixin.py:150} INFO - Game 0042300304 processed successfully.
+[2024-12-29T08:36:07.585+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300304
+[2024-12-29T08:36:07.672+0000] {logging_mixin.py:150} INFO - Game 0042300304 processed successfully.
+[2024-12-29T08:36:07.672+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300313
+[2024-12-29T08:36:08.696+0000] {logging_mixin.py:150} INFO - Game 0042300313 processed successfully.
+[2024-12-29T08:36:08.696+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300313
+[2024-12-29T08:36:08.815+0000] {logging_mixin.py:150} INFO - Game 0042300313 processed successfully.
+[2024-12-29T08:36:08.815+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300303
+[2024-12-29T08:36:09.259+0000] {logging_mixin.py:150} INFO - Game 0042300303 processed successfully.
+[2024-12-29T08:36:09.259+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300303
+[2024-12-29T08:36:09.355+0000] {logging_mixin.py:150} INFO - Game 0042300303 processed successfully.
+[2024-12-29T08:36:09.356+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300312
+[2024-12-29T08:36:09.660+0000] {logging_mixin.py:150} INFO - Game 0042300312 processed successfully.
+[2024-12-29T08:36:09.661+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300312
+[2024-12-29T08:36:09.753+0000] {logging_mixin.py:150} INFO - Game 0042300312 processed successfully.
+[2024-12-29T08:36:09.754+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300302
+[2024-12-29T08:36:10.261+0000] {logging_mixin.py:150} INFO - Game 0042300302 processed successfully.
+[2024-12-29T08:36:10.261+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300302
+[2024-12-29T08:36:10.346+0000] {logging_mixin.py:150} INFO - Game 0042300302 processed successfully.
+[2024-12-29T08:36:10.346+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300311
+[2024-12-29T08:36:10.868+0000] {logging_mixin.py:150} INFO - Game 0042300311 processed successfully.
+[2024-12-29T08:36:10.868+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300311
+[2024-12-29T08:36:10.968+0000] {logging_mixin.py:150} INFO - Game 0042300311 processed successfully.
+[2024-12-29T08:36:10.968+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300301
+[2024-12-29T08:36:11.243+0000] {logging_mixin.py:150} INFO - Game 0042300301 processed successfully.
+[2024-12-29T08:36:11.243+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300301
+[2024-12-29T08:36:11.332+0000] {logging_mixin.py:150} INFO - Game 0042300301 processed successfully.
+[2024-12-29T08:36:11.332+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300237
+[2024-12-29T08:36:11.863+0000] {logging_mixin.py:150} INFO - Game 0042300237 processed successfully.
+[2024-12-29T08:36:11.864+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300217
+[2024-12-29T08:36:12.181+0000] {logging_mixin.py:150} INFO - Game 0042300217 processed successfully.
+[2024-12-29T08:36:12.181+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300217
+[2024-12-29T08:36:12.364+0000] {logging_mixin.py:150} INFO - Game 0042300217 processed successfully.
+[2024-12-29T08:36:12.365+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300237
+[2024-12-29T08:36:12.476+0000] {logging_mixin.py:150} INFO - Game 0042300237 processed successfully.
+[2024-12-29T08:36:12.477+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300226
+[2024-12-29T08:36:12.934+0000] {logging_mixin.py:150} INFO - Game 0042300226 processed successfully.
+[2024-12-29T08:36:12.936+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300226
+[2024-12-29T08:36:13.058+0000] {logging_mixin.py:150} INFO - Game 0042300226 processed successfully.
+[2024-12-29T08:36:13.064+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300216
+[2024-12-29T08:36:13.380+0000] {logging_mixin.py:150} INFO - Game 0042300216 processed successfully.
+[2024-12-29T08:36:13.381+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300216
+[2024-12-29T08:36:13.464+0000] {logging_mixin.py:150} INFO - Game 0042300216 processed successfully.
+[2024-12-29T08:36:13.464+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300236
+[2024-12-29T08:36:13.756+0000] {logging_mixin.py:150} INFO - Game 0042300236 processed successfully.
+[2024-12-29T08:36:13.757+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300236
+[2024-12-29T08:36:13.951+0000] {logging_mixin.py:150} INFO - Game 0042300236 processed successfully.
+[2024-12-29T08:36:13.951+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300205
+[2024-12-29T08:36:14.242+0000] {logging_mixin.py:150} INFO - Game 0042300205 processed successfully.
+[2024-12-29T08:36:14.243+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300205
+[2024-12-29T08:36:14.491+0000] {logging_mixin.py:150} INFO - Game 0042300205 processed successfully.
+[2024-12-29T08:36:14.492+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300225
+[2024-12-29T08:36:14.781+0000] {logging_mixin.py:150} INFO - Game 0042300225 processed successfully.
+[2024-12-29T08:36:14.782+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300225
+[2024-12-29T08:36:14.973+0000] {logging_mixin.py:150} INFO - Game 0042300225 processed successfully.
+[2024-12-29T08:36:14.975+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300235
+[2024-12-29T08:36:15.252+0000] {logging_mixin.py:150} INFO - Game 0042300235 processed successfully.
+[2024-12-29T08:36:15.252+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300215
+[2024-12-29T08:36:15.527+0000] {logging_mixin.py:150} INFO - Game 0042300215 processed successfully.
+[2024-12-29T08:36:15.528+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300215
+[2024-12-29T08:36:15.626+0000] {logging_mixin.py:150} INFO - Game 0042300215 processed successfully.
+[2024-12-29T08:36:15.626+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300235
+[2024-12-29T08:36:15.719+0000] {logging_mixin.py:150} INFO - Game 0042300235 processed successfully.
+[2024-12-29T08:36:15.720+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300224
+[2024-12-29T08:36:16.128+0000] {logging_mixin.py:150} INFO - Game 0042300224 processed successfully.
+[2024-12-29T08:36:16.129+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300224
+[2024-12-29T08:36:16.251+0000] {logging_mixin.py:150} INFO - Game 0042300224 processed successfully.
+[2024-12-29T08:36:16.251+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300204
+[2024-12-29T08:36:16.695+0000] {logging_mixin.py:150} INFO - Game 0042300204 processed successfully.
+[2024-12-29T08:36:16.696+0000] {logging_mixin.py:150} INFO - Processing game ID: 0042300204
+[2024-12-29T08:36:16.816+0000] {logging_mixin.py:150} INFO - Game 0042300204 processed successfully.
+[2024-12-29T08:36:16.823+0000] {logging_mixin.py:150} INFO - Up to 50 game data for season 2023-24 have been sent to 'games' topic in Kafka.
+[2024-12-29T08:36:16.826+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-12-29T08:36:16.838+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=fetch_and_process_games, task_id=fetch_and_process_games_task, execution_date=20241229T083601, start_date=20241229T083602, end_date=20241229T083616
+[2024-12-29T08:36:16.895+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-12-29T08:36:16.910+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

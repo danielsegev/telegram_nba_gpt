@@ -1,0 +1,773 @@
+[2024-12-29T17:47:50.112+0000] {processor.py:157} INFO - Started process (PID=392) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:47:50.113+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T17:47:50.113+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:47:50.113+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:47:50.118+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:47:50.117+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_postgtres_dag.py", line 4, in <module>
+    from kafka import KafkaConsumer
+ModuleNotFoundError: No module named 'kafka'
+[2024-12-29T17:47:50.118+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:47:50.132+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.021 seconds
+[2024-12-29T17:48:20.317+0000] {processor.py:157} INFO - Started process (PID=423) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:48:20.321+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T17:48:20.324+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:48:20.323+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:48:20.332+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:48:20.330+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_postgtres_dag.py", line 4, in <module>
+    from kafka import KafkaConsumer
+ModuleNotFoundError: No module named 'kafka'
+[2024-12-29T17:48:20.332+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:48:20.393+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.080 seconds
+[2024-12-29T17:48:52.061+0000] {processor.py:157} INFO - Started process (PID=454) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:48:52.065+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T17:48:52.067+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:48:52.066+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:48:52.082+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:48:52.079+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_postgtres_dag.py", line 4, in <module>
+    from kafka import KafkaConsumer
+ModuleNotFoundError: No module named 'kafka'
+[2024-12-29T17:48:52.083+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:48:52.137+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.085 seconds
+[2024-12-29T17:49:22.566+0000] {processor.py:157} INFO - Started process (PID=458) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:49:22.595+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T17:49:22.611+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:49:22.608+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:49:22.765+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:49:22.723+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_postgtres_dag.py", line 4, in <module>
+    from kafka import KafkaConsumer
+ModuleNotFoundError: No module named 'kafka'
+[2024-12-29T17:49:22.780+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:49:23.069+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.546 seconds
+[2024-12-29T17:49:53.411+0000] {processor.py:157} INFO - Started process (PID=489) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:49:53.416+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T17:49:53.417+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:49:53.417+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:49:53.469+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:49:53.436+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_postgtres_dag.py", line 4, in <module>
+    from kafka import KafkaConsumer
+ModuleNotFoundError: No module named 'kafka'
+[2024-12-29T17:49:53.470+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:49:53.551+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.175 seconds
+[2024-12-29T17:50:24.525+0000] {processor.py:157} INFO - Started process (PID=520) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:50:24.544+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T17:50:24.567+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:50:24.566+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:50:24.599+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:50:24.588+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_postgtres_dag.py", line 4, in <module>
+    from kafka import KafkaConsumer
+ModuleNotFoundError: No module named 'kafka'
+[2024-12-29T17:50:24.601+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:50:24.678+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.172 seconds
+[2024-12-29T17:50:54.966+0000] {processor.py:157} INFO - Started process (PID=551) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:50:54.981+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T17:50:54.993+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:50:54.988+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:50:55.063+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:50:55.056+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_postgtres_dag.py", line 4, in <module>
+    from kafka import KafkaConsumer
+ModuleNotFoundError: No module named 'kafka'
+[2024-12-29T17:50:55.064+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:50:55.154+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.224 seconds
+[2024-12-29T17:51:25.264+0000] {processor.py:157} INFO - Started process (PID=582) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:51:25.268+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T17:51:25.269+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:51:25.269+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:51:25.288+0000] {logging_mixin.py:150} INFO - [2024-12-29T17:51:25.282+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_postgtres_dag.py", line 4, in <module>
+    from kafka import KafkaConsumer
+ModuleNotFoundError: No module named 'kafka'
+[2024-12-29T17:51:25.288+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T17:51:25.343+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.088 seconds
+[2024-12-29T18:05:20.475+0000] {processor.py:157} INFO - Started process (PID=30) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:05:20.480+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:05:20.484+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:20.483+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:05:20.639+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:05:20.927+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:20.927+0000] {manager.py:414} ERROR - Add View Menu Error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(kafka_to_postgres_teams) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: {'dag_id': 'kafka_to_postgres_teams', 'fileloc': '/opt/airflow/dags/kafka_to_postgtres_dag.py', 'fileloc_hash': 26009562929591765, 'data': '{"__version": 1, "dag": {"dataset_triggers": [], "start_date": 1704067200.0, "fileloc": "/opt/airflow/dags/kafka_to_postgtres_dag.py", "_dag_id": "ka ... (1277 characters truncated) ... onOperator", "_task_module": "airflow.operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {}}], "dag_dependencies": [], "params": {}}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 12, 29, 18, 5, 20, 667504, tzinfo=Timezone('UTC')), 'dag_hash': '947c06106479dd65e34a1249ab615200', 'processor_subdir': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2024-12-29T18:05:20.935+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:20.935+0000] {manager.py:504} INFO - Created Permission View: can read on None
+[2024-12-29T18:05:20.951+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:20.951+0000] {manager.py:507} ERROR - Creation of Permission View Error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ab_permission_view_permission_id_view_menu_id_uq"
+DETAIL:  Key (permission_id, view_menu_id)=(1, 65) already exists.
+
+[SQL: INSERT INTO ab_permission_view (permission_id, view_menu_id) VALUES (%(permission_id)s, %(view_menu_id)s) RETURNING ab_permission_view.id]
+[parameters: {'permission_id': 1, 'view_menu_id': 65}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2024-12-29T18:05:20.967+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:20.967+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:05:20.984+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:20.984+0000] {dag.py:2763} INFO - Creating ORM DAG for kafka_to_postgres_teams
+[2024-12-29T18:05:21.000+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:21.000+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:05:21.399+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:21.379+0000] {dagbag.py:649} ERROR - Failed to write serialized DAG: /opt/airflow/dags/kafka_to_postgtres_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 611, in _assert_active
+    code="7s2a",
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dag_pkey"
+DETAIL:  Key (dag_id)=(kafka_to_postgres_teams) already exists.
+
+[SQL: INSERT INTO dag (dag_id, root_dag_id, is_paused, is_subdag, is_active, last_parsed_time, last_pickled, last_expired, scheduler_lock, pickle_id, fileloc, processor_subdir, owners, description, default_view, schedule_interval, timetable_description, max_active_tasks, max_active_runs, has_task_concurrency_limits, has_import_errors, next_dagrun, next_dagrun_data_interval_start, next_dagrun_data_interval_end, next_dagrun_create_after) VALUES (%(dag_id)s, %(root_dag_id)s, %(is_paused)s, %(is_subdag)s, %(is_active)s, %(last_parsed_time)s, %(last_pickled)s, %(last_expired)s, %(scheduler_lock)s, %(pickle_id)s, %(fileloc)s, %(processor_subdir)s, %(owners)s, %(description)s, %(default_view)s, %(schedule_interval)s, %(timetable_description)s, %(max_active_tasks)s, %(max_active_runs)s, %(has_task_concurrency_limits)s, %(has_import_errors)s, %(next_dagrun)s, %(next_dagrun_data_interval_start)s, %(next_dagrun_data_interval_end)s, %(next_dagrun_create_after)s)]
+[parameters: {'dag_id': 'kafka_to_postgres_teams', 'root_dag_id': None, 'is_paused': True, 'is_subdag': False, 'is_active': True, 'last_parsed_time': datetime.datetime(2024, 12, 29, 18, 5, 21, 505, tzinfo=Timezone('UTC')), 'last_pickled': None, 'last_expired': None, 'scheduler_lock': None, 'pickle_id': None, 'fileloc': '/opt/airflow/dags/kafka_to_postgtres_dag.py', 'processor_subdir': '/opt/airflow/dags', 'owners': 'airflow', 'description': "Load data from Kafka 'teams' topic into PostgreSQL", 'default_view': 'grid', 'schedule_interval': 'null', 'timetable_description': 'Never, external triggers only', 'max_active_tasks': 16, 'max_active_runs': 16, 'has_task_concurrency_limits': False, 'has_import_errors': False, 'next_dagrun': None, 'next_dagrun_data_interval_start': None, 'next_dagrun_data_interval_end': None, 'next_dagrun_create_after': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-12-29T18:05:21.399+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:21.399+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:05:21.400+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 314, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 673, in _sync_to_db
+    DAG.bulk_write_to_db(dags.values(), processor_subdir=processor_subdir, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2753, in bulk_write_to_db
+    orm_dags: list[DagModel] = with_row_locks(query, of=DagModel, session=session).all()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2773, in all
+    return self._iter().all()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 611, in _assert_active
+    code="7s2a",
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dag_pkey"
+DETAIL:  Key (dag_id)=(kafka_to_postgres_teams) already exists.
+
+[SQL: INSERT INTO dag (dag_id, root_dag_id, is_paused, is_subdag, is_active, last_parsed_time, last_pickled, last_expired, scheduler_lock, pickle_id, fileloc, processor_subdir, owners, description, default_view, schedule_interval, timetable_description, max_active_tasks, max_active_runs, has_task_concurrency_limits, has_import_errors, next_dagrun, next_dagrun_data_interval_start, next_dagrun_data_interval_end, next_dagrun_create_after) VALUES (%(dag_id)s, %(root_dag_id)s, %(is_paused)s, %(is_subdag)s, %(is_active)s, %(last_parsed_time)s, %(last_pickled)s, %(last_expired)s, %(scheduler_lock)s, %(pickle_id)s, %(fileloc)s, %(processor_subdir)s, %(owners)s, %(description)s, %(default_view)s, %(schedule_interval)s, %(timetable_description)s, %(max_active_tasks)s, %(max_active_runs)s, %(has_task_concurrency_limits)s, %(has_import_errors)s, %(next_dagrun)s, %(next_dagrun_data_interval_start)s, %(next_dagrun_data_interval_end)s, %(next_dagrun_create_after)s)]
+[parameters: {'dag_id': 'kafka_to_postgres_teams', 'root_dag_id': None, 'is_paused': True, 'is_subdag': False, 'is_active': True, 'last_parsed_time': datetime.datetime(2024, 12, 29, 18, 5, 21, 505, tzinfo=Timezone('UTC')), 'last_pickled': None, 'last_expired': None, 'scheduler_lock': None, 'pickle_id': None, 'fileloc': '/opt/airflow/dags/kafka_to_postgtres_dag.py', 'processor_subdir': '/opt/airflow/dags', 'owners': 'airflow', 'description': "Load data from Kafka 'teams' topic into PostgreSQL", 'default_view': 'grid', 'schedule_interval': 'null', 'timetable_description': 'Never, external triggers only', 'max_active_tasks': 16, 'max_active_runs': 16, 'has_task_concurrency_limits': False, 'has_import_errors': False, 'next_dagrun': None, 'next_dagrun_data_interval_start': None, 'next_dagrun_data_interval_end': None, 'next_dagrun_create_after': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-12-29T18:05:51.775+0000] {processor.py:157} INFO - Started process (PID=61) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:05:51.794+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:05:51.803+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:51.799+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:05:51.949+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:05:52.138+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:52.138+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:05:52.166+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:05:52.166+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:05:52.210+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.472 seconds
+[2024-12-29T18:06:22.479+0000] {processor.py:157} INFO - Started process (PID=92) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:06:22.483+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:06:22.501+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:06:22.499+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:06:22.642+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:06:22.697+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:06:22.697+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:06:22.747+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:06:22.746+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:06:22.786+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.314 seconds
+[2024-12-29T18:09:07.344+0000] {processor.py:157} INFO - Started process (PID=29) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:09:07.346+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:09:07.348+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:09:07.348+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:09:07.512+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:09:07.731+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:09:07.731+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:09:07.757+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:09:07.757+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:09:07.785+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.446 seconds
+[2024-12-29T18:09:38.405+0000] {processor.py:157} INFO - Started process (PID=60) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:09:38.410+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:09:38.415+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:09:38.413+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:09:38.484+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:09:38.598+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:09:38.598+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:09:38.673+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:09:38.672+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:09:38.744+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.343 seconds
+[2024-12-29T18:10:09.043+0000] {processor.py:157} INFO - Started process (PID=91) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:10:09.046+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:10:09.050+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:10:09.050+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:10:09.131+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:10:09.691+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:10:09.690+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:10:09.747+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:10:09.747+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:10:09.806+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.769 seconds
+[2024-12-29T18:10:40.864+0000] {processor.py:157} INFO - Started process (PID=122) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:10:40.887+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:10:40.897+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:10:40.895+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:10:41.545+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:10:41.889+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:10:41.889+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:10:42.105+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:10:42.104+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:10:42.435+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.666 seconds
+[2024-12-29T18:11:13.637+0000] {processor.py:157} INFO - Started process (PID=153) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:11:13.656+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:11:13.670+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:11:13.668+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:11:14.371+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:11:15.326+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:11:15.325+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:11:15.453+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:11:15.453+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:11:15.502+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.962 seconds
+[2024-12-29T18:11:46.079+0000] {processor.py:157} INFO - Started process (PID=184) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:11:46.101+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:11:46.110+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:11:46.109+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:11:46.505+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:11:46.788+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:11:46.788+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:11:46.886+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:11:46.886+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:11:46.981+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.967 seconds
+[2024-12-29T18:12:17.678+0000] {processor.py:157} INFO - Started process (PID=215) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:12:17.689+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:12:17.692+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:12:17.691+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:12:17.966+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:12:18.552+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:12:18.552+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:12:18.628+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:12:18.625+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:12:18.721+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.062 seconds
+[2024-12-29T18:12:49.000+0000] {processor.py:157} INFO - Started process (PID=246) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:12:49.010+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:12:49.011+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:12:49.011+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:12:49.128+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:12:49.618+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:12:49.618+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:12:50.106+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:12:50.106+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:12:50.145+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.172 seconds
+[2024-12-29T18:13:20.399+0000] {processor.py:157} INFO - Started process (PID=277) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:13:20.402+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:13:20.405+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:13:20.405+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:13:20.482+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:13:20.706+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:13:20.706+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:13:20.748+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:13:20.748+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:13:20.763+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.381 seconds
+[2024-12-29T18:13:50.940+0000] {processor.py:157} INFO - Started process (PID=308) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:13:50.944+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:13:50.946+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:13:50.946+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:13:51.006+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:13:51.047+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:13:51.047+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:13:51.072+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:13:51.072+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:13:51.089+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.155 seconds
+[2024-12-29T18:14:21.359+0000] {processor.py:157} INFO - Started process (PID=339) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:14:21.360+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:14:21.361+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:14:21.361+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:14:21.388+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:14:21.455+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:14:21.454+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:14:21.471+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:14:21.471+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:14:21.491+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.134 seconds
+[2024-12-29T18:14:51.591+0000] {processor.py:157} INFO - Started process (PID=370) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:14:51.592+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:14:51.593+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:14:51.593+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:14:51.618+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:14:51.628+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:14:51.627+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:14:51.645+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:14:51.645+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:14:51.662+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.073 seconds
+[2024-12-29T18:15:21.734+0000] {processor.py:157} INFO - Started process (PID=401) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:15:21.735+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:15:21.737+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:15:21.737+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:15:21.761+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:15:21.828+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:15:21.828+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:15:21.843+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:15:21.843+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:15:21.859+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.127 seconds
+[2024-12-29T18:15:51.963+0000] {processor.py:157} INFO - Started process (PID=432) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:15:51.964+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:15:51.964+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:15:51.964+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:15:51.989+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:15:51.999+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:15:51.999+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:15:52.015+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:15:52.015+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:15:52.026+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.065 seconds
+[2024-12-29T18:16:22.173+0000] {processor.py:157} INFO - Started process (PID=463) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:16:22.174+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:16:22.175+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:16:22.175+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:16:22.215+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:16:22.285+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:16:22.285+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:16:22.302+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:16:22.302+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:16:22.323+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.153 seconds
+[2024-12-29T18:16:52.436+0000] {processor.py:157} INFO - Started process (PID=494) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:16:52.438+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:16:52.440+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:16:52.440+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:16:52.479+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:16:52.512+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:16:52.504+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:16:52.552+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:16:52.552+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:16:52.562+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.129 seconds
+[2024-12-29T18:17:22.793+0000] {processor.py:157} INFO - Started process (PID=534) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:17:22.796+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:17:22.797+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:17:22.797+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:17:22.835+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:17:22.911+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:17:22.911+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:17:22.928+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:17:22.928+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:17:22.942+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.151 seconds
+[2024-12-29T18:17:53.729+0000] {processor.py:157} INFO - Started process (PID=565) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:17:53.731+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:17:53.732+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:17:53.732+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:17:53.773+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:17:53.791+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:17:53.791+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:17:53.805+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:17:53.805+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:17:53.815+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.089 seconds
+[2024-12-29T18:18:23.877+0000] {processor.py:157} INFO - Started process (PID=595) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:18:23.877+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:18:23.878+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:18:23.878+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:18:23.904+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:18:23.974+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:18:23.974+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:18:23.988+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:18:23.988+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:18:23.999+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.126 seconds
+[2024-12-29T18:27:05.118+0000] {processor.py:157} INFO - Started process (PID=39) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:27:05.122+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:27:05.126+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:27:05.125+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:27:05.186+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:27:05.212+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:27:05.212+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:27:05.249+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:27:05.248+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:27:05.278+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.167 seconds
+[2024-12-29T18:27:35.367+0000] {processor.py:157} INFO - Started process (PID=61) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:27:35.372+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:27:35.379+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:27:35.378+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:27:35.557+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:27:35.675+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:27:35.674+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:27:35.690+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:27:35.689+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:27:35.706+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.348 seconds
+[2024-12-29T18:28:06.080+0000] {processor.py:157} INFO - Started process (PID=92) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:28:06.103+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:28:06.107+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:28:06.107+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:28:06.337+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:28:06.428+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:28:06.428+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:28:06.471+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:28:06.471+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:28:06.504+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.430 seconds
+[2024-12-29T18:28:37.191+0000] {processor.py:157} INFO - Started process (PID=123) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:28:37.196+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:28:37.203+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:28:37.202+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:28:37.729+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:28:38.398+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:28:38.398+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:28:38.479+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:28:38.479+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:28:38.547+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.400 seconds
+[2024-12-29T18:29:08.918+0000] {processor.py:157} INFO - Started process (PID=154) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:29:08.923+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:29:08.928+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:29:08.927+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:29:09.406+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:29:09.859+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:29:09.858+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:29:10.114+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:29:10.114+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:29:10.265+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.363 seconds
+[2024-12-29T18:29:40.404+0000] {processor.py:157} INFO - Started process (PID=184) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:29:40.411+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:29:40.414+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:29:40.413+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:29:40.793+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:29:41.075+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:29:41.074+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:29:41.099+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:29:41.099+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:29:41.130+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.735 seconds
+[2024-12-29T18:30:11.805+0000] {processor.py:157} INFO - Started process (PID=215) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:30:11.807+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:30:11.808+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:30:11.808+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:30:11.888+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:30:12.219+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:30:12.218+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:30:12.276+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:30:12.276+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:30:12.358+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.557 seconds
+[2024-12-29T18:30:43.628+0000] {processor.py:157} INFO - Started process (PID=238) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:30:43.632+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:30:43.632+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:30:43.632+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:30:43.691+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:30:43.705+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:30:43.705+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:30:43.729+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:30:43.729+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:30:43.748+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.127 seconds
+[2024-12-29T18:31:15.704+0000] {processor.py:157} INFO - Started process (PID=268) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:31:15.705+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:31:15.705+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:31:15.705+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:31:15.741+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:31:15.842+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:31:15.841+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:31:15.869+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:31:15.869+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:31:15.891+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.191 seconds
+[2024-12-29T18:31:46.133+0000] {processor.py:157} INFO - Started process (PID=290) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:31:46.135+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:31:46.135+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:31:46.135+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:31:46.169+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:31:46.199+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:31:46.198+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:31:46.211+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:31:46.210+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:31:46.222+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.095 seconds
+[2024-12-29T18:32:16.847+0000] {processor.py:157} INFO - Started process (PID=321) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:32:16.848+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:32:16.849+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:32:16.848+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:32:16.876+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:32:16.951+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:32:16.951+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:32:16.966+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:32:16.966+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:32:16.991+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.146 seconds
+[2024-12-29T18:32:47.371+0000] {processor.py:157} INFO - Started process (PID=344) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:32:47.373+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:32:47.377+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:32:47.376+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:32:47.491+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:32:47.512+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:32:47.512+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:32:47.540+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:32:47.540+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:32:47.574+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.209 seconds
+[2024-12-29T18:33:17.749+0000] {processor.py:157} INFO - Started process (PID=374) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:33:17.754+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:33:17.760+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:33:17.759+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:33:17.805+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:33:17.943+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:33:17.943+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:33:17.969+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:33:17.969+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:33:17.997+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.267 seconds
+[2024-12-29T18:33:48.066+0000] {processor.py:157} INFO - Started process (PID=406) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:33:48.067+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:33:48.068+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:33:48.067+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:33:48.105+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:33:48.119+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:33:48.119+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:33:48.136+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:33:48.136+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:33:48.155+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.092 seconds
+[2024-12-29T18:34:18.275+0000] {processor.py:157} INFO - Started process (PID=436) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:34:18.276+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:34:18.278+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:34:18.278+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:34:18.312+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:34:18.391+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:34:18.391+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:34:18.410+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:34:18.410+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:34:18.425+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.154 seconds
+[2024-12-29T18:34:48.473+0000] {processor.py:157} INFO - Started process (PID=467) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:34:48.474+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:34:48.474+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:34:48.474+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:34:48.505+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:34:48.533+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:34:48.533+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:34:48.550+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:34:48.549+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:34:48.561+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.091 seconds
+[2024-12-29T18:37:20.816+0000] {processor.py:157} INFO - Started process (PID=38) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:37:20.821+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:37:20.829+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:37:20.829+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:37:21.036+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:37:22.271+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:37:22.266+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:37:22.470+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:37:22.469+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:37:22.593+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.781 seconds
+[2024-12-29T18:37:52.702+0000] {processor.py:157} INFO - Started process (PID=61) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:37:52.703+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:37:52.704+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:37:52.703+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:37:52.745+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:37:52.764+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:37:52.763+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:37:52.782+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:37:52.782+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:37:52.811+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.111 seconds
+[2024-12-29T18:38:23.156+0000] {processor.py:157} INFO - Started process (PID=92) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:38:23.163+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:38:23.165+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:38:23.164+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:38:23.578+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:38:25.211+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:38:25.210+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:38:25.313+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:38:25.312+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:38:25.482+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 2.355 seconds
+[2024-12-29T18:38:57.488+0000] {processor.py:157} INFO - Started process (PID=124) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:38:57.489+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:38:57.490+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:38:57.490+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:38:57.545+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:38:57.568+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:38:57.568+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:38:57.595+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:38:57.595+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:38:57.605+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.122 seconds
+[2024-12-29T18:39:28.172+0000] {processor.py:157} INFO - Started process (PID=154) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:39:28.227+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:39:28.241+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:39:28.239+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:39:28.687+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:39:29.426+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:39:29.425+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:39:29.516+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:39:29.516+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:39:29.577+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.481 seconds
+[2024-12-29T18:40:00.625+0000] {processor.py:157} INFO - Started process (PID=185) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:40:00.633+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:40:00.640+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:40:00.639+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:40:00.906+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:40:00.981+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:40:00.980+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:40:01.034+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:40:01.034+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:40:01.087+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.491 seconds
+[2024-12-29T18:40:31.203+0000] {processor.py:157} INFO - Started process (PID=216) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:40:31.217+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:40:31.219+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:40:31.219+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:40:31.530+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:40:31.951+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:40:31.950+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:40:31.987+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:40:31.987+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:40:32.024+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.841 seconds
+[2024-12-29T18:41:02.446+0000] {processor.py:157} INFO - Started process (PID=247) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:41:02.449+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:41:02.457+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:41:02.455+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:41:02.808+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:41:03.105+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:41:03.105+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:41:03.354+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:41:03.353+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:41:03.457+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 1.044 seconds
+[2024-12-29T18:41:33.701+0000] {processor.py:157} INFO - Started process (PID=278) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:41:33.705+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:41:33.707+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:41:33.706+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:41:33.822+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:41:33.966+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:41:33.966+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:41:33.982+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:41:33.982+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:41:34.002+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.322 seconds
+[2024-12-29T18:42:04.408+0000] {processor.py:157} INFO - Started process (PID=309) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:42:04.412+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:42:04.418+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:42:04.418+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:42:04.504+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:42:04.590+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:42:04.590+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:42:04.642+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:42:04.642+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:42:04.674+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.282 seconds
+[2024-12-29T18:42:35.014+0000] {processor.py:157} INFO - Started process (PID=340) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:42:35.024+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:42:35.026+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:42:35.026+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:42:35.226+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:42:35.508+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:42:35.508+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:42:35.761+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:42:35.760+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:42:35.806+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.815 seconds
+[2024-12-29T18:43:06.177+0000] {processor.py:157} INFO - Started process (PID=371) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:43:06.181+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:43:06.183+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:43:06.183+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:43:06.256+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:43:06.333+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:43:06.332+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:43:06.365+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:43:06.365+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:43:06.403+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.233 seconds
+[2024-12-29T18:43:36.629+0000] {processor.py:157} INFO - Started process (PID=401) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:43:36.633+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:43:36.634+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:43:36.633+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:43:36.698+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:43:36.842+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:43:36.841+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:43:36.875+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:43:36.875+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:43:36.898+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.278 seconds
+[2024-12-29T18:44:06.992+0000] {processor.py:157} INFO - Started process (PID=432) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:44:06.995+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:44:07.001+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:44:07.001+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:44:07.150+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:44:07.295+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:44:07.295+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:44:07.394+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:44:07.394+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:44:07.477+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.501 seconds
+[2024-12-29T18:44:38.319+0000] {processor.py:157} INFO - Started process (PID=464) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:44:38.321+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:44:38.322+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:44:38.322+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:44:38.369+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:44:38.484+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:44:38.484+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:44:38.504+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:44:38.504+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:44:38.518+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.203 seconds
+[2024-12-29T18:45:08.648+0000] {processor.py:157} INFO - Started process (PID=495) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:08.651+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:45:08.653+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:08.652+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:08.749+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:08.821+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:08.821+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:45:08.856+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:08.856+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:45:08.877+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.239 seconds
+[2024-12-29T18:45:23.344+0000] {processor.py:157} INFO - Started process (PID=40) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:23.345+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:45:23.346+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:23.345+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:23.447+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:23.453+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:23.453+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:45:23.467+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:23.467+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:45:23.481+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.139 seconds
+[2024-12-29T18:45:53.613+0000] {processor.py:157} INFO - Started process (PID=64) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:53.614+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:45:53.618+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:53.617+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:53.770+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:45:53.840+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:53.840+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:45:53.851+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:45:53.851+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:45:53.860+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.250 seconds
+[2024-12-29T18:46:24.036+0000] {processor.py:157} INFO - Started process (PID=95) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:46:24.036+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:46:24.037+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:46:24.037+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:46:24.145+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:46:24.166+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:46:24.166+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:46:24.180+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:46:24.180+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:46:24.190+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.157 seconds
+[2024-12-29T18:46:54.375+0000] {processor.py:157} INFO - Started process (PID=127) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:46:54.376+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:46:54.377+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:46:54.377+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:46:54.471+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:46:54.527+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:46:54.527+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:46:54.538+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:46:54.538+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:46:54.548+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.175 seconds
+[2024-12-29T18:47:24.662+0000] {processor.py:157} INFO - Started process (PID=159) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:47:24.663+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:47:24.665+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:47:24.664+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:47:24.724+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:47:24.858+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:47:24.858+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:47:24.878+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:47:24.878+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:47:24.901+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.244 seconds
+[2024-12-29T18:47:55.016+0000] {processor.py:157} INFO - Started process (PID=191) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:47:55.018+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:47:55.018+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:47:55.018+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:47:55.046+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:47:55.055+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:47:55.055+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:47:55.072+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:47:55.071+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:47:55.083+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.069 seconds
+[2024-12-29T18:48:25.147+0000] {processor.py:157} INFO - Started process (PID=223) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:48:25.149+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:48:25.150+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:48:25.150+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:48:25.175+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:48:25.236+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:48:25.236+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:48:25.247+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:48:25.247+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:48:25.257+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.112 seconds
+[2024-12-29T18:48:55.345+0000] {processor.py:157} INFO - Started process (PID=255) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:48:55.346+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:48:55.347+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:48:55.347+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:48:55.371+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:48:55.379+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:48:55.379+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:48:55.392+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:48:55.392+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:48:55.402+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.059 seconds
+[2024-12-29T18:49:26.261+0000] {processor.py:157} INFO - Started process (PID=287) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:49:26.262+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:49:26.263+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:49:26.262+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:49:26.294+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:49:26.365+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:49:26.365+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:49:26.378+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:49:26.378+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:49:26.388+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.130 seconds
+[2024-12-29T18:49:57.233+0000] {processor.py:157} INFO - Started process (PID=319) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:49:57.235+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:49:57.236+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:49:57.236+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:49:57.271+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:49:57.288+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:49:57.288+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:49:57.301+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:49:57.301+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:49:57.311+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.082 seconds
+[2024-12-29T18:50:27.410+0000] {processor.py:157} INFO - Started process (PID=351) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:50:27.412+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:50:27.413+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:50:27.413+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:50:27.463+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:50:27.549+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:50:27.549+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:50:27.567+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:50:27.567+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:50:27.586+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.182 seconds
+[2024-12-29T18:50:57.732+0000] {processor.py:157} INFO - Started process (PID=383) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:50:57.734+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:50:57.735+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:50:57.735+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:50:57.762+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:50:57.774+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:50:57.774+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:50:57.788+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:50:57.788+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:50:57.804+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.074 seconds
+[2024-12-29T18:51:27.860+0000] {processor.py:157} INFO - Started process (PID=415) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:51:27.861+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:51:27.862+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:51:27.862+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:51:27.894+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:51:27.964+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:51:27.963+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:51:27.974+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:51:27.974+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:51:27.983+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.126 seconds
+[2024-12-29T18:51:58.025+0000] {processor.py:157} INFO - Started process (PID=447) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:51:58.027+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:51:58.027+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:51:58.027+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:51:58.050+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:51:58.066+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:51:58.066+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:51:58.084+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:51:58.083+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:51:58.094+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.071 seconds
+[2024-12-29T18:52:28.836+0000] {processor.py:157} INFO - Started process (PID=479) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:52:28.839+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:52:28.840+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:52:28.839+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:52:28.885+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:52:28.965+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:52:28.965+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:52:28.980+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:52:28.980+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:52:28.993+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.163 seconds
+[2024-12-29T18:52:59.064+0000] {processor.py:157} INFO - Started process (PID=511) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:52:59.065+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:52:59.065+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:52:59.065+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:52:59.090+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:52:59.106+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:52:59.105+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:52:59.122+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:52:59.122+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:52:59.132+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.071 seconds
+[2024-12-29T18:53:29.878+0000] {processor.py:157} INFO - Started process (PID=543) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:53:29.879+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:53:29.879+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:53:29.879+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:53:29.905+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:53:29.984+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:53:29.984+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:53:29.998+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:53:29.998+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:53:30.010+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.133 seconds
+[2024-12-29T18:54:00.834+0000] {processor.py:157} INFO - Started process (PID=575) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:54:00.836+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:54:00.837+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:54:00.837+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:54:00.877+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:54:00.895+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:54:00.895+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:54:00.911+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:54:00.911+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:54:00.922+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.093 seconds
+[2024-12-29T18:54:31.814+0000] {processor.py:157} INFO - Started process (PID=607) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:54:31.815+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:54:31.816+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:54:31.816+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:54:31.852+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:54:31.925+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:54:31.925+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:54:31.939+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:54:31.939+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:54:31.951+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.141 seconds
+[2024-12-29T18:55:02.817+0000] {processor.py:157} INFO - Started process (PID=639) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:55:02.818+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:55:02.819+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:55:02.819+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:55:02.851+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:55:02.867+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:55:02.867+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:55:02.881+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:55:02.880+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:55:02.891+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.077 seconds
+[2024-12-29T18:55:33.797+0000] {processor.py:157} INFO - Started process (PID=671) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:55:33.798+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:55:33.798+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:55:33.798+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:55:33.823+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:55:33.885+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:55:33.885+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:55:33.898+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:55:33.898+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:55:33.908+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.113 seconds
+[2024-12-29T18:56:03.974+0000] {processor.py:157} INFO - Started process (PID=703) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:56:03.976+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:56:03.977+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:56:03.976+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:56:04.045+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:56:04.083+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:56:04.083+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:56:04.100+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:56:04.099+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:56:04.114+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.143 seconds
+[2024-12-29T18:56:34.172+0000] {processor.py:157} INFO - Started process (PID=734) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:56:34.174+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:56:34.176+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:56:34.176+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:56:34.209+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:56:34.275+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:56:34.275+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:56:34.288+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:56:34.288+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:56:34.298+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.132 seconds
+[2024-12-29T18:57:05.188+0000] {processor.py:157} INFO - Started process (PID=767) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:57:05.190+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:57:05.191+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:57:05.191+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:57:05.225+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:57:05.243+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:57:05.243+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:57:05.256+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:57:05.256+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:57:05.267+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.082 seconds
+[2024-12-29T18:57:35.379+0000] {processor.py:157} INFO - Started process (PID=799) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:57:35.380+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:57:35.380+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:57:35.380+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:57:35.411+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:57:35.488+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:57:35.488+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:57:35.503+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:57:35.503+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:57:35.515+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.143 seconds
+[2024-12-29T18:58:05.568+0000] {processor.py:157} INFO - Started process (PID=831) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:58:05.570+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:58:05.570+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:58:05.570+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:58:05.594+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:58:05.659+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:58:05.659+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:58:05.671+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:58:05.671+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:58:05.680+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.115 seconds
+[2024-12-29T18:58:36.471+0000] {processor.py:157} INFO - Started process (PID=864) to work on /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:58:36.474+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/kafka_to_postgtres_dag.py for tasks to queue
+[2024-12-29T18:58:36.474+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:58:36.474+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:58:36.512+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_teams']) retrieved from /opt/airflow/dags/kafka_to_postgtres_dag.py
+[2024-12-29T18:58:36.532+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:58:36.532+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-12-29T18:58:36.548+0000] {logging_mixin.py:150} INFO - [2024-12-29T18:58:36.548+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_teams to None, run_after=None
+[2024-12-29T18:58:36.560+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_postgtres_dag.py took 0.091 seconds

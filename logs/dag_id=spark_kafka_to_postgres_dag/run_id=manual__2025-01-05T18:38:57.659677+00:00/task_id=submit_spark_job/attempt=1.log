@@ -1,0 +1,23 @@
+[2025-01-05T18:38:58.476+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_dag.submit_spark_job manual__2025-01-05T18:38:57.659677+00:00 [queued]>
+[2025-01-05T18:38:58.481+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_dag.submit_spark_job manual__2025-01-05T18:38:57.659677+00:00 [queued]>
+[2025-01-05T18:38:58.481+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-01-05T18:38:58.490+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): submit_spark_job> on 2025-01-05 18:38:57.659677+00:00
+[2025-01-05T18:38:58.495+0000] {standard_task_runner.py:57} INFO - Started process 81 to run task
+[2025-01-05T18:38:58.499+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_kafka_to_postgres_dag', 'submit_spark_job', 'manual__2025-01-05T18:38:57.659677+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/teams_kafka_to_spark.py', '--cfg-path', '/tmp/tmp97dl49ub']
+[2025-01-05T18:38:58.502+0000] {standard_task_runner.py:85} INFO - Job 38: Subtask submit_spark_job
+[2025-01-05T18:38:58.537+0000] {task_command.py:410} INFO - Running <TaskInstance: spark_kafka_to_postgres_dag.submit_spark_job manual__2025-01-05T18:38:57.659677+00:00 [running]> on host a2035b0981b8
+[2025-01-05T18:38:58.836+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_kafka_to_postgres_dag' AIRFLOW_CTX_TASK_ID='submit_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2025-01-05T18:38:57.659677+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-05T18:38:57.659677+00:00'
+[2025-01-05T18:38:58.842+0000] {spark_submit.py:218} INFO - Could not load connection string my_spark_conn, defaulting to yarn
+[2025-01-05T18:38:58.843+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master yarn --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --conf spark.yarn.appMasterEnv.SPARK_HOME=/opt/spark --conf spark.yarn.appMasterEnv.PATH=/opt/spark/bin:$PATH --conf spark.yarn.appMasterEnv.SHELL=/usr/bin/bash --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 --executor-memory 2G --driver-memory 1G --name SparkKafkaToPostgres --verbose /usr/local/***/include/scripts/kafka_to_postgres_teams.py
+[2025-01-05T18:38:58.850+0000] {spark_submit.py:490} INFO - /usr/bin/env: ‘bash’: No such file or directory
+[2025-01-05T18:38:58.858+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 422, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --conf spark.yarn.appMasterEnv.SPARK_HOME=/opt/spark --conf spark.yarn.appMasterEnv.PATH=/opt/spark/bin:$PATH --conf spark.yarn.appMasterEnv.SHELL=/usr/bin/bash --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 --executor-memory 2G --driver-memory 1G --name SparkKafkaToPostgres --verbose /usr/local/***/include/scripts/kafka_to_postgres_teams.py. Error code is: 127.
+[2025-01-05T18:38:58.861+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=spark_kafka_to_postgres_dag, task_id=submit_spark_job, execution_date=20250105T183857, start_date=20250105T183858, end_date=20250105T183858
+[2025-01-05T18:38:58.867+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 38 for task submit_spark_job (Cannot execute: spark-submit --master yarn --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --conf spark.yarn.appMasterEnv.SPARK_HOME=/opt/spark --conf spark.yarn.appMasterEnv.PATH=/opt/spark/bin:$PATH --conf spark.yarn.appMasterEnv.SHELL=/usr/bin/bash --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 --executor-memory 2G --driver-memory 1G --name SparkKafkaToPostgres --verbose /usr/local/***/include/scripts/kafka_to_postgres_teams.py. Error code is: 127.; 81)
+[2025-01-05T18:38:58.895+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-05T18:38:58.914+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

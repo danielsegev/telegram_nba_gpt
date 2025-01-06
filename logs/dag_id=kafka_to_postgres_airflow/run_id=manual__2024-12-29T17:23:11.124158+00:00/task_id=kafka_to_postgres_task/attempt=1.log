@@ -1,0 +1,32 @@
+[2024-12-29T17:23:11.878+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres_airflow.kafka_to_postgres_task manual__2024-12-29T17:23:11.124158+00:00 [queued]>
+[2024-12-29T17:23:11.883+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres_airflow.kafka_to_postgres_task manual__2024-12-29T17:23:11.124158+00:00 [queued]>
+[2024-12-29T17:23:11.883+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2024-12-29T17:23:11.892+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): kafka_to_postgres_task> on 2024-12-29 17:23:11.124158+00:00
+[2024-12-29T17:23:11.895+0000] {standard_task_runner.py:57} INFO - Started process 60 to run task
+[2024-12-29T17:23:11.898+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres_***', 'kafka_to_postgres_task', 'manual__2024-12-29T17:23:11.124158+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_postgres_***.py', '--cfg-path', '/tmp/tmpnaa0ipzh']
+[2024-12-29T17:23:11.898+0000] {standard_task_runner.py:85} INFO - Job 84: Subtask kafka_to_postgres_task
+[2024-12-29T17:23:11.930+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres_airflow.kafka_to_postgres_task manual__2024-12-29T17:23:11.124158+00:00 [running]> on host a50ed5fc7956
+[2024-12-29T17:23:11.977+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres_***' AIRFLOW_CTX_TASK_ID='kafka_to_postgres_task' AIRFLOW_CTX_EXECUTION_DATE='2024-12-29T17:23:11.124158+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-29T17:23:11.124158+00:00'
+[2024-12-29T17:23:12.097+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kafka_to_postgres_airflow.py", line 47, in kafka_to_postgres
+    .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0,org.postgresql:postgresql:42.6.0") \
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/session.py", line 477, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 512, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 198, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 432, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/java_gateway.py", line 106, in launch_gateway
+    raise RuntimeError("Java gateway process exited before sending its port number")
+RuntimeError: Java gateway process exited before sending its port number
+[2024-12-29T17:23:12.108+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=kafka_to_postgres_***, task_id=kafka_to_postgres_task, execution_date=20241229T172311, start_date=20241229T172311, end_date=20241229T172312
+[2024-12-29T17:23:12.119+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 84 for task kafka_to_postgres_task (Java gateway process exited before sending its port number; 60)
+[2024-12-29T17:23:12.125+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2024-12-29T17:23:12.145+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

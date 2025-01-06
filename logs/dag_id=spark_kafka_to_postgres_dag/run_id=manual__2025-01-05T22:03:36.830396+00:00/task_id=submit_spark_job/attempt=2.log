@@ -1,0 +1,332 @@
+[2025-01-05T22:08:39.325+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_dag.submit_spark_job manual__2025-01-05T22:03:36.830396+00:00 [queued]>
+[2025-01-05T22:08:39.331+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_dag.submit_spark_job manual__2025-01-05T22:03:36.830396+00:00 [queued]>
+[2025-01-05T22:08:39.331+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 3
+[2025-01-05T22:08:39.338+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): submit_spark_job> on 2025-01-05 22:03:36.830396+00:00
+[2025-01-05T22:08:39.341+0000] {standard_task_runner.py:57} INFO - Started process 71 to run task
+[2025-01-05T22:08:39.343+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_kafka_to_postgres_dag', 'submit_spark_job', 'manual__2025-01-05T22:03:36.830396+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/teams_kafka_to_spark.py', '--cfg-path', '/tmp/tmpb9g1fbrd']
+[2025-01-05T22:08:39.345+0000] {standard_task_runner.py:85} INFO - Job 72: Subtask submit_spark_job
+[2025-01-05T22:08:39.369+0000] {task_command.py:410} INFO - Running <TaskInstance: spark_kafka_to_postgres_dag.submit_spark_job manual__2025-01-05T22:03:36.830396+00:00 [running]> on host f19cecaeabab
+[2025-01-05T22:08:39.597+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_kafka_to_postgres_dag' AIRFLOW_CTX_TASK_ID='submit_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2025-01-05T22:03:36.830396+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-05T22:03:36.830396+00:00'
+[2025-01-05T22:08:39.603+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-01-05T22:08:39.604+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master spark-master:7077 --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --executor-memory 2G --driver-memory 1G --name SparkKafkaToPostgres --queue root.default --deploy-mode client /usr/local/***/include/scripts/scripts/kafka_to_postgres_teams.py
+[2025-01-05T22:08:39.620+0000] {spark_submit.py:490} INFO - /opt/spark/bin/load-spark-env.sh: line 68: ps: command not found
+[2025-01-05T22:08:41.438+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SparkContext: Running Spark version 3.5.4
+[2025-01-05T22:08:41.440+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SparkContext: OS info Linux, 6.10.14-linuxkit, aarch64
+[2025-01-05T22:08:41.440+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SparkContext: Java version 17.0.13
+[2025-01-05T22:08:41.483+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-01-05T22:08:41.544+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO ResourceUtils: ==============================================================
+[2025-01-05T22:08:41.544+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-01-05T22:08:41.544+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO ResourceUtils: ==============================================================
+[2025-01-05T22:08:41.544+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SparkContext: Submitted application: KafkaToPostgres_Teams
+[2025-01-05T22:08:41.561+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-01-05T22:08:41.566+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO ResourceProfile: Limiting resource is cpu
+[2025-01-05T22:08:41.567+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-01-05T22:08:41.625+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SecurityManager: Changing view acls to: ***
+[2025-01-05T22:08:41.625+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SecurityManager: Changing modify acls to: ***
+[2025-01-05T22:08:41.626+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SecurityManager: Changing view acls groups to:
+[2025-01-05T22:08:41.626+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SecurityManager: Changing modify acls groups to:
+[2025-01-05T22:08:41.626+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2025-01-05T22:08:41.765+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO Utils: Successfully started service 'sparkDriver' on port 34127.
+[2025-01-05T22:08:41.783+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SparkEnv: Registering MapOutputTracker
+[2025-01-05T22:08:41.802+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SparkEnv: Registering BlockManagerMaster
+[2025-01-05T22:08:41.811+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-01-05T22:08:41.811+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-01-05T22:08:41.814+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-01-05T22:08:41.827+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-dde07694-75c5-4e5d-94e3-901352f7875d
+[2025-01-05T22:08:41.835+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-01-05T22:08:41.843+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-01-05T22:08:41.931+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2025-01-05T22:08:41.976+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:41 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-01-05T22:08:42.069+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2025-01-05T22:08:42.098+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO TransportClientFactory: Successfully created connection to spark-master/172.18.0.4:7077 after 14 ms (0 ms spent in bootstraps)
+[2025-01-05T22:08:42.263+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20250105220842-0000
+[2025-01-05T22:08:42.270+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42915.
+[2025-01-05T22:08:42.270+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO NettyBlockTransferService: Server created on f19cecaeabab:42915
+[2025-01-05T22:08:42.272+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-01-05T22:08:42.276+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, f19cecaeabab, 42915, None)
+[2025-01-05T22:08:42.281+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO BlockManagerMasterEndpoint: Registering block manager f19cecaeabab:42915 with 434.4 MiB RAM, BlockManagerId(driver, f19cecaeabab, 42915, None)
+[2025-01-05T22:08:42.282+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, f19cecaeabab, 42915, None)
+[2025-01-05T22:08:42.283+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, f19cecaeabab, 42915, None)
+[2025-01-05T22:08:42.285+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250105220842-0000/0 on worker-20250105220213-172.18.0.6-33973 (172.18.0.6:33973) with 2 core(s)
+[2025-01-05T22:08:42.288+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO StandaloneSchedulerBackend: Granted executor ID app-20250105220842-0000/0 on hostPort 172.18.0.6:33973 with 2 core(s), 2.0 GiB RAM
+[2025-01-05T22:08:42.631+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250105220842-0000/0 is now RUNNING
+[2025-01-05T22:08:42.647+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:42 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2025-01-05T22:08:43.067+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:43 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2025-01-05T22:08:43.082+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:43 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2025-01-05T22:08:44.214+0000] {spark_submit.py:490} INFO - Traceback (most recent call last):
+[2025-01-05T22:08:44.215+0000] {spark_submit.py:490} INFO - File "/usr/local/***/include/scripts/scripts/kafka_to_postgres_teams.py", line 32, in <module>
+[2025-01-05T22:08:44.215+0000] {spark_submit.py:490} INFO - .option("startingOffsets", "earliest") \
+[2025-01-05T22:08:44.216+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming/readwriter.py", line 304, in load
+[2025-01-05T22:08:44.216+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1323, in __call__
+[2025-01-05T22:08:44.217+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+[2025-01-05T22:08:44.222+0000] {spark_submit.py:490} INFO - pyspark.errors.exceptions.captured.AnalysisException: Failed to find data source: kafka. Please deploy the application as per the deployment section of Structured Streaming + Kafka Integration Guide.
+[2025-01-05T22:08:44.275+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO SparkContext: Invoking stop() from shutdown hook
+[2025-01-05T22:08:44.279+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2025-01-05T22:08:44.288+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO SparkUI: Stopped Spark web UI at http://f19cecaeabab:4040
+[2025-01-05T22:08:44.291+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO StandaloneSchedulerBackend: Shutting down all executors
+[2025-01-05T22:08:44.295+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+[2025-01-05T22:08:44.323+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2025-01-05T22:08:44.340+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/blockmgr-dde07694-75c5-4e5d-94e3-901352f7875d. Falling back to Java IO way
+[2025-01-05T22:08:44.344+0000] {spark_submit.py:490} INFO - java.io.IOException: Failed to delete: /tmp/blockmgr-dde07694-75c5-4e5d-94e3-901352f7875d
+[2025-01-05T22:08:44.345+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:166)
+[2025-01-05T22:08:44.345+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:109)
+[2025-01-05T22:08:44.346+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+[2025-01-05T22:08:44.348+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+[2025-01-05T22:08:44.350+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+[2025-01-05T22:08:44.353+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+[2025-01-05T22:08:44.354+0000] {spark_submit.py:490} INFO - at org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1(DiskBlockManager.scala:368)
+[2025-01-05T22:08:44.354+0000] {spark_submit.py:490} INFO - at org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1$adapted(DiskBlockManager.scala:364)
+[2025-01-05T22:08:44.354+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+[2025-01-05T22:08:44.354+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+[2025-01-05T22:08:44.354+0000] {spark_submit.py:490} INFO - at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+[2025-01-05T22:08:44.354+0000] {spark_submit.py:490} INFO - at org.apache.spark.storage.DiskBlockManager.doStop(DiskBlockManager.scala:364)
+[2025-01-05T22:08:44.358+0000] {spark_submit.py:490} INFO - at org.apache.spark.storage.DiskBlockManager.stop(DiskBlockManager.scala:359)
+[2025-01-05T22:08:44.358+0000] {spark_submit.py:490} INFO - at org.apache.spark.storage.BlockManager.stop(BlockManager.scala:2122)
+[2025-01-05T22:08:44.359+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkEnv.stop(SparkEnv.scala:95)
+[2025-01-05T22:08:44.359+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2305)
+[2025-01-05T22:08:44.359+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+[2025-01-05T22:08:44.359+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkContext.stop(SparkContext.scala:2305)
+[2025-01-05T22:08:44.359+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
+[2025-01-05T22:08:44.360+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
+[2025-01-05T22:08:44.360+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+[2025-01-05T22:08:44.360+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.360+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.360+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+[2025-01-05T22:08:44.363+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.367+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.367+0000] {spark_submit.py:490} INFO - at scala.util.Try$.apply(Try.scala:213)
+[2025-01-05T22:08:44.368+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.369+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+[2025-01-05T22:08:44.370+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-05T22:08:44.370+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-05T22:08:44.370+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-05T22:08:44.371+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-05T22:08:44.371+0000] {spark_submit.py:490} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-05T22:08:44.371+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: Cannot run program "rm": error=2, No such file or directory
+[2025-01-05T22:08:44.372+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+[2025-01-05T22:08:44.372+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+[2025-01-05T22:08:44.372+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:162)
+[2025-01-05T22:08:44.372+0000] {spark_submit.py:490} INFO - ... 33 more
+[2025-01-05T22:08:44.372+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: error=2, No such file or directory
+[2025-01-05T22:08:44.372+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+[2025-01-05T22:08:44.374+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:314)
+[2025-01-05T22:08:44.374+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:244)
+[2025-01-05T22:08:44.374+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+[2025-01-05T22:08:44.375+0000] {spark_submit.py:490} INFO - ... 35 more
+[2025-01-05T22:08:44.375+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO MemoryStore: MemoryStore cleared
+[2025-01-05T22:08:44.375+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO BlockManager: BlockManager stopped
+[2025-01-05T22:08:44.380+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2025-01-05T22:08:44.381+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2025-01-05T22:08:44.381+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542/userFiles-62ff9e09-18f9-4474-bee9-cce4025b6253. Falling back to Java IO way
+[2025-01-05T22:08:44.382+0000] {spark_submit.py:490} INFO - java.io.IOException: Failed to delete: /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542/userFiles-62ff9e09-18f9-4474-bee9-cce4025b6253
+[2025-01-05T22:08:44.382+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:166)
+[2025-01-05T22:08:44.385+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:109)
+[2025-01-05T22:08:44.387+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+[2025-01-05T22:08:44.388+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+[2025-01-05T22:08:44.388+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+[2025-01-05T22:08:44.388+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+[2025-01-05T22:08:44.389+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkEnv.stop(SparkEnv.scala:108)
+[2025-01-05T22:08:44.389+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2305)
+[2025-01-05T22:08:44.390+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+[2025-01-05T22:08:44.390+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkContext.stop(SparkContext.scala:2305)
+[2025-01-05T22:08:44.391+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkContext.stop(SparkContext.scala:2211)
+[2025-01-05T22:08:44.395+0000] {spark_submit.py:490} INFO - at org.apache.spark.SparkContext.$anonfun$new$34(SparkContext.scala:681)
+[2025-01-05T22:08:44.396+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+[2025-01-05T22:08:44.399+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.400+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.400+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+[2025-01-05T22:08:44.402+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.403+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.403+0000] {spark_submit.py:490} INFO - at scala.util.Try$.apply(Try.scala:213)
+[2025-01-05T22:08:44.403+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.404+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+[2025-01-05T22:08:44.404+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-05T22:08:44.405+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-05T22:08:44.405+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-05T22:08:44.405+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-05T22:08:44.406+0000] {spark_submit.py:490} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-05T22:08:44.406+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: Cannot run program "rm": error=2, No such file or directory
+[2025-01-05T22:08:44.406+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+[2025-01-05T22:08:44.406+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+[2025-01-05T22:08:44.407+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:162)
+[2025-01-05T22:08:44.407+0000] {spark_submit.py:490} INFO - ... 25 more
+[2025-01-05T22:08:44.407+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: error=2, No such file or directory
+[2025-01-05T22:08:44.407+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+[2025-01-05T22:08:44.407+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:314)
+[2025-01-05T22:08:44.407+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:244)
+[2025-01-05T22:08:44.408+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+[2025-01-05T22:08:44.408+0000] {spark_submit.py:490} INFO - ... 27 more
+[2025-01-05T22:08:44.408+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO SparkContext: Successfully stopped SparkContext
+[2025-01-05T22:08:44.408+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO ShutdownHookManager: Shutdown hook called
+[2025-01-05T22:08:44.408+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542
+[2025-01-05T22:08:44.408+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542. Falling back to Java IO way
+[2025-01-05T22:08:44.408+0000] {spark_submit.py:490} INFO - java.io.IOException: Failed to delete: /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:166)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:109)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+[2025-01-05T22:08:44.409+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at scala.util.Try$.apply(Try.scala:213)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+[2025-01-05T22:08:44.410+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: Cannot run program "rm": error=2, No such file or directory
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:162)
+[2025-01-05T22:08:44.411+0000] {spark_submit.py:490} INFO - ... 25 more
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: error=2, No such file or directory
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:314)
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:244)
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - ... 27 more
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542/pyspark-936bc58e-905a-4913-bdd1-359d7a6e2e89. Falling back to Java IO way
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - java.io.IOException: Failed to delete: /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542/pyspark-936bc58e-905a-4913-bdd1-359d7a6e2e89
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:166)
+[2025-01-05T22:08:44.412+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:109)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:130)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+[2025-01-05T22:08:44.413+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at scala.util.Try$.apply(Try.scala:213)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-05T22:08:44.414+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: Cannot run program "rm": error=2, No such file or directory
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:162)
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - ... 27 more
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: error=2, No such file or directory
+[2025-01-05T22:08:44.415+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:314)
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:244)
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - ... 29 more
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-d1453d66-fe47-49e4-b391-133f501f26c4
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/spark-d1453d66-fe47-49e4-b391-133f501f26c4. Falling back to Java IO way
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - java.io.IOException: Failed to delete: /tmp/spark-d1453d66-fe47-49e4-b391-133f501f26c4
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:166)
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:109)
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+[2025-01-05T22:08:44.416+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.417+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at scala.util.Try$.apply(Try.scala:213)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: Cannot run program "rm": error=2, No such file or directory
+[2025-01-05T22:08:44.418+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:162)
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - ... 25 more
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: error=2, No such file or directory
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:314)
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:244)
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - ... 27 more
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542/pyspark-936bc58e-905a-4913-bdd1-359d7a6e2e89
+[2025-01-05T22:08:44.419+0000] {spark_submit.py:490} INFO - 25/01/05 22:08:44 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542/pyspark-936bc58e-905a-4913-bdd1-359d7a6e2e89. Falling back to Java IO way
+[2025-01-05T22:08:44.420+0000] {spark_submit.py:490} INFO - java.io.IOException: Failed to delete: /tmp/spark-e0209cae-ef7c-4ebf-a7fa-cde2eb477542/pyspark-936bc58e-905a-4913-bdd1-359d7a6e2e89
+[2025-01-05T22:08:44.420+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:166)
+[2025-01-05T22:08:44.420+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:109)
+[2025-01-05T22:08:44.420+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+[2025-01-05T22:08:44.420+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+[2025-01-05T22:08:44.420+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+[2025-01-05T22:08:44.421+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+[2025-01-05T22:08:44.421+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+[2025-01-05T22:08:44.421+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+[2025-01-05T22:08:44.421+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+[2025-01-05T22:08:44.421+0000] {spark_submit.py:490} INFO - at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+[2025-01-05T22:08:44.421+0000] {spark_submit.py:490} INFO - at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+[2025-01-05T22:08:44.421+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+[2025-01-05T22:08:44.422+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+[2025-01-05T22:08:44.422+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.422+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.422+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+[2025-01-05T22:08:44.422+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.422+0000] {spark_submit.py:490} INFO - at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2025-01-05T22:08:44.422+0000] {spark_submit.py:490} INFO - at scala.util.Try$.apply(Try.scala:213)
+[2025-01-05T22:08:44.422+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+[2025-01-05T22:08:44.423+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+[2025-01-05T22:08:44.423+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-05T22:08:44.423+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-05T22:08:44.423+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-05T22:08:44.423+0000] {spark_submit.py:490} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-05T22:08:44.423+0000] {spark_submit.py:490} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-05T22:08:44.423+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: Cannot run program "rm": error=2, No such file or directory
+[2025-01-05T22:08:44.424+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+[2025-01-05T22:08:44.424+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+[2025-01-05T22:08:44.424+0000] {spark_submit.py:490} INFO - at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:162)
+[2025-01-05T22:08:44.424+0000] {spark_submit.py:490} INFO - ... 25 more
+[2025-01-05T22:08:44.424+0000] {spark_submit.py:490} INFO - Caused by: java.io.IOException: error=2, No such file or directory
+[2025-01-05T22:08:44.424+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+[2025-01-05T22:08:44.424+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:314)
+[2025-01-05T22:08:44.424+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:244)
+[2025-01-05T22:08:44.425+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+[2025-01-05T22:08:44.425+0000] {spark_submit.py:490} INFO - ... 27 more
+[2025-01-05T22:08:44.442+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 422, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark-master:7077 --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --executor-memory 2G --driver-memory 1G --name SparkKafkaToPostgres --queue root.default --deploy-mode client /usr/local/***/include/scripts/scripts/kafka_to_postgres_teams.py. Error code is: 1.
+[2025-01-05T22:08:44.446+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=spark_kafka_to_postgres_dag, task_id=submit_spark_job, execution_date=20250105T220336, start_date=20250105T220839, end_date=20250105T220844
+[2025-01-05T22:08:44.457+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 72 for task submit_spark_job (Cannot execute: spark-submit --master spark-master:7077 --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --executor-memory 2G --driver-memory 1G --name SparkKafkaToPostgres --queue root.default --deploy-mode client /usr/local/***/include/scripts/scripts/kafka_to_postgres_teams.py. Error code is: 1.; 71)
+[2025-01-05T22:08:44.504+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-05T22:08:44.520+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

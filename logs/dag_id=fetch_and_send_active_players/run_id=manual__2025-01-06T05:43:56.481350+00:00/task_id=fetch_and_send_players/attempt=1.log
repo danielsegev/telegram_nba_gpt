@@ -1,0 +1,73 @@
+[2025-01-06T05:43:57.671+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_and_send_active_players.fetch_and_send_players manual__2025-01-06T05:43:56.481350+00:00 [queued]>
+[2025-01-06T05:43:57.677+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_and_send_active_players.fetch_and_send_players manual__2025-01-06T05:43:56.481350+00:00 [queued]>
+[2025-01-06T05:43:57.677+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-06T05:43:57.685+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_send_players> on 2025-01-06 05:43:56.481350+00:00
+[2025-01-06T05:43:57.689+0000] {standard_task_runner.py:57} INFO - Started process 563 to run task
+[2025-01-06T05:43:57.693+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_and_send_active_players', 'fetch_and_send_players', 'manual__2025-01-06T05:43:56.481350+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/retrieve_players_dag.py', '--cfg-path', '/tmp/tmp_632lzok']
+[2025-01-06T05:43:57.696+0000] {standard_task_runner.py:85} INFO - Job 84: Subtask fetch_and_send_players
+[2025-01-06T05:43:57.733+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_and_send_active_players.fetch_and_send_players manual__2025-01-06T05:43:56.481350+00:00 [running]> on host f7921eadaf8b
+[2025-01-06T05:43:57.962+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_and_send_active_players' AIRFLOW_CTX_TASK_ID='fetch_and_send_players' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T05:43:56.481350+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T05:43:56.481350+00:00'
+[2025-01-06T05:43:57.971+0000] {logging_mixin.py:150} INFO - Processing active player 1/582 with ID 1630173
+[2025-01-06T05:44:02.614+0000] {logging_mixin.py:150} INFO - Processing active player 11/582 with ID 203507
+[2025-01-06T05:44:10.523+0000] {logging_mixin.py:150} INFO - Processing active player 21/582 with ID 1631116
+[2025-01-06T05:44:15.762+0000] {logging_mixin.py:150} INFO - Processing active player 31/582 with ID 1630567
+[2025-01-06T05:44:21.726+0000] {logging_mixin.py:150} INFO - Processing active player 41/582 with ID 1630699
+[2025-01-06T05:44:28.345+0000] {logging_mixin.py:150} INFO - Processing active player 51/582 with ID 203992
+[2025-01-06T05:44:34.957+0000] {logging_mixin.py:150} INFO - Processing active player 61/582 with ID 1628396
+[2025-01-06T05:44:40.005+0000] {logging_mixin.py:150} INFO - Processing active player 71/582 with ID 1631112
+[2025-01-06T05:44:44.601+0000] {logging_mixin.py:150} INFO - Processing active player 81/582 with ID 1630215
+[2025-01-06T05:44:49.557+0000] {logging_mixin.py:150} INFO - Processing active player 91/582 with ID 1627936
+[2025-01-06T05:44:54.199+0000] {logging_mixin.py:150} INFO - Processing active player 101/582 with ID 1629634
+[2025-01-06T05:44:59.045+0000] {logging_mixin.py:150} INFO - Processing active player 111/582 with ID 203496
+[2025-01-06T05:45:04.215+0000] {logging_mixin.py:150} INFO - Processing active player 121/582 with ID 203076
+[2025-01-06T05:45:09.147+0000] {logging_mixin.py:150} INFO - Processing active player 131/582 with ID 1629603
+[2025-01-06T05:45:13.846+0000] {logging_mixin.py:150} INFO - Processing active player 141/582 with ID 1630288
+[2025-01-06T05:45:18.697+0000] {logging_mixin.py:150} INFO - Processing active player 151/582 with ID 1630162
+[2025-01-06T05:45:23.307+0000] {logging_mixin.py:150} INFO - Processing active player 161/582 with ID 1630201
+[2025-01-06T05:45:28.210+0000] {logging_mixin.py:150} INFO - Processing active player 171/582 with ID 1629655
+[2025-01-06T05:45:33.160+0000] {logging_mixin.py:150} INFO - Processing active player 181/582 with ID 1630581
+[2025-01-06T05:45:37.820+0000] {logging_mixin.py:150} INFO - Processing active player 191/582 with ID 203924
+[2025-01-06T05:45:43.398+0000] {logging_mixin.py:150} INFO - Processing active player 201/582 with ID 1631100
+[2025-01-06T05:45:47.894+0000] {logging_mixin.py:150} INFO - Processing active player 211/582 with ID 201935
+[2025-01-06T05:45:52.638+0000] {logging_mixin.py:150} INFO - Processing active player 221/582 with ID 1628404
+[2025-01-06T05:45:58.074+0000] {logging_mixin.py:150} INFO - Processing active player 231/582 with ID 1627741
+[2025-01-06T05:46:03.039+0000] {logging_mixin.py:150} INFO - Processing active player 241/582 with ID 201143
+[2025-01-06T05:46:07.934+0000] {logging_mixin.py:150} INFO - Processing active player 251/582 with ID 1630538
+[2025-01-06T05:46:13.167+0000] {logging_mixin.py:150} INFO - Processing active player 261/582 with ID 1628382
+[2025-01-06T05:46:17.746+0000] {logging_mixin.py:150} INFO - Processing active player 271/582 with ID 1629661
+[2025-01-06T05:46:22.652+0000] {logging_mixin.py:150} INFO - Processing active player 281/582 with ID 1630539
+[2025-01-06T05:46:27.530+0000] {logging_mixin.py:150} INFO - Processing active player 291/582 with ID 1631211
+[2025-01-06T05:46:32.853+0000] {logging_mixin.py:150} INFO - Processing active player 301/582 with ID 1629723
+[2025-01-06T05:46:39.374+0000] {logging_mixin.py:150} INFO - Processing active player 311/582 with ID 1629641
+[2025-01-06T05:46:43.672+0000] {logging_mixin.py:150} INFO - Processing active player 321/582 with ID 1629642
+[2025-01-06T05:46:49.415+0000] {logging_mixin.py:150} INFO - Processing active player 331/582 with ID 1630588
+[2025-01-06T05:46:54.664+0000] {logging_mixin.py:150} INFO - Processing active player 341/582 with ID 1631213
+[2025-01-06T05:46:59.195+0000] {logging_mixin.py:150} INFO - Processing active player 351/582 with ID 1630183
+[2025-01-06T05:47:04.221+0000] {logging_mixin.py:150} INFO - Processing active player 361/582 with ID 1629002
+[2025-01-06T05:47:08.991+0000] {logging_mixin.py:150} INFO - Processing active player 371/582 with ID 1630600
+[2025-01-06T05:47:13.877+0000] {logging_mixin.py:150} INFO - Processing active player 381/582 with ID 1628539
+[2025-01-06T05:47:18.503+0000] {logging_mixin.py:150} INFO - Processing active player 391/582 with ID 1630174
+[2025-01-06T05:47:23.432+0000] {logging_mixin.py:150} INFO - Processing active player 401/582 with ID 1628021
+[2025-01-06T05:47:28.302+0000] {logging_mixin.py:150} INFO - Processing active player 411/582 with ID 1630647
+[2025-01-06T05:47:34.016+0000] {logging_mixin.py:150} INFO - Processing active player 421/582 with ID 1630590
+[2025-01-06T05:47:49.430+0000] {logging_mixin.py:150} INFO - Processing active player 431/582 with ID 204001
+[2025-01-06T05:47:54.739+0000] {logging_mixin.py:150} INFO - Processing active player 441/582 with ID 1626184
+[2025-01-06T05:47:59.247+0000] {logging_mixin.py:150} INFO - Processing active player 451/582 with ID 203085
+[2025-01-06T05:48:03.692+0000] {logging_mixin.py:150} INFO - Processing active player 461/582 with ID 203082
+[2025-01-06T05:48:08.581+0000] {logging_mixin.py:150} INFO - Processing active player 471/582 with ID 203471
+[2025-01-06T05:48:12.945+0000] {logging_mixin.py:150} INFO - Processing active player 481/582 with ID 1630250
+[2025-01-06T05:48:17.491+0000] {logging_mixin.py:150} INFO - Processing active player 491/582 with ID 1628372
+[2025-01-06T05:48:22.263+0000] {logging_mixin.py:150} INFO - Processing active player 501/582 with ID 1630591
+[2025-01-06T05:48:26.564+0000] {logging_mixin.py:150} INFO - Processing active player 511/582 with ID 1630560
+[2025-01-06T05:48:31.178+0000] {logging_mixin.py:150} INFO - Processing active player 521/582 with ID 1629018
+[2025-01-06T05:48:35.723+0000] {logging_mixin.py:150} INFO - Processing active player 531/582 with ID 203943
+[2025-01-06T05:48:40.022+0000] {logging_mixin.py:150} INFO - Processing active player 541/582 with ID 203933
+[2025-01-06T05:48:44.786+0000] {logging_mixin.py:150} INFO - Processing active player 551/582 with ID 201566
+[2025-01-06T05:48:49.317+0000] {logging_mixin.py:150} INFO - Processing active player 561/582 with ID 1631114
+[2025-01-06T05:48:53.637+0000] {logging_mixin.py:150} INFO - Processing active player 571/582 with ID 1628391
+[2025-01-06T05:48:58.772+0000] {logging_mixin.py:150} INFO - Processing active player 581/582 with ID 203469
+[2025-01-06T05:49:01.727+0000] {logging_mixin.py:150} INFO - All active players extended data sent to 'players' topic in Kafka.
+[2025-01-06T05:49:01.734+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-06T05:49:01.757+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=fetch_and_send_active_players, task_id=fetch_and_send_players, execution_date=20250106T054356, start_date=20250106T054357, end_date=20250106T054901
+[2025-01-06T05:49:01.787+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-06T05:49:01.815+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -3,7 +3,7 @@ from confluent_kafka import Producer
 
 # Kafka configuration
 KAFKA_CONF = {
-    'bootstrap.servers': 'localhost:29092'  # Replace with your Kafka broker
+    'bootstrap.servers': 'localhost:29092'  # Update this if your broker configuration changes
 }
 
 def initialize_producer():
@@ -15,7 +15,7 @@ def initialize_producer():
         producer = Producer(KAFKA_CONF)
         return producer
     except Exception as e:
-        logging.error("Failed to initialize Kafka producer:", exc_info=True)
+        logging.error("Failed to initialize Kafka producer", exc_info=True)
         raise
 
 def produce_message(producer, topic, message):
@@ -32,7 +32,7 @@ def produce_message(producer, topic, message):
         producer.flush()  # Ensure the message is sent
         logging.info(f"Message successfully sent to topic '{topic}'")
     except Exception as e:
-        logging.error(f"Failed to produce message to topic '{topic}':", exc_info=True)
+        logging.error(f"Failed to produce message to topic '{topic}'", exc_info=True)
         raise
 
 def close_producer(producer):
@@ -42,6 +42,7 @@ def close_producer(producer):
     try:
         logging.info("Flushing and closing Kafka producer...")
         producer.flush()
+        logging.info("Kafka producer closed successfully.")
     except Exception as e:
-        logging.error("Error while closing Kafka producer:", exc_info=True)
+        logging.error("Error while closing Kafka producer", exc_info=True)
         raise

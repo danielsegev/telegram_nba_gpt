@@ -1,0 +1,21 @@
+[2024-12-29T14:34:53.557+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T14:34:51.810027+00:00 [queued]>
+[2024-12-29T14:34:53.590+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T14:34:51.810027+00:00 [queued]>
+[2024-12-29T14:34:53.591+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2024-12-29T14:34:53.619+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): run_spark_job> on 2024-12-29 14:34:51.810027+00:00
+[2024-12-29T14:34:53.627+0000] {standard_task_runner.py:57} INFO - Started process 82 to run task
+[2024-12-29T14:34:53.631+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_kafka_to_postgres_teams', 'run_spark_job', 'manual__2024-12-29T14:34:51.810027+00:00', '--job-id', '74', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_postgres_teams_dag.py', '--cfg-path', '/tmp/tmp4w2tqlu1']
+[2024-12-29T14:34:53.633+0000] {standard_task_runner.py:85} INFO - Job 74: Subtask run_spark_job
+[2024-12-29T14:34:53.741+0000] {task_command.py:410} INFO - Running <TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T14:34:51.810027+00:00 [running]> on host d0aa9c48ed30
+[2024-12-29T14:34:53.864+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_kafka_to_postgres_teams' AIRFLOW_CTX_TASK_ID='run_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2024-12-29T14:34:51.810027+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-29T14:34:51.810027+00:00'
+[2024-12-29T14:34:53.866+0000] {logging_mixin.py:150} INFO - Connecting to SSH...
+[2024-12-29T14:34:53.883+0000] {transport.py:1893} INFO - Connected (version 2.0, client OpenSSH_9.0p1)
+[2024-12-29T14:34:54.172+0000] {transport.py:1893} INFO - Authentication (password) successful!
+[2024-12-29T14:34:54.173+0000] {logging_mixin.py:150} INFO - SSH connection established.
+[2024-12-29T14:34:54.173+0000] {logging_mixin.py:150} INFO - Executing Spark job...
+[2024-12-29T14:36:44.818+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-29T14:36:44.824+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 82. PIDs of all processes in the group: [82]
+[2024-12-29T14:36:44.824+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 82
+[2024-12-29T14:36:44.826+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-29T14:36:44.834+0000] {logging_mixin.py:150} INFO - Error during Spark job execution: Task received SIGTERM signal
+[2024-12-29T14:36:44.836+0000] {logging_mixin.py:150} INFO - SSH connection closed.
+[2024-12-29T14:36:44.969+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=82, status='terminated', exitcode=0, started='14:34:52') (82) terminated with exit code 0

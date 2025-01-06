@@ -1,0 +1,13 @@
+[2025-01-06T11:03:14.833+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T11:03:08.723616+00:00 [queued]>
+[2025-01-06T11:03:14.850+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T11:03:08.723616+00:00 [queued]>
+[2025-01-06T11:03:14.850+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-06T11:03:14.875+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_process_games> on 2025-01-06 11:03:08.723616+00:00
+[2025-01-06T11:03:14.884+0000] {standard_task_runner.py:57} INFO - Started process 68 to run task
+[2025-01-06T11:03:14.891+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'fetch_and_process_games', 'manual__2025-01-06T11:03:08.723616+00:00', '--job-id', '197', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpdmqol9kd']
+[2025-01-06T11:03:14.897+0000] {standard_task_runner.py:85} INFO - Job 197: Subtask fetch_and_process_games
+[2025-01-06T11:03:14.969+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T11:03:08.723616+00:00 [running]> on host b75ef10336ca
+[2025-01-06T11:03:15.152+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='fetch_and_process_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T11:03:08.723616+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T11:03:08.723616+00:00'
+[2025-01-06T11:03:32.116+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-06T11:03:32.151+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_data_pipeline, task_id=fetch_and_process_games, execution_date=20250106T110308, start_date=20250106T110314, end_date=20250106T110332
+[2025-01-06T11:03:32.238+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-06T11:03:32.301+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,13 @@
+[2025-01-06T09:39:04.022+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T09:38:59.588567+00:00 [queued]>
+[2025-01-06T09:39:04.034+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T09:38:59.588567+00:00 [queued]>
+[2025-01-06T09:39:04.034+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-06T09:39:04.311+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_process_games> on 2025-01-06 09:38:59.588567+00:00
+[2025-01-06T09:39:04.326+0000] {standard_task_runner.py:57} INFO - Started process 68 to run task
+[2025-01-06T09:39:04.334+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'fetch_and_process_games', 'manual__2025-01-06T09:38:59.588567+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpax4tcsun']
+[2025-01-06T09:39:04.341+0000] {standard_task_runner.py:85} INFO - Job 142: Subtask fetch_and_process_games
+[2025-01-06T09:39:04.416+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T09:38:59.588567+00:00 [running]> on host a65c69560e11
+[2025-01-06T09:39:04.507+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='fetch_and_process_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T09:38:59.588567+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T09:38:59.588567+00:00'
+[2025-01-06T09:39:18.037+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-06T09:39:18.050+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_data_pipeline, task_id=fetch_and_process_games, execution_date=20250106T093859, start_date=20250106T093904, end_date=20250106T093918
+[2025-01-06T09:39:18.109+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-06T09:39:18.132+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

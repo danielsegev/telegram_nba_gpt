@@ -1,0 +1,69 @@
+[2024-12-29T14:25:54.349+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T14:25:52.763419+00:00 [queued]>
+[2024-12-29T14:25:54.363+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T14:25:52.763419+00:00 [queued]>
+[2024-12-29T14:25:54.364+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2024-12-29T14:25:54.379+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): run_spark_job> on 2024-12-29 14:25:52.763419+00:00
+[2024-12-29T14:25:54.390+0000] {standard_task_runner.py:57} INFO - Started process 78 to run task
+[2024-12-29T14:25:54.393+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_kafka_to_postgres_teams', 'run_spark_job', 'manual__2024-12-29T14:25:52.763419+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_postgres_teams_dag.py', '--cfg-path', '/tmp/tmp4x_8lada']
+[2024-12-29T14:25:54.395+0000] {standard_task_runner.py:85} INFO - Job 73: Subtask run_spark_job
+[2024-12-29T14:25:54.476+0000] {task_command.py:410} INFO - Running <TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T14:25:52.763419+00:00 [running]> on host d0aa9c48ed30
+[2024-12-29T14:25:54.576+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_kafka_to_postgres_teams' AIRFLOW_CTX_TASK_ID='run_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2024-12-29T14:25:52.763419+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-29T14:25:52.763419+00:00'
+[2024-12-29T14:25:54.591+0000] {transport.py:1893} INFO - Connected (version 2.0, client OpenSSH_9.0p1)
+[2024-12-29T14:25:54.883+0000] {transport.py:1893} INFO - Authentication (password) successful!
+[2024-12-29T14:25:54.883+0000] {logging_mixin.py:150} INFO - SSH connection established.
+[2024-12-29T14:25:55.263+0000] {logging_mixin.py:150} INFO - Starting Spark job execution...
+[2024-12-29T14:26:02.137+0000] {logging_mixin.py:150} INFO - STDOUT: :: loading settings :: url = jar:file:/usr/local/lib/python3.10/dist-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-12-29T14:26:02.633+0000] {logging_mixin.py:150} INFO - STDOUT: Ivy Default Cache set to: /home/developer/.ivy2/cache
+[2024-12-29T14:26:02.634+0000] {logging_mixin.py:150} INFO - STDOUT: The jars for the packages stored in: /home/developer/.ivy2/jars
+[2024-12-29T14:26:02.647+0000] {logging_mixin.py:150} INFO - STDOUT: org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2024-12-29T14:26:02.647+0000] {logging_mixin.py:150} INFO - STDOUT: org.postgresql#postgresql added as a dependency
+[2024-12-29T14:26:02.653+0000] {logging_mixin.py:150} INFO - STDOUT: :: resolving dependencies :: org.apache.spark#spark-submit-parent-f3ace01b-bd56-460a-ba1f-4de7a03aadb4;1.0
+[2024-12-29T14:26:02.653+0000] {logging_mixin.py:150} INFO - STDOUT: confs: [default]
+[2024-12-29T14:26:03.162+0000] {logging_mixin.py:150} INFO - STDOUT: found org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0 in central
+[2024-12-29T14:26:03.407+0000] {logging_mixin.py:150} INFO - STDOUT: found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.0 in central
+[2024-12-29T14:26:03.571+0000] {logging_mixin.py:150} INFO - STDOUT: found org.apache.kafka#kafka-clients;2.8.0 in central
+[2024-12-29T14:26:03.667+0000] {logging_mixin.py:150} INFO - STDOUT: found org.lz4#lz4-java;1.7.1 in central
+[2024-12-29T14:26:03.806+0000] {logging_mixin.py:150} INFO - STDOUT: found org.xerial.snappy#snappy-java;1.1.8.4 in central
+[2024-12-29T14:26:03.920+0000] {logging_mixin.py:150} INFO - STDOUT: found org.slf4j#slf4j-api;1.7.30 in central
+[2024-12-29T14:26:04.011+0000] {logging_mixin.py:150} INFO - STDOUT: found org.apache.hadoop#hadoop-client-runtime;3.3.1 in central
+[2024-12-29T14:26:04.062+0000] {logging_mixin.py:150} INFO - STDOUT: found org.spark-project.spark#unused;1.0.0 in central
+[2024-12-29T14:26:04.144+0000] {logging_mixin.py:150} INFO - STDOUT: found org.apache.hadoop#hadoop-client-api;3.3.1 in central
+[2024-12-29T14:26:04.335+0000] {logging_mixin.py:150} INFO - STDOUT: found org.apache.htrace#htrace-core4;4.1.0-incubating in central
+[2024-12-29T14:26:04.393+0000] {logging_mixin.py:150} INFO - STDOUT: found commons-logging#commons-logging;1.1.3 in central
+[2024-12-29T14:26:04.432+0000] {logging_mixin.py:150} INFO - STDOUT: found com.google.code.findbugs#jsr305;3.0.0 in central
+[2024-12-29T14:26:04.477+0000] {logging_mixin.py:150} INFO - STDOUT: found org.apache.commons#commons-pool2;2.6.2 in central
+[2024-12-29T14:26:04.539+0000] {logging_mixin.py:150} INFO - STDOUT: found org.postgresql#postgresql;42.6.0 in central
+[2024-12-29T14:26:04.592+0000] {logging_mixin.py:150} INFO - STDOUT: found org.checkerframework#checker-qual;3.31.0 in central
+[2024-12-29T14:26:04.691+0000] {logging_mixin.py:150} INFO - STDOUT: :: resolution report :: resolve 1970ms :: artifacts dl 67ms
+[2024-12-29T14:26:04.692+0000] {logging_mixin.py:150} INFO - STDOUT: :: modules in use:
+[2024-12-29T14:26:04.692+0000] {logging_mixin.py:150} INFO - STDOUT: com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+[2024-12-29T14:26:04.693+0000] {logging_mixin.py:150} INFO - STDOUT: commons-logging#commons-logging;1.1.3 from central in [default]
+[2024-12-29T14:26:04.693+0000] {logging_mixin.py:150} INFO - STDOUT: org.apache.commons#commons-pool2;2.6.2 from central in [default]
+[2024-12-29T14:26:04.694+0000] {logging_mixin.py:150} INFO - STDOUT: org.apache.hadoop#hadoop-client-api;3.3.1 from central in [default]
+[2024-12-29T14:26:04.694+0000] {logging_mixin.py:150} INFO - STDOUT: org.apache.hadoop#hadoop-client-runtime;3.3.1 from central in [default]
+[2024-12-29T14:26:04.694+0000] {logging_mixin.py:150} INFO - STDOUT: org.apache.htrace#htrace-core4;4.1.0-incubating from central in [default]
+[2024-12-29T14:26:04.694+0000] {logging_mixin.py:150} INFO - STDOUT: org.apache.kafka#kafka-clients;2.8.0 from central in [default]
+[2024-12-29T14:26:04.694+0000] {logging_mixin.py:150} INFO - STDOUT: org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.0 from central in [default]
+[2024-12-29T14:26:04.695+0000] {logging_mixin.py:150} INFO - STDOUT: org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.0 from central in [default]
+[2024-12-29T14:26:04.695+0000] {logging_mixin.py:150} INFO - STDOUT: org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2024-12-29T14:26:04.695+0000] {logging_mixin.py:150} INFO - STDOUT: org.lz4#lz4-java;1.7.1 from central in [default]
+[2024-12-29T14:26:04.695+0000] {logging_mixin.py:150} INFO - STDOUT: org.postgresql#postgresql;42.6.0 from central in [default]
+[2024-12-29T14:26:04.695+0000] {logging_mixin.py:150} INFO - STDOUT: org.slf4j#slf4j-api;1.7.30 from central in [default]
+[2024-12-29T14:26:04.695+0000] {logging_mixin.py:150} INFO - STDOUT: org.spark-project.spark#unused;1.0.0 from central in [default]
+[2024-12-29T14:26:04.696+0000] {logging_mixin.py:150} INFO - STDOUT: org.xerial.snappy#snappy-java;1.1.8.4 from central in [default]
+[2024-12-29T14:26:04.696+0000] {logging_mixin.py:150} INFO - STDOUT: ---------------------------------------------------------------------
+[2024-12-29T14:26:04.696+0000] {logging_mixin.py:150} INFO - STDOUT: |                  |            modules            ||   artifacts   |
+[2024-12-29T14:26:04.696+0000] {logging_mixin.py:150} INFO - STDOUT: |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-12-29T14:26:04.696+0000] {logging_mixin.py:150} INFO - STDOUT: ---------------------------------------------------------------------
+[2024-12-29T14:26:04.696+0000] {logging_mixin.py:150} INFO - STDOUT: |      default     |   15  |   0   |   0   |   0   ||   15  |   0   |
+[2024-12-29T14:26:04.697+0000] {logging_mixin.py:150} INFO - STDOUT: ---------------------------------------------------------------------
+[2024-12-29T14:26:04.717+0000] {logging_mixin.py:150} INFO - STDOUT: :: retrieving :: org.apache.spark#spark-submit-parent-f3ace01b-bd56-460a-ba1f-4de7a03aadb4
+[2024-12-29T14:26:04.717+0000] {logging_mixin.py:150} INFO - STDOUT: confs: [default]
+[2024-12-29T14:26:04.749+0000] {logging_mixin.py:150} INFO - STDOUT: 0 artifacts copied, 15 already retrieved (0kB/30ms)
+[2024-12-29T14:26:05.331+0000] {logging_mixin.py:150} INFO - STDOUT: 24/12/29 14:26:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-12-29T14:34:16.133+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-29T14:34:16.141+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 78. PIDs of all processes in the group: [78]
+[2024-12-29T14:34:16.142+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 78
+[2024-12-29T14:34:16.144+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-29T14:34:16.148+0000] {logging_mixin.py:150} INFO - Error during Spark job execution: Task received SIGTERM signal
+[2024-12-29T14:34:16.150+0000] {logging_mixin.py:150} INFO - SSH connection closed.
+[2024-12-29T14:34:16.367+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=78, status='terminated', exitcode=0, started='14:25:53') (78) terminated with exit code 0

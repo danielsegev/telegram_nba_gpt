@@ -1,0 +1,18 @@
+[2024-12-29T13:48:18.659+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T13:48:16.198757+00:00 [queued]>
+[2024-12-29T13:48:18.677+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T13:48:16.198757+00:00 [queued]>
+[2024-12-29T13:48:18.678+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2024-12-29T13:48:18.705+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): run_spark_job> on 2024-12-29 13:48:16.198757+00:00
+[2024-12-29T13:48:18.763+0000] {standard_task_runner.py:57} INFO - Started process 64 to run task
+[2024-12-29T13:48:18.773+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_kafka_to_postgres_teams', 'run_spark_job', 'manual__2024-12-29T13:48:16.198757+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_postgres_teams_dag.py', '--cfg-path', '/tmp/tmp3ib80c9y']
+[2024-12-29T13:48:18.782+0000] {standard_task_runner.py:85} INFO - Job 69: Subtask run_spark_job
+[2024-12-29T13:48:18.982+0000] {task_command.py:410} INFO - Running <TaskInstance: spark_kafka_to_postgres_teams.run_spark_job manual__2024-12-29T13:48:16.198757+00:00 [running]> on host d0aa9c48ed30
+[2024-12-29T13:48:19.307+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_kafka_to_postgres_teams' AIRFLOW_CTX_TASK_ID='run_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2024-12-29T13:48:16.198757+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-29T13:48:16.198757+00:00'
+[2024-12-29T13:48:19.426+0000] {transport.py:1893} INFO - Connected (version 2.0, client OpenSSH_9.0p1)
+[2024-12-29T13:48:19.897+0000] {transport.py:1893} INFO - Authentication (password) successful!
+[2024-12-29T13:48:19.910+0000] {logging_mixin.py:150} INFO - SSH connection established.
+[2024-12-29T14:09:30.669+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-29T14:09:30.681+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 64. PIDs of all processes in the group: [64]
+[2024-12-29T14:09:30.682+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 64
+[2024-12-29T14:09:30.687+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-29T14:09:30.722+0000] {logging_mixin.py:150} INFO - SSH connection closed.
+[2024-12-29T14:09:30.865+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=64, status='terminated', exitcode=0, started='13:48:17') (64) terminated with exit code 0

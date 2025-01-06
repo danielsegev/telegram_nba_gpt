@@ -1,0 +1,82 @@
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from datetime import datetime, timedelta
+from nba_api.stats.static import players
+from nba_api.stats.endpoints import commonplayerinfo
+import pandas as pd
+import json
+from confluent_kafka import Producer
+
+def fetch_and_send_players():
+    # Kafka producer configuration
+    conf = {
+        'bootstrap.servers': 'kafka:9092'
+    }
+    producer = Producer(conf)
+
+    # Get all players
+    all_players = players.get_players()
+
+    # Filter to include only active players
+    active_players = [p for p in all_players if p['is_active']]
+
+    # Convert to DataFrame
+    df_players = pd.DataFrame(active_players)
+
+    extended_info_list = []
+    for idx, row in df_players.iterrows():
+        player_id = row['id']
+        # Progress logging every 10 players
+        if idx % 10 == 0:
+            print(f"Processing active player {idx+1}/{len(df_players)} with ID {player_id}")
+        try:
+            info = commonplayerinfo.CommonPlayerInfo(player_id=player_id)
+            info_df = info.get_data_frames()[0]
+
+            # Rename PERSON_ID to 'id' for a clean merge
+            info_df = info_df.rename(columns={'PERSON_ID': 'id'})
+            extended_info_list.append(info_df)
+        except Exception as e:
+            print(f"Error fetching data for player_id {player_id}: {e}")
+            continue
+
+    # Combine all returned DataFrames
+    df_extended_info = pd.concat(extended_info_list, ignore_index=True) if extended_info_list else pd.DataFrame()
+
+    # Merge the basic player info with the extended info
+    df_merged = pd.merge(df_players, df_extended_info, on='id', how='left')
+
+    # Produce each player's data to Kafka 'players' topic
+    try:
+        for _, player_row in df_merged.iterrows():
+            # Convert row to dictionary and JSON
+            player_dict = player_row.to_dict()
+            player_json = json.dumps(player_dict)
+
+            # Produce message to Kafka
+            producer.produce('players', value=player_json)
+        
+        # Flush all messages at once after producing
+        producer.flush()
+        print("All active players extended data sent to 'players' topic in Kafka.")
+    except Exception as e:
+        print(f"Error producing to Kafka: {e}")
+
+# Define the DAG
+with DAG(
+    "fetch_and_send_active_players",
+    default_args={
+        "owner": "airflow",
+        "retries": 1,
+        "retry_delay": timedelta(minutes=5),
+    },
+    description="Fetch active players from NBA API and send to Kafka",
+    schedule=None,  # Run manually or trigger on demand
+    start_date=datetime(2023, 12, 29),
+    catchup=False,
+) as dag:
+
+    send_players_task = PythonOperator(
+        task_id="fetch_and_send_players",
+        python_callable=fetch_and_send_players,
+    )

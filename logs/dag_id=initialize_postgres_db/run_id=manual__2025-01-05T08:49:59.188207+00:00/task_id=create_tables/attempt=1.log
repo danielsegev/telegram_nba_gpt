@@ -1,0 +1,19 @@
+[2025-01-05T08:50:00.746+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: initialize_postgres_db.create_tables manual__2025-01-05T08:49:59.188207+00:00 [queued]>
+[2025-01-05T08:50:00.752+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: initialize_postgres_db.create_tables manual__2025-01-05T08:49:59.188207+00:00 [queued]>
+[2025-01-05T08:50:00.752+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-05T08:50:00.759+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_tables> on 2025-01-05 08:49:59.188207+00:00
+[2025-01-05T08:50:00.762+0000] {standard_task_runner.py:57} INFO - Started process 64 to run task
+[2025-01-05T08:50:00.765+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'initialize_postgres_db', 'create_tables', 'manual__2025-01-05T08:49:59.188207+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/initialize_postgres_db.py', '--cfg-path', '/tmp/tmp1bhc1cnl']
+[2025-01-05T08:50:00.766+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask create_tables
+[2025-01-05T08:50:00.793+0000] {task_command.py:410} INFO - Running <TaskInstance: initialize_postgres_db.create_tables manual__2025-01-05T08:49:59.188207+00:00 [running]> on host 0046383f1264
+[2025-01-05T08:50:00.831+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='postgres' AIRFLOW_CTX_DAG_ID='initialize_postgres_db' AIRFLOW_CTX_TASK_ID='create_tables' AIRFLOW_CTX_EXECUTION_DATE='2025-01-05T08:49:59.188207+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-05T08:49:59.188207+00:00'
+[2025-01-05T08:50:00.832+0000] {initialize_postgres_db.py:23} INFO - Starting table creation...
+[2025-01-05T08:50:00.832+0000] {logging_mixin.py:150} INFO - Error creating tables: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+[2025-01-05T08:50:00.832+0000] {initialize_postgres_db.py:25} INFO - Table creation completed successfully.
+[2025-01-05T08:50:00.832+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-05T08:50:00.837+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=initialize_postgres_db, task_id=create_tables, execution_date=20250105T084959, start_date=20250105T085000, end_date=20250105T085000
+[2025-01-05T08:50:00.863+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-05T08:50:00.875+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

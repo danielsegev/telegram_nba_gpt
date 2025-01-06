@@ -1,0 +1,13 @@
+[2025-01-06T09:54:29.152+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.kafka_retrieve_teams manual__2025-01-06T09:54:25.311143+00:00 [queued]>
+[2025-01-06T09:54:29.160+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.kafka_retrieve_teams manual__2025-01-06T09:54:25.311143+00:00 [queued]>
+[2025-01-06T09:54:29.160+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-06T09:54:29.171+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): kafka_retrieve_teams> on 2025-01-06 09:54:25.311143+00:00
+[2025-01-06T09:54:29.176+0000] {standard_task_runner.py:57} INFO - Started process 1176 to run task
+[2025-01-06T09:54:29.179+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'kafka_retrieve_teams', 'manual__2025-01-06T09:54:25.311143+00:00', '--job-id', '159', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpvdediks6']
+[2025-01-06T09:54:29.181+0000] {standard_task_runner.py:85} INFO - Job 159: Subtask kafka_retrieve_teams
+[2025-01-06T09:54:29.227+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.kafka_retrieve_teams manual__2025-01-06T09:54:25.311143+00:00 [running]> on host a65c69560e11
+[2025-01-06T09:54:29.492+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='kafka_retrieve_teams' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T09:54:25.311143+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T09:54:25.311143+00:00'
+[2025-01-06T09:54:30.524+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-06T09:54:30.535+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_data_pipeline, task_id=kafka_retrieve_teams, execution_date=20250106T095425, start_date=20250106T095429, end_date=20250106T095430
+[2025-01-06T09:54:30.588+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-06T09:54:30.613+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,16 @@
+[2025-01-06T09:47:50.627+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.initialize_postgres_db manual__2025-01-06T09:47:49.206695+00:00 [queued]>
+[2025-01-06T09:47:50.633+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.initialize_postgres_db manual__2025-01-06T09:47:49.206695+00:00 [queued]>
+[2025-01-06T09:47:50.633+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-06T09:47:50.643+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): initialize_postgres_db> on 2025-01-06 09:47:49.206695+00:00
+[2025-01-06T09:47:50.648+0000] {standard_task_runner.py:57} INFO - Started process 272 to run task
+[2025-01-06T09:47:50.651+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'initialize_postgres_db', 'manual__2025-01-06T09:47:49.206695+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpocrd2ahm']
+[2025-01-06T09:47:50.654+0000] {standard_task_runner.py:85} INFO - Job 146: Subtask initialize_postgres_db
+[2025-01-06T09:47:50.691+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.initialize_postgres_db manual__2025-01-06T09:47:49.206695+00:00 [running]> on host a65c69560e11
+[2025-01-06T09:47:50.949+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='initialize_postgres_db' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T09:47:49.206695+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T09:47:49.206695+00:00'
+[2025-01-06T09:47:50.950+0000] {full_nba_data_pipeline.py:45} INFO - Starting database creation...
+[2025-01-06T09:47:50.952+0000] {logging_mixin.py:150} INFO - Database 'dwh' already exists.
+[2025-01-06T09:47:50.952+0000] {full_nba_data_pipeline.py:47} INFO - Database creation completed.
+[2025-01-06T09:47:50.952+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-06T09:47:50.958+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_data_pipeline, task_id=initialize_postgres_db, execution_date=20250106T094749, start_date=20250106T094750, end_date=20250106T094750
+[2025-01-06T09:47:51.001+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-06T09:47:51.113+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -15,6 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 """Config sub-commands."""
+
 from __future__ import annotations
 
 import locale
@@ -35,6 +36,7 @@ from airflow.providers_manager import ProvidersManager
 from airflow.typing_compat import Protocol
 from airflow.utils.cli import suppress_logs_and_warning
 from airflow.utils.platform import getuser
+from airflow.utils.providers_configuration_loader import providers_configuration_loaded
 from airflow.version import version as airflow_version
 
 log = logging.getLogger(__name__)
@@ -82,7 +84,7 @@ class PiiAnonymizer(Anonymizer):
     def process_username(self, value) -> str:
         if not value:
             return value
-        return value[0] + "..." + value[-1]
+        return f"{value[0]}...{value[-1]}"
 
     def process_url(self, value) -> str:
         if not value:
@@ -112,11 +114,11 @@ class PiiAnonymizer(Anonymizer):
 
             # pack
             if username and password and host:
-                netloc = username + ":" + password + "@" + host
+                netloc = f"{username}:{password}@{host}"
             elif username and host:
-                netloc = username + "@" + host
+                netloc = f"{username}@{host}"
             elif password and host:
-                netloc = ":" + password + "@" + host
+                netloc = f":{password}@{host}"
             elif host:
                 netloc = host
             else:
@@ -161,7 +163,7 @@ class Architecture(Enum):
     def get_current() -> Architecture:
         """Get architecture."""
         current_architecture = _MACHINE_TO_ARCHITECTURE.get(platform.machine().lower())
-        return current_architecture if current_architecture else Architecture.UNKNOWN
+        return current_architecture or Architecture.UNKNOWN
 
 
 _MACHINE_TO_ARCHITECTURE: dict[str, Architecture] = {
@@ -208,14 +210,14 @@ class AirflowInfo:
 
     @staticmethod
     def _task_logging_handler():
-        """Returns task logging handler."""
+        """Return task logging handler."""
 
         def get_fullname(o):
             module = o.__class__.__module__
             if module is None or module == str.__class__.__module__:
                 return o.__class__.__name__  # Avoid reporting __builtin__
             else:
-                return module + "." + o.__class__.__name__
+                return f"{module}.{o.__class__.__name__}"
 
         try:
             handler_names = [get_fullname(handler) for handler in logging.getLogger("airflow.task").handlers]
@@ -258,7 +260,7 @@ class AirflowInfo:
         operating_system = OperatingSystem.get_current()
         arch = Architecture.get_current()
         uname = platform.uname()
-        _locale = locale.getdefaultlocale()
+        _locale = locale.getlocale()
         python_location = self.anonymizer.process_path(sys.executable)
         python_version = sys.version.replace("\n", " ")
 
@@ -313,7 +315,7 @@ class AirflowInfo:
         return [(p.data["package-name"], p.version) for p in ProvidersManager().providers.values()]
 
     def show(self, output: str, console: AirflowConsole | None = None) -> None:
-        """Shows information about Airflow instance."""
+        """Show information about Airflow instance."""
         all_info = {
             "Apache Airflow": self._airflow_info,
             "System info": self._system_info,
@@ -335,7 +337,7 @@ class AirflowInfo:
             )
 
     def render_text(self, output: str) -> str:
-        """Exports the info to string."""
+        """Export the info to string."""
         console = AirflowConsole(record=True)
         with console.capture():
             self.show(output=output, console=console)
@@ -378,6 +380,7 @@ def _send_report_to_fileio(info):
 
 
 @suppress_logs_and_warning
+@providers_configuration_loaded
 def show_info(args):
     """Show information related to Airflow, system and other."""
     # Enforce anonymization, when file_io upload is tuned on.

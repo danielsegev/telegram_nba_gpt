@@ -1,0 +1,13 @@
+[2025-01-06T05:40:35.648+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_dag.save_to_postgres manual__2025-01-06T05:40:21.348551+00:00 [queued]>
+[2025-01-06T05:40:35.654+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_kafka_to_postgres_dag.save_to_postgres manual__2025-01-06T05:40:21.348551+00:00 [queued]>
+[2025-01-06T05:40:35.654+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-01-06T05:40:35.661+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): save_to_postgres> on 2025-01-06 05:40:21.348551+00:00
+[2025-01-06T05:40:35.664+0000] {standard_task_runner.py:57} INFO - Started process 560 to run task
+[2025-01-06T05:40:35.667+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_kafka_to_postgres_dag', 'save_to_postgres', 'manual__2025-01-06T05:40:21.348551+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/teams_kafka_to_spark.py', '--cfg-path', '/tmp/tmpllnht1iz']
+[2025-01-06T05:40:35.668+0000] {standard_task_runner.py:85} INFO - Job 83: Subtask save_to_postgres
+[2025-01-06T05:40:35.700+0000] {task_command.py:410} INFO - Running <TaskInstance: spark_kafka_to_postgres_dag.save_to_postgres manual__2025-01-06T05:40:21.348551+00:00 [running]> on host f7921eadaf8b
+[2025-01-06T05:40:35.938+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_kafka_to_postgres_dag' AIRFLOW_CTX_TASK_ID='save_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T05:40:21.348551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T05:40:21.348551+00:00'
+[2025-01-06T05:40:35.939+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-06T05:40:35.944+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=spark_kafka_to_postgres_dag, task_id=save_to_postgres, execution_date=20250106T054021, start_date=20250106T054035, end_date=20250106T054035
+[2025-01-06T05:40:35.972+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-06T05:40:35.984+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
