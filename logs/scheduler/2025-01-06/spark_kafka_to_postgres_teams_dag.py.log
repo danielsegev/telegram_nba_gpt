@@ -8966,3 +8966,17 @@
 [2025-01-06T20:43:35.381+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:43:35.381+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2025-01-06T20:43:35.394+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:43:35.393+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
 [2025-01-06T20:43:35.403+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py took 0.241 seconds
+[2025-01-06T20:44:05.711+0000] {processor.py:157} INFO - Started process (PID=8238) to work on /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py
+[2025-01-06T20:44:05.715+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py for tasks to queue
+[2025-01-06T20:44:05.716+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:05.716+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py
+[2025-01-06T20:44:05.998+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py
+[2025-01-06T20:44:06.016+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:06.016+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:44:06.032+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:06.032+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2025-01-06T20:44:06.043+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py took 0.335 seconds
+[2025-01-06T20:44:36.358+0000] {processor.py:157} INFO - Started process (PID=8287) to work on /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py
+[2025-01-06T20:44:36.361+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py for tasks to queue
+[2025-01-06T20:44:36.362+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:36.362+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py
+[2025-01-06T20:44:36.545+0000] {processor.py:836} INFO - DAG(s) dict_keys(['spark_kafka_to_postgres_dag']) retrieved from /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py
+[2025-01-06T20:44:36.561+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:36.561+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:44:36.577+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:36.576+0000] {dag.py:3508} INFO - Setting next_dagrun for spark_kafka_to_postgres_dag to None, run_after=None
+[2025-01-06T20:44:36.588+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/spark_kafka_to_postgres_teams_dag.py took 0.232 seconds

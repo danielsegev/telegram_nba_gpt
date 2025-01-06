@@ -9721,3 +9721,17 @@ ModuleNotFoundError: No module named 'airflow.providers.apache.kafka'
 [2025-01-06T20:43:35.112+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:43:35.111+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2025-01-06T20:43:35.133+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:43:35.133+0000] {dag.py:3508} INFO - Setting next_dagrun for fetch_and_send_active_players to None, run_after=None
 [2025-01-06T20:43:35.150+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrieve_players_dag.py took 0.417 seconds
+[2025-01-06T20:44:05.226+0000] {processor.py:157} INFO - Started process (PID=8221) to work on /opt/airflow/dags/retrieve_players_dag.py
+[2025-01-06T20:44:05.230+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrieve_players_dag.py for tasks to queue
+[2025-01-06T20:44:05.230+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:05.230+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrieve_players_dag.py
+[2025-01-06T20:44:05.605+0000] {processor.py:836} INFO - DAG(s) dict_keys(['fetch_and_send_active_players']) retrieved from /opt/airflow/dags/retrieve_players_dag.py
+[2025-01-06T20:44:05.630+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:05.629+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:44:05.653+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:05.653+0000] {dag.py:3508} INFO - Setting next_dagrun for fetch_and_send_active_players to None, run_after=None
+[2025-01-06T20:44:05.871+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrieve_players_dag.py took 0.648 seconds
+[2025-01-06T20:44:35.914+0000] {processor.py:157} INFO - Started process (PID=8270) to work on /opt/airflow/dags/retrieve_players_dag.py
+[2025-01-06T20:44:35.919+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrieve_players_dag.py for tasks to queue
+[2025-01-06T20:44:35.920+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:35.920+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrieve_players_dag.py
+[2025-01-06T20:44:36.280+0000] {processor.py:836} INFO - DAG(s) dict_keys(['fetch_and_send_active_players']) retrieved from /opt/airflow/dags/retrieve_players_dag.py
+[2025-01-06T20:44:36.307+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:36.307+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:44:36.325+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:36.325+0000] {dag.py:3508} INFO - Setting next_dagrun for fetch_and_send_active_players to None, run_after=None
+[2025-01-06T20:44:36.340+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrieve_players_dag.py took 0.428 seconds

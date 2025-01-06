@@ -9637,3 +9637,17 @@
 [2025-01-06T20:43:36.451+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:43:36.450+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2025-01-06T20:43:36.466+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:43:36.466+0000] {dag.py:3508} INFO - Setting next_dagrun for fetch_and_process_games to None, run_after=None
 [2025-01-06T20:43:36.478+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrieve_games_dag.py took 0.298 seconds
+[2025-01-06T20:44:06.909+0000] {processor.py:157} INFO - Started process (PID=8248) to work on /opt/airflow/dags/retrieve_games_dag.py
+[2025-01-06T20:44:06.917+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrieve_games_dag.py for tasks to queue
+[2025-01-06T20:44:06.918+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:06.917+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrieve_games_dag.py
+[2025-01-06T20:44:07.197+0000] {processor.py:836} INFO - DAG(s) dict_keys(['fetch_and_process_games']) retrieved from /opt/airflow/dags/retrieve_games_dag.py
+[2025-01-06T20:44:07.266+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:07.265+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:44:07.306+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:07.306+0000] {dag.py:3508} INFO - Setting next_dagrun for fetch_and_process_games to None, run_after=None
+[2025-01-06T20:44:07.316+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrieve_games_dag.py took 0.410 seconds
+[2025-01-06T20:44:37.414+0000] {processor.py:157} INFO - Started process (PID=8297) to work on /opt/airflow/dags/retrieve_games_dag.py
+[2025-01-06T20:44:37.427+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrieve_games_dag.py for tasks to queue
+[2025-01-06T20:44:37.428+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:37.428+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrieve_games_dag.py
+[2025-01-06T20:44:37.695+0000] {processor.py:836} INFO - DAG(s) dict_keys(['fetch_and_process_games']) retrieved from /opt/airflow/dags/retrieve_games_dag.py
+[2025-01-06T20:44:37.715+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:37.714+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:44:37.729+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:37.729+0000] {dag.py:3508} INFO - Setting next_dagrun for fetch_and_process_games to None, run_after=None
+[2025-01-06T20:44:37.739+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrieve_games_dag.py took 0.328 seconds

@@ -9756,3 +9756,17 @@
 [2025-01-06T20:43:34.687+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:43:34.687+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2025-01-06T20:43:34.704+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:43:34.703+0000] {dag.py:3508} INFO - Setting next_dagrun for initialize_postgres_db to None, run_after=None
 [2025-01-06T20:43:34.716+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/initialize_postgres_db.py took 0.067 seconds
+[2025-01-06T20:44:05.155+0000] {processor.py:157} INFO - Started process (PID=8219) to work on /opt/airflow/dags/initialize_postgres_db.py
+[2025-01-06T20:44:05.159+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/initialize_postgres_db.py for tasks to queue
+[2025-01-06T20:44:05.159+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:05.159+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/initialize_postgres_db.py
+[2025-01-06T20:44:05.166+0000] {processor.py:836} INFO - DAG(s) dict_keys(['initialize_postgres_db']) retrieved from /opt/airflow/dags/initialize_postgres_db.py
+[2025-01-06T20:44:05.182+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:05.182+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:44:05.196+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:05.196+0000] {dag.py:3508} INFO - Setting next_dagrun for initialize_postgres_db to None, run_after=None
+[2025-01-06T20:44:05.206+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/initialize_postgres_db.py took 0.053 seconds
+[2025-01-06T20:44:35.843+0000] {processor.py:157} INFO - Started process (PID=8268) to work on /opt/airflow/dags/initialize_postgres_db.py
+[2025-01-06T20:44:35.847+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/initialize_postgres_db.py for tasks to queue
+[2025-01-06T20:44:35.847+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:35.847+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/initialize_postgres_db.py
+[2025-01-06T20:44:35.854+0000] {processor.py:836} INFO - DAG(s) dict_keys(['initialize_postgres_db']) retrieved from /opt/airflow/dags/initialize_postgres_db.py
+[2025-01-06T20:44:35.869+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:35.869+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:44:35.882+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:35.882+0000] {dag.py:3508} INFO - Setting next_dagrun for initialize_postgres_db to None, run_after=None
+[2025-01-06T20:44:35.892+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/initialize_postgres_db.py took 0.051 seconds
