@@ -9684,3 +9684,10 @@
 [2025-01-06T20:44:37.685+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:37.685+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2025-01-06T20:44:37.701+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:37.700+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_retrieve_teams to None, run_after=None
 [2025-01-06T20:44:37.713+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrieve_teams_dag.py took 0.305 seconds
+[2025-01-06T20:45:08.213+0000] {processor.py:157} INFO - Started process (PID=8345) to work on /opt/airflow/dags/retrieve_teams_dag.py
+[2025-01-06T20:45:08.228+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrieve_teams_dag.py for tasks to queue
+[2025-01-06T20:45:08.229+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:08.229+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrieve_teams_dag.py
+[2025-01-06T20:45:08.468+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_retrieve_teams']) retrieved from /opt/airflow/dags/retrieve_teams_dag.py
+[2025-01-06T20:45:08.485+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:08.485+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:45:08.504+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:08.503+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_retrieve_teams to None, run_after=None
+[2025-01-06T20:45:08.520+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrieve_teams_dag.py took 0.313 seconds

@@ -8288,3 +8288,10 @@ NameError: name 'data_ingestion_completed' is not defined
 [2025-01-06T20:44:35.721+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:35.721+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2025-01-06T20:44:35.751+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:35.751+0000] {dag.py:3508} INFO - Setting next_dagrun for activate_telegram_bot to None, run_after=None
 [2025-01-06T20:44:35.768+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/bot_dag.py took 0.167 seconds
+[2025-01-06T20:45:06.038+0000] {processor.py:157} INFO - Started process (PID=8314) to work on /opt/airflow/dags/bot_dag.py
+[2025-01-06T20:45:06.047+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/bot_dag.py for tasks to queue
+[2025-01-06T20:45:06.048+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:06.048+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/bot_dag.py
+[2025-01-06T20:45:06.114+0000] {processor.py:836} INFO - DAG(s) dict_keys(['activate_telegram_bot']) retrieved from /opt/airflow/dags/bot_dag.py
+[2025-01-06T20:45:06.169+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:06.169+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:45:06.191+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:06.191+0000] {dag.py:3508} INFO - Setting next_dagrun for activate_telegram_bot to None, run_after=None
+[2025-01-06T20:45:06.211+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/bot_dag.py took 0.184 seconds

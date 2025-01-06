@@ -8292,3 +8292,10 @@ NameError: name 'fetch_and_send_active_players_task' is not defined
 [2025-01-06T20:44:36.312+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:36.312+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2025-01-06T20:44:36.329+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:44:36.329+0000] {dag.py:3508} INFO - Setting next_dagrun for nba_data_pipeline to None, run_after=None
 [2025-01-06T20:44:36.343+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/full_nba_data_pipeline.py took 0.432 seconds
+[2025-01-06T20:45:06.830+0000] {processor.py:157} INFO - Started process (PID=8327) to work on /opt/airflow/dags/full_nba_data_pipeline.py
+[2025-01-06T20:45:06.838+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/full_nba_data_pipeline.py for tasks to queue
+[2025-01-06T20:45:06.841+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:06.840+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/full_nba_data_pipeline.py
+[2025-01-06T20:45:07.142+0000] {processor.py:836} INFO - DAG(s) dict_keys(['nba_data_pipeline']) retrieved from /opt/airflow/dags/full_nba_data_pipeline.py
+[2025-01-06T20:45:07.166+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:07.166+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T20:45:07.185+0000] {logging_mixin.py:150} INFO - [2025-01-06T20:45:07.185+0000] {dag.py:3508} INFO - Setting next_dagrun for nba_data_pipeline to None, run_after=None
+[2025-01-06T20:45:07.195+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/full_nba_data_pipeline.py took 0.370 seconds
