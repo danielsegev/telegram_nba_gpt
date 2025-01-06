@@ -1,0 +1,18 @@
+[2025-01-06T16:02:40.703+0000] {processor.py:157} INFO - Started process (PID=7477) to work on /opt/airflow/dags/dag.py
+[2025-01-06T16:02:40.704+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2025-01-06T16:02:40.705+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:02:40.705+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2025-01-06T16:02:41.077+0000] {processor.py:836} INFO - DAG(s) dict_keys(['nba_data_pipeline2']) retrieved from /opt/airflow/dags/dag.py
+[2025-01-06T16:02:41.654+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:02:41.654+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:nba_data_pipeline2
+[2025-01-06T16:02:41.662+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:02:41.662+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:nba_data_pipeline2
+[2025-01-06T16:02:41.666+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:02:41.666+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:nba_data_pipeline2
+[2025-01-06T16:02:41.681+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:02:41.681+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T16:02:41.692+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:02:41.691+0000] {dag.py:2763} INFO - Creating ORM DAG for nba_data_pipeline2
+[2025-01-06T16:02:41.701+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:02:41.701+0000] {dag.py:3508} INFO - Setting next_dagrun for nba_data_pipeline2 to None, run_after=None
+[2025-01-06T16:02:41.715+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag.py took 1.017 seconds
+[2025-01-06T16:03:12.437+0000] {processor.py:157} INFO - Started process (PID=7535) to work on /opt/airflow/dags/dag.py
+[2025-01-06T16:03:12.439+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2025-01-06T16:03:12.440+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:03:12.440+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2025-01-06T16:03:12.716+0000] {processor.py:836} INFO - DAG(s) dict_keys(['nba_data_pipeline2']) retrieved from /opt/airflow/dags/dag.py
+[2025-01-06T16:03:12.734+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:03:12.734+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-01-06T16:03:12.748+0000] {logging_mixin.py:150} INFO - [2025-01-06T16:03:12.748+0000] {dag.py:3508} INFO - Setting next_dagrun for nba_data_pipeline2 to None, run_after=None
+[2025-01-06T16:03:12.758+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag.py took 0.325 seconds

@@ -1,0 +1,16 @@
+[2025-01-06T16:04:10.393+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T16:04:07.045162+00:00 [queued]>
+[2025-01-06T16:04:10.406+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T16:04:07.045162+00:00 [queued]>
+[2025-01-06T16:04:10.406+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-06T16:04:10.423+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_process_games> on 2025-01-06 16:04:07.045162+00:00
+[2025-01-06T16:04:10.437+0000] {standard_task_runner.py:57} INFO - Started process 3376 to run task
+[2025-01-06T16:04:10.440+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'fetch_and_process_games', 'manual__2025-01-06T16:04:07.045162+00:00', '--job-id', '303', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpmbcky9i5']
+[2025-01-06T16:04:10.447+0000] {standard_task_runner.py:85} INFO - Job 303: Subtask fetch_and_process_games
+[2025-01-06T16:04:10.765+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.fetch_and_process_games manual__2025-01-06T16:04:07.045162+00:00 [running]> on host d37d09639978
+[2025-01-06T16:04:10.830+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='fetch_and_process_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T16:04:07.045162+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T16:04:07.045162+00:00'
+[2025-01-06T16:06:37.589+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-06T16:06:37.602+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 3376. PIDs of all processes in the group: [3376]
+[2025-01-06T16:06:37.602+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 3376
+[2025-01-06T16:07:37.607+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=3376, name='airflow task ru', status='sleeping', started='16:04:09') did not respond to SIGTERM. Trying SIGKILL
+[2025-01-06T16:07:37.630+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 3376
+[2025-01-06T16:07:37.664+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=3376, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='16:04:09') (3376) terminated with exit code Negsignal.SIGKILL
+[2025-01-06T16:07:37.666+0000] {standard_task_runner.py:174} ERROR - Job 303 was killed before it finished (likely due to running out of memory)

@@ -90,7 +90,7 @@ def write_to_postgres(batch_df, batch_id):
         "dbname": "dwh",
         "user": "airflow",
         "password": "airflow",
-        "host": "postgres",
+        "host": "192.168.64.1",
         "port": "5432"
     }
 

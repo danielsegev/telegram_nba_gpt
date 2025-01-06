@@ -1,0 +1,269 @@
+[2025-01-06T15:22:59.621+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.spark_kafka_to_postgres_teams manual__2025-01-06T15:22:52.834377+00:00 [queued]>
+[2025-01-06T15:22:59.630+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.spark_kafka_to_postgres_teams manual__2025-01-06T15:22:52.834377+00:00 [queued]>
+[2025-01-06T15:22:59.630+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-06T15:22:59.643+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): spark_kafka_to_postgres_teams> on 2025-01-06 15:22:52.834377+00:00
+[2025-01-06T15:22:59.648+0000] {standard_task_runner.py:57} INFO - Started process 1187 to run task
+[2025-01-06T15:22:59.651+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'spark_kafka_to_postgres_teams', 'manual__2025-01-06T15:22:52.834377+00:00', '--job-id', '283', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline copy.py', '--cfg-path', '/tmp/tmpdcrozqs8']
+[2025-01-06T15:22:59.657+0000] {standard_task_runner.py:85} INFO - Job 283: Subtask spark_kafka_to_postgres_teams
+[2025-01-06T15:22:59.878+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.spark_kafka_to_postgres_teams manual__2025-01-06T15:22:52.834377+00:00 [running]> on host d37d09639978
+[2025-01-06T15:22:59.975+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='spark_kafka_to_postgres_teams' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T15:22:52.834377+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T15:22:52.834377+00:00'
+[2025-01-06T15:22:59.987+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-01-06T15:22:59.990+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name SparkKafkaToPostgresTeams --queue root.default --deploy-mode client /usr/local/***/include/scripts/scripts/kafka_to_postgres_teams.py
+[2025-01-06T15:23:00.016+0000] {spark_submit.py:490} INFO - /opt/spark/bin/load-spark-env.sh: line 68: ps: command not found
+[2025-01-06T15:23:02.454+0000] {spark_submit.py:490} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-06T15:23:02.517+0000] {spark_submit.py:490} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-01-06T15:23:02.521+0000] {spark_submit.py:490} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-01-06T15:23:02.522+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-01-06T15:23:02.523+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql added as a dependency
+[2025-01-06T15:23:02.524+0000] {spark_submit.py:490} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-cc7126af-f1d4-47b1-896e-eb9bd0746ba8;1.0
+[2025-01-06T15:23:02.525+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-01-06T15:23:02.741+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4 in central
+[2025-01-06T15:23:02.820+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4 in central
+[2025-01-06T15:23:02.851+0000] {spark_submit.py:490} INFO - found org.apache.kafka#kafka-clients;3.4.1 in central
+[2025-01-06T15:23:02.883+0000] {spark_submit.py:490} INFO - found org.lz4#lz4-java;1.8.0 in central
+[2025-01-06T15:23:02.915+0000] {spark_submit.py:490} INFO - found org.xerial.snappy#snappy-java;1.1.10.5 in central
+[2025-01-06T15:23:02.944+0000] {spark_submit.py:490} INFO - found org.slf4j#slf4j-api;2.0.7 in central
+[2025-01-06T15:23:02.971+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+[2025-01-06T15:23:03.017+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+[2025-01-06T15:23:03.050+0000] {spark_submit.py:490} INFO - found commons-logging#commons-logging;1.1.3 in central
+[2025-01-06T15:23:03.071+0000] {spark_submit.py:490} INFO - found com.google.code.findbugs#jsr305;3.0.0 in central
+[2025-01-06T15:23:03.088+0000] {spark_submit.py:490} INFO - found org.apache.commons#commons-pool2;2.11.1 in central
+[2025-01-06T15:23:03.104+0000] {spark_submit.py:490} INFO - found org.postgresql#postgresql;42.6.0 in central
+[2025-01-06T15:23:03.113+0000] {spark_submit.py:490} INFO - found org.checkerframework#checker-qual;3.31.0 in central
+[2025-01-06T15:23:03.150+0000] {spark_submit.py:490} INFO - :: resolution report :: resolve 608ms :: artifacts dl 18ms
+[2025-01-06T15:23:03.150+0000] {spark_submit.py:490} INFO - :: modules in use:
+[2025-01-06T15:23:03.151+0000] {spark_submit.py:490} INFO - com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+[2025-01-06T15:23:03.152+0000] {spark_submit.py:490} INFO - commons-logging#commons-logging;1.1.3 from central in [default]
+[2025-01-06T15:23:03.152+0000] {spark_submit.py:490} INFO - org.apache.commons#commons-pool2;2.11.1 from central in [default]
+[2025-01-06T15:23:03.152+0000] {spark_submit.py:490} INFO - org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+[2025-01-06T15:23:03.152+0000] {spark_submit.py:490} INFO - org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+[2025-01-06T15:23:03.153+0000] {spark_submit.py:490} INFO - org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+[2025-01-06T15:23:03.153+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4 from central in [default]
+[2025-01-06T15:23:03.154+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4 from central in [default]
+[2025-01-06T15:23:03.154+0000] {spark_submit.py:490} INFO - org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-01-06T15:23:03.156+0000] {spark_submit.py:490} INFO - org.lz4#lz4-java;1.8.0 from central in [default]
+[2025-01-06T15:23:03.158+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-01-06T15:23:03.161+0000] {spark_submit.py:490} INFO - org.slf4j#slf4j-api;2.0.7 from central in [default]
+[2025-01-06T15:23:03.163+0000] {spark_submit.py:490} INFO - org.xerial.snappy#snappy-java;1.1.10.5 from central in [default]
+[2025-01-06T15:23:03.163+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-06T15:23:03.164+0000] {spark_submit.py:490} INFO - |                  |            modules            ||   artifacts   |
+[2025-01-06T15:23:03.165+0000] {spark_submit.py:490} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-01-06T15:23:03.166+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-06T15:23:03.166+0000] {spark_submit.py:490} INFO - |      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+[2025-01-06T15:23:03.167+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-06T15:23:03.167+0000] {spark_submit.py:490} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-cc7126af-f1d4-47b1-896e-eb9bd0746ba8
+[2025-01-06T15:23:03.168+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-01-06T15:23:03.185+0000] {spark_submit.py:490} INFO - 0 artifacts copied, 13 already retrieved (0kB/19ms)
+[2025-01-06T15:23:03.424+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:03 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-01-06T15:23:04.819+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SparkContext: Running Spark version 3.5.4
+[2025-01-06T15:23:04.821+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SparkContext: OS info Linux, 6.10.14-linuxkit, aarch64
+[2025-01-06T15:23:04.823+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SparkContext: Java version 17.0.13
+[2025-01-06T15:23:04.850+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO ResourceUtils: ==============================================================
+[2025-01-06T15:23:04.851+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-01-06T15:23:04.851+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO ResourceUtils: ==============================================================
+[2025-01-06T15:23:04.852+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SparkContext: Submitted application: KafkaToPostgres_Teams
+[2025-01-06T15:23:04.880+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-01-06T15:23:04.889+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO ResourceProfile: Limiting resource is cpu
+[2025-01-06T15:23:04.893+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-01-06T15:23:04.958+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SecurityManager: Changing view acls to: ***
+[2025-01-06T15:23:04.960+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SecurityManager: Changing modify acls to: ***
+[2025-01-06T15:23:04.961+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SecurityManager: Changing view acls groups to:
+[2025-01-06T15:23:04.961+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SecurityManager: Changing modify acls groups to:
+[2025-01-06T15:23:04.961+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:04 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2025-01-06T15:23:05.216+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO Utils: Successfully started service 'sparkDriver' on port 35151.
+[2025-01-06T15:23:05.282+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkEnv: Registering MapOutputTracker
+[2025-01-06T15:23:05.351+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkEnv: Registering BlockManagerMaster
+[2025-01-06T15:23:05.365+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-01-06T15:23:05.366+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-01-06T15:23:05.368+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-01-06T15:23:05.386+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-ec3fe947-b4db-45ea-9e34-f2f31974df5d
+[2025-01-06T15:23:05.400+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-01-06T15:23:05.425+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-01-06T15:23:05.798+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2025-01-06T15:23:05.870+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2025-01-06T15:23:05.890+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+[2025-01-06T15:23:05.930+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.4.jar at spark://d37d09639978:35151/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.4.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.932+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.postgresql_postgresql-42.6.0.jar at spark://d37d09639978:35151/jars/org.postgresql_postgresql-42.6.0.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.933+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.4.jar at spark://d37d09639978:35151/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.4.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.934+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://d37d09639978:35151/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.934+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://d37d09639978:35151/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.935+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://d37d09639978:35151/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.936+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://d37d09639978:35151/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.936+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://d37d09639978:35151/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.937+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar at spark://d37d09639978:35151/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.938+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://d37d09639978:35151/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.938+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://d37d09639978:35151/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.939+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://d37d09639978:35151/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.939+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.checkerframework_checker-qual-3.31.0.jar at spark://d37d09639978:35151/jars/org.checkerframework_checker-qual-3.31.0.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.940+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.4.jar at spark://d37d09639978:35151/files/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.4.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.940+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.4.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.4.jar
+[2025-01-06T15:23:05.951+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.postgresql_postgresql-42.6.0.jar at spark://d37d09639978:35151/files/org.postgresql_postgresql-42.6.0.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.952+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO Utils: Copying /home/***/.ivy2/jars/org.postgresql_postgresql-42.6.0.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.postgresql_postgresql-42.6.0.jar
+[2025-01-06T15:23:05.961+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.4.jar at spark://d37d09639978:35151/files/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.4.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.962+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.4.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.4.jar
+[2025-01-06T15:23:05.976+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://d37d09639978:35151/files/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.976+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.apache.kafka_kafka-clients-3.4.1.jar
+[2025-01-06T15:23:05.984+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://d37d09639978:35151/files/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.985+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO Utils: Copying /home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/com.google.code.findbugs_jsr305-3.0.0.jar
+[2025-01-06T15:23:05.992+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://d37d09639978:35151/files/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1736176984810
+[2025-01-06T15:23:05.993+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:05 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.apache.commons_commons-pool2-2.11.1.jar
+[2025-01-06T15:23:06.002+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://d37d09639978:35151/files/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1736176984810
+[2025-01-06T15:23:06.006+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+[2025-01-06T15:23:06.067+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://d37d09639978:35151/files/org.lz4_lz4-java-1.8.0.jar with timestamp 1736176984810
+[2025-01-06T15:23:06.068+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO Utils: Copying /home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.lz4_lz4-java-1.8.0.jar
+[2025-01-06T15:23:06.077+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar at spark://d37d09639978:35151/files/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1736176984810
+[2025-01-06T15:23:06.078+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO Utils: Copying /home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.xerial.snappy_snappy-java-1.1.10.5.jar
+[2025-01-06T15:23:06.090+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://d37d09639978:35151/files/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1736176984810
+[2025-01-06T15:23:06.090+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO Utils: Copying /home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.slf4j_slf4j-api-2.0.7.jar
+[2025-01-06T15:23:06.095+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://d37d09639978:35151/files/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1736176984810
+[2025-01-06T15:23:06.096+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+[2025-01-06T15:23:06.165+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO SparkContext: Added file file:///home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://d37d09639978:35151/files/commons-logging_commons-logging-1.1.3.jar with timestamp 1736176984810
+[2025-01-06T15:23:06.167+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO Utils: Copying /home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/commons-logging_commons-logging-1.1.3.jar
+[2025-01-06T15:23:06.171+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.checkerframework_checker-qual-3.31.0.jar at spark://d37d09639978:35151/files/org.checkerframework_checker-qual-3.31.0.jar with timestamp 1736176984810
+[2025-01-06T15:23:06.172+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO Utils: Copying /home/***/.ivy2/jars/org.checkerframework_checker-qual-3.31.0.jar to /tmp/spark-df00a450-7157-440e-b4e5-f18c95e6105b/userFiles-4f76551c-73c5-427b-b2cb-2f85ef1e45b7/org.checkerframework_checker-qual-3.31.0.jar
+[2025-01-06T15:23:06.280+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2025-01-06T15:23:06.342+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO TransportClientFactory: Successfully created connection to spark-master/172.18.0.2:7077 after 32 ms (0 ms spent in bootstraps)
+[2025-01-06T15:23:06.567+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20250106152306-0004
+[2025-01-06T15:23:06.587+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46055.
+[2025-01-06T15:23:06.600+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO NettyBlockTransferService: Server created on d37d09639978:46055
+[2025-01-06T15:23:06.601+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-01-06T15:23:06.620+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, d37d09639978, 46055, None)
+[2025-01-06T15:23:06.628+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO BlockManagerMasterEndpoint: Registering block manager d37d09639978:46055 with 434.4 MiB RAM, BlockManagerId(driver, d37d09639978, 46055, None)
+[2025-01-06T15:23:06.642+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, d37d09639978, 46055, None)
+[2025-01-06T15:23:06.651+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, d37d09639978, 46055, None)
+[2025-01-06T15:23:06.921+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:06 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2025-01-06T15:23:07.240+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:07 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2025-01-06T15:23:07.243+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:07 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2025-01-06T15:23:11.709+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:11 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+[2025-01-06T15:23:11.752+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:11 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+[2025-01-06T15:23:11.771+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:11 INFO ResolveWriteToStream: Checkpoint root file:///tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292 resolved to file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292.
+[2025-01-06T15:23:11.772+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:11 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[2025-01-06T15:23:11.859+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:11 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/metadata using temp file file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/.metadata.e79b7d54-e64f-463b-a2e1-b4dd7f22fb11.tmp
+[2025-01-06T15:23:11.953+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:11 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/.metadata.e79b7d54-e64f-463b-a2e1-b4dd7f22fb11.tmp to file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/metadata
+[2025-01-06T15:23:11.985+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:11 INFO MicroBatchExecution: Starting [id = 75002f4d-8860-4bf0-92d9-b690ab90e10f, runId = 25265a0e-b1bb-45c2-ab88-d05c32be5f80]. Use file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292 to store the query checkpoint.
+[2025-01-06T15:23:12.006+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@5956ff00] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@5505d40a]
+[2025-01-06T15:23:12.392+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO AdminClientConfig: AdminClientConfig values:
+[2025-01-06T15:23:12.392+0000] {spark_submit.py:490} INFO - auto.include.jmx.reporter = true
+[2025-01-06T15:23:12.393+0000] {spark_submit.py:490} INFO - bootstrap.servers = [kafka-learn:9092]
+[2025-01-06T15:23:12.393+0000] {spark_submit.py:490} INFO - client.dns.lookup = use_all_dns_ips
+[2025-01-06T15:23:12.393+0000] {spark_submit.py:490} INFO - client.id =
+[2025-01-06T15:23:12.394+0000] {spark_submit.py:490} INFO - connections.max.idle.ms = 300000
+[2025-01-06T15:23:12.394+0000] {spark_submit.py:490} INFO - default.api.timeout.ms = 60000
+[2025-01-06T15:23:12.394+0000] {spark_submit.py:490} INFO - metadata.max.age.ms = 300000
+[2025-01-06T15:23:12.394+0000] {spark_submit.py:490} INFO - metric.reporters = []
+[2025-01-06T15:23:12.395+0000] {spark_submit.py:490} INFO - metrics.num.samples = 2
+[2025-01-06T15:23:12.395+0000] {spark_submit.py:490} INFO - metrics.recording.level = INFO
+[2025-01-06T15:23:12.395+0000] {spark_submit.py:490} INFO - metrics.sample.window.ms = 30000
+[2025-01-06T15:23:12.395+0000] {spark_submit.py:490} INFO - receive.buffer.bytes = 65536
+[2025-01-06T15:23:12.395+0000] {spark_submit.py:490} INFO - reconnect.backoff.max.ms = 1000
+[2025-01-06T15:23:12.396+0000] {spark_submit.py:490} INFO - reconnect.backoff.ms = 50
+[2025-01-06T15:23:12.396+0000] {spark_submit.py:490} INFO - request.timeout.ms = 30000
+[2025-01-06T15:23:12.396+0000] {spark_submit.py:490} INFO - retries = 2147483647
+[2025-01-06T15:23:12.400+0000] {spark_submit.py:490} INFO - retry.backoff.ms = 100
+[2025-01-06T15:23:12.402+0000] {spark_submit.py:490} INFO - sasl.client.callback.handler.class = null
+[2025-01-06T15:23:12.403+0000] {spark_submit.py:490} INFO - sasl.jaas.config = null
+[2025-01-06T15:23:12.403+0000] {spark_submit.py:490} INFO - sasl.kerberos.kinit.cmd = /usr/bin/kinit
+[2025-01-06T15:23:12.403+0000] {spark_submit.py:490} INFO - sasl.kerberos.min.time.before.relogin = 60000
+[2025-01-06T15:23:12.404+0000] {spark_submit.py:490} INFO - sasl.kerberos.service.name = null
+[2025-01-06T15:23:12.404+0000] {spark_submit.py:490} INFO - sasl.kerberos.ticket.renew.jitter = 0.05
+[2025-01-06T15:23:12.404+0000] {spark_submit.py:490} INFO - sasl.kerberos.ticket.renew.window.factor = 0.8
+[2025-01-06T15:23:12.404+0000] {spark_submit.py:490} INFO - sasl.login.callback.handler.class = null
+[2025-01-06T15:23:12.405+0000] {spark_submit.py:490} INFO - sasl.login.class = null
+[2025-01-06T15:23:12.405+0000] {spark_submit.py:490} INFO - sasl.login.connect.timeout.ms = null
+[2025-01-06T15:23:12.406+0000] {spark_submit.py:490} INFO - sasl.login.read.timeout.ms = null
+[2025-01-06T15:23:12.413+0000] {spark_submit.py:490} INFO - sasl.login.refresh.buffer.seconds = 300
+[2025-01-06T15:23:12.413+0000] {spark_submit.py:490} INFO - sasl.login.refresh.min.period.seconds = 60
+[2025-01-06T15:23:12.414+0000] {spark_submit.py:490} INFO - sasl.login.refresh.window.factor = 0.8
+[2025-01-06T15:23:12.414+0000] {spark_submit.py:490} INFO - sasl.login.refresh.window.jitter = 0.05
+[2025-01-06T15:23:12.415+0000] {spark_submit.py:490} INFO - sasl.login.retry.backoff.max.ms = 10000
+[2025-01-06T15:23:12.415+0000] {spark_submit.py:490} INFO - sasl.login.retry.backoff.ms = 100
+[2025-01-06T15:23:12.416+0000] {spark_submit.py:490} INFO - sasl.mechanism = GSSAPI
+[2025-01-06T15:23:12.416+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.clock.skew.seconds = 30
+[2025-01-06T15:23:12.417+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.expected.audience = null
+[2025-01-06T15:23:12.417+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.expected.issuer = null
+[2025-01-06T15:23:12.418+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+[2025-01-06T15:23:12.418+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+[2025-01-06T15:23:12.419+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+[2025-01-06T15:23:12.419+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.jwks.endpoint.url = null
+[2025-01-06T15:23:12.420+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.scope.claim.name = scope
+[2025-01-06T15:23:12.421+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.sub.claim.name = sub
+[2025-01-06T15:23:12.422+0000] {spark_submit.py:490} INFO - sasl.oauthbearer.token.endpoint.url = null
+[2025-01-06T15:23:12.423+0000] {spark_submit.py:490} INFO - security.protocol = PLAINTEXT
+[2025-01-06T15:23:12.427+0000] {spark_submit.py:490} INFO - security.providers = null
+[2025-01-06T15:23:12.432+0000] {spark_submit.py:490} INFO - send.buffer.bytes = 131072
+[2025-01-06T15:23:12.434+0000] {spark_submit.py:490} INFO - socket.connection.setup.timeout.max.ms = 30000
+[2025-01-06T15:23:12.435+0000] {spark_submit.py:490} INFO - socket.connection.setup.timeout.ms = 10000
+[2025-01-06T15:23:12.437+0000] {spark_submit.py:490} INFO - ssl.cipher.suites = null
+[2025-01-06T15:23:12.438+0000] {spark_submit.py:490} INFO - ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+[2025-01-06T15:23:12.438+0000] {spark_submit.py:490} INFO - ssl.endpoint.identification.algorithm = https
+[2025-01-06T15:23:12.438+0000] {spark_submit.py:490} INFO - ssl.engine.factory.class = null
+[2025-01-06T15:23:12.438+0000] {spark_submit.py:490} INFO - ssl.key.password = null
+[2025-01-06T15:23:12.438+0000] {spark_submit.py:490} INFO - ssl.keymanager.algorithm = SunX509
+[2025-01-06T15:23:12.439+0000] {spark_submit.py:490} INFO - ssl.keystore.certificate.chain = null
+[2025-01-06T15:23:12.442+0000] {spark_submit.py:490} INFO - ssl.keystore.key = null
+[2025-01-06T15:23:12.442+0000] {spark_submit.py:490} INFO - ssl.keystore.location = null
+[2025-01-06T15:23:12.443+0000] {spark_submit.py:490} INFO - ssl.keystore.password = null
+[2025-01-06T15:23:12.443+0000] {spark_submit.py:490} INFO - ssl.keystore.type = JKS
+[2025-01-06T15:23:12.443+0000] {spark_submit.py:490} INFO - ssl.protocol = TLSv1.3
+[2025-01-06T15:23:12.443+0000] {spark_submit.py:490} INFO - ssl.provider = null
+[2025-01-06T15:23:12.443+0000] {spark_submit.py:490} INFO - ssl.secure.random.implementation = null
+[2025-01-06T15:23:12.443+0000] {spark_submit.py:490} INFO - ssl.trustmanager.algorithm = PKIX
+[2025-01-06T15:23:12.443+0000] {spark_submit.py:490} INFO - ssl.truststore.certificates = null
+[2025-01-06T15:23:12.444+0000] {spark_submit.py:490} INFO - ssl.truststore.location = null
+[2025-01-06T15:23:12.444+0000] {spark_submit.py:490} INFO - ssl.truststore.password = null
+[2025-01-06T15:23:12.444+0000] {spark_submit.py:490} INFO - ssl.truststore.type = JKS
+[2025-01-06T15:23:12.444+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T15:23:12.478+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[2025-01-06T15:23:12.482+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO AppInfoParser: Kafka version: 3.4.1
+[2025-01-06T15:23:12.483+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO AppInfoParser: Kafka commitId: 8a516edc2755df89
+[2025-01-06T15:23:12.483+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO AppInfoParser: Kafka startTimeMs: 1736176992478
+[2025-01-06T15:23:12.904+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/sources/0/0 using temp file file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/sources/0/.0.c2bb174e-4cb0-4d89-96e1-88bb638c8ea1.tmp
+[2025-01-06T15:23:12.934+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/sources/0/.0.c2bb174e-4cb0-4d89-96e1-88bb638c8ea1.tmp to file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/sources/0/0
+[2025-01-06T15:23:12.935+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO KafkaMicroBatchStream: Initial offsets: {"teams":{"0":0}}
+[2025-01-06T15:23:12.957+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO OffsetSeqLog: BatchIds found from listing:
+[2025-01-06T15:23:12.959+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO OffsetSeqLog: BatchIds found from listing:
+[2025-01-06T15:23:12.960+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO MicroBatchExecution: Starting new streaming query.
+[2025-01-06T15:23:12.963+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO MicroBatchExecution: Stream started from {}
+[2025-01-06T15:23:12.996+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:12 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/offsets/0 using temp file file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/offsets/.0.1a997e91-2cee-41c3-b96d-9f9c1a6087ca.tmp
+[2025-01-06T15:23:13.064+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:13 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/offsets/.0.1a997e91-2cee-41c3-b96d-9f9c1a6087ca.tmp to file:/tmp/temporary-6603071d-928f-464b-a7ce-bbad75dff292/offsets/0
+[2025-01-06T15:23:13.065+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:13 INFO MicroBatchExecution: Committed offsets for batch 0. Metadata OffsetSeqMetadata(0,1736176992982,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.databricks.sql.optimizer.pruneFiltersCanPruneStreamingSubplan -> false, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+[2025-01-06T15:23:13.501+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:13 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+[2025-01-06T15:23:13.569+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:13 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+[2025-01-06T15:23:13.655+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:13 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+[2025-01-06T15:23:13.665+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:13 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+[2025-01-06T15:23:14.127+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO CodeGenerator: Code generated in 293.023667 ms
+[2025-01-06T15:23:14.357+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO CodeGenerator: Code generated in 10.860583 ms
+[2025-01-06T15:23:14.380+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO CodeGenerator: Code generated in 11.516125 ms
+[2025-01-06T15:23:14.498+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+[2025-01-06T15:23:14.511+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO DAGScheduler: Registering RDD 6 (start at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+[2025-01-06T15:23:14.515+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO DAGScheduler: Got job 0 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2025-01-06T15:23:14.516+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO DAGScheduler: Final stage: ResultStage 1 (start at NativeMethodAccessorImpl.java:0)
+[2025-01-06T15:23:14.516+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+[2025-01-06T15:23:14.517+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+[2025-01-06T15:23:14.520+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[6] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2025-01-06T15:23:14.621+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 37.2 KiB, free 434.4 MiB)
+[2025-01-06T15:23:14.680+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.8 KiB, free 434.3 MiB)
+[2025-01-06T15:23:14.685+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on d37d09639978:46055 (size: 14.8 KiB, free: 434.4 MiB)
+[2025-01-06T15:23:14.701+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+[2025-01-06T15:23:14.729+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[6] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2025-01-06T15:23:14.732+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:14 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2025-01-06T15:23:29.756+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:29 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T15:23:44.757+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:44 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T15:23:59.754+0000] {spark_submit.py:490} INFO - 25/01/06 15:23:59 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T15:24:14.764+0000] {spark_submit.py:490} INFO - 25/01/06 15:24:14 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T15:24:29.753+0000] {spark_submit.py:490} INFO - 25/01/06 15:24:29 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T15:24:44.751+0000] {spark_submit.py:490} INFO - 25/01/06 15:24:44 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[2025-01-06T15:24:55.778+0000] {spark_submit.py:490} INFO - 25/01/06 15:24:55 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250106152306-0004/0 on worker-20250106145202-172.18.0.8-39187 (172.18.0.8:39187) with 2 core(s)
+[2025-01-06T15:24:55.784+0000] {spark_submit.py:490} INFO - 25/01/06 15:24:55 INFO StandaloneSchedulerBackend: Granted executor ID app-20250106152306-0004/0 on hostPort 172.18.0.8:39187 with 2 core(s), 2.0 GiB RAM
+[2025-01-06T15:24:55.852+0000] {spark_submit.py:490} INFO - 25/01/06 15:24:55 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250106152306-0004/0 is now RUNNING
+[2025-01-06T15:24:57.058+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-06T15:24:57.066+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 1187. PIDs of all processes in the group: [1194, 1333, 1187]
+[2025-01-06T15:24:57.066+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 1187
+[2025-01-06T15:24:57.067+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-06T15:24:57.068+0000] {spark_submit.py:615} INFO - Sending kill signal to spark-submit
+[2025-01-06T15:24:57.755+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1187, status='terminated', exitcode=0, started='15:22:59') (1187) terminated with exit code 0
+[2025-01-06T15:25:57.090+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=1333, name='python3', status='zombie', started='15:23:03') did not respond to SIGTERM. Trying SIGKILL
+[2025-01-06T15:25:57.103+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=1194, name='java', status='zombie', started='15:22:59') did not respond to SIGTERM. Trying SIGKILL
+[2025-01-06T15:25:57.104+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 1187
+[2025-01-06T15:26:57.161+0000] {process_utils.py:160} ERROR - Process psutil.Process(pid=1333, name='python3', status='zombie', started='15:23:03') (1333) could not be killed. Giving up.
+[2025-01-06T15:26:57.168+0000] {process_utils.py:160} ERROR - Process psutil.Process(pid=1194, name='java', status='zombie', started='15:22:59') (1194) could not be killed. Giving up.

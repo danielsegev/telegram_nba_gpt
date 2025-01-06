@@ -1,0 +1,23 @@
+[2025-01-06T16:08:55.845+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.initialize_postgres_db manual__2025-01-06T16:08:54.628804+00:00 [queued]>
+[2025-01-06T16:08:55.852+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.initialize_postgres_db manual__2025-01-06T16:08:54.628804+00:00 [queued]>
+[2025-01-06T16:08:55.852+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-06T16:08:55.865+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): initialize_postgres_db> on 2025-01-06 16:08:54.628804+00:00
+[2025-01-06T16:08:55.872+0000] {standard_task_runner.py:57} INFO - Started process 3390 to run task
+[2025-01-06T16:08:55.877+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'initialize_postgres_db', 'manual__2025-01-06T16:08:54.628804+00:00', '--job-id', '306', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpfndcv1nb']
+[2025-01-06T16:08:55.896+0000] {standard_task_runner.py:85} INFO - Job 306: Subtask initialize_postgres_db
+[2025-01-06T16:08:56.212+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.initialize_postgres_db manual__2025-01-06T16:08:54.628804+00:00 [running]> on host d37d09639978
+[2025-01-06T16:08:56.275+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='initialize_postgres_db' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T16:08:54.628804+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T16:08:54.628804+00:00'
+[2025-01-06T16:08:56.276+0000] {full_nba_data_pipeline.py:34} INFO - Starting database creation...
+[2025-01-06T16:08:56.277+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/full_nba_data_pipeline.py", line 35, in create_database_with_logging
+    from create_tables import create_database
+ModuleNotFoundError: No module named 'create_tables'
+[2025-01-06T16:08:56.289+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=nba_data_pipeline, task_id=initialize_postgres_db, execution_date=20250106T160854, start_date=20250106T160855, end_date=20250106T160856
+[2025-01-06T16:08:56.297+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 306 for task initialize_postgres_db (No module named 'create_tables'; 3390)
+[2025-01-06T16:08:56.318+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-06T16:08:56.457+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

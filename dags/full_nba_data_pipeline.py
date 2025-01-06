@@ -1,33 +1,32 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
+
 from datetime import datetime, timedelta
 import os
 import sys
 import logging
 import json
 import pandas as pd
+
 from confluent_kafka import Producer
 from nba_api.stats.static import teams, players
-from nba_api.stats.endpoints import leaguegamefinder
+from nba_api.stats.endpoints import leaguegamefinder, commonplayerinfo
 from nba_api.live.nba.endpoints import boxscore
-import subprocess
-import signal
-import time
 
 # Ensure Airflow can find the scripts directory
 dag_folder = os.path.dirname(os.path.abspath(__file__))
 scripts_path = os.path.join(dag_folder, "scripts")
-if scripts_path not in sys.path:
-    sys.path.insert(0, scripts_path)
 include_path = os.path.join(dag_folder, "include", "scripts")
-if include_path not in sys.path:
-    sys.path.insert(0, include_path)
 
-# Import database initialization scripts after modifying sys.path
+for path in [scripts_path, include_path]:
+    if path not in sys.path:
+        sys.path.insert(0, path)
+
+# Import database initialization scripts
 from create_tables import create_database, create_tables
 
-# Set default arguments
+# Default DAG arguments
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
@@ -36,7 +35,7 @@ default_args = {
     "email_on_retry": False,
     "retries": 3,
     "retry_delay": timedelta(minutes=5),
-    "start_date": datetime(2025, 1, 6)
+    "start_date": datetime(2025, 1, 6),
 }
 
 # Initialize DAG
@@ -48,8 +47,7 @@ with DAG(
     start_date=datetime(2025, 1, 1),
 ) as dag:
 
-    ### STEP 1: DATABASE INITIALIZATION ###
-
+    # STEP 1: DATABASE INITIALIZATION
     def create_database_with_logging():
         logging.info("Starting database creation...")
         create_database()
@@ -72,14 +70,14 @@ with DAG(
 
     initialize_postgres_db >> create_tables_task
 
-    ### STEP 2: DATA INGESTION INTO KAFKA (RUNS IN PARALLEL) ###
-
+    # STEP 2: DATA INGESTION INTO KAFKA (RUNS IN PARALLEL)
     def send_teams_to_kafka():
         producer = Producer({'bootstrap.servers': 'kafka-learn:9092'})
         all_teams = teams.get_teams()
+
         for _, team_row in pd.DataFrame(all_teams).iterrows():
-            team_json = json.dumps(team_row.to_dict())
-            producer.produce('teams', value=team_json)
+            producer.produce('teams', value=json.dumps(team_row.to_dict()))
+
         producer.flush()
 
     kafka_retrieve_teams_task = PythonOperator(
@@ -88,35 +86,77 @@ with DAG(
     )
 
     def fetch_and_send_players():
-        producer = Producer({'bootstrap.servers': 'kafka-learn:9092'})
-        active_players = [p for p in players.get_players() if p['is_active']]
+        """
+        Fetch active NBA players, enrich data using commonplayerinfo API, and send messages to Kafka topic 'players'.
+        """
+        conf = {'bootstrap.servers': 'kafka-learn:9092'}
+        producer = Producer(conf)
+
+        def delivery_report(err, msg):
+            """Callback for message delivery confirmation."""
+            if err is not None:
+                print(f"Message delivery failed: {err}")
+            else:
+                print(f"Message delivered to {msg.topic()} [{msg.partition()}]")
+
+        all_players = players.get_players()
+        active_players = [p for p in all_players if p['is_active']]
         df_players = pd.DataFrame(active_players)
-        for _, player_row in df_players.iterrows():
-            player_json = json.dumps(player_row.to_dict())
-            producer.produce('players', value=player_json)
-        producer.flush()
+        extended_info_list = []
+
+        for idx, row in df_players.iterrows():
+            player_id = row['id']
+            if idx % 10 == 0:
+                print(f"Processing active player {idx+1}/{len(df_players)} with ID {player_id}")
+            try:
+                info = commonplayerinfo.CommonPlayerInfo(player_id=player_id)
+                info_df = info.get_data_frames()[0]
+                info_df = info_df.rename(columns={'PERSON_ID': 'id'})
+                extended_info_list.append(info_df)
+            except Exception as e:
+                print(f"Error fetching data for player_id {player_id}: {e}")
+                continue
+
+        df_extended_info = pd.concat(extended_info_list, ignore_index=True) if extended_info_list else pd.DataFrame()
+        df_merged = pd.merge(df_players, df_extended_info, on='id', how='left')
+
+        num_messages = 0
+        try:
+            for _, player_row in df_merged.iterrows():
+                player_json = json.dumps(player_row.to_dict())
+                producer.produce('players', value=player_json, callback=delivery_report)
+                num_messages += 1
+
+            producer.flush()
+            print(f"✅ {num_messages} messages sent to 'players' topic in Kafka.")
+        except Exception as e:
+            print(f"❌ Error producing to Kafka: {e}")
 
     fetch_and_send_active_players_task = PythonOperator(
         task_id="fetch_and_send_active_players",
         python_callable=fetch_and_send_players
     )
 
-    def fetch_and_process_games(season="2023-24", limit=50):
+    def fetch_and_process_games(season="2023-24", limit=100):
         producer = Producer({'bootstrap.servers': 'kafka-learn:9092'})
         game_finder = leaguegamefinder.LeagueGameFinder(season_nullable=season)
         game_ids = game_finder.get_data_frames()[0]['GAME_ID'].tolist()[:limit]
+
         for game_id in game_ids:
             live_game = boxscore.BoxScore(game_id=game_id)
             boxscore_data = live_game.get_dict()
+
             home_players = boxscore_data['game']['homeTeam'].get('players', [])
             away_players = boxscore_data['game']['awayTeam'].get('players', [])
             all_players = home_players + away_players
+
             df = pd.json_normalize(all_players)
+
             for _, player_row in df.iterrows():
                 player_dict = player_row.to_dict()
                 player_dict['game_id'] = game_id
-                player_json = json.dumps(player_dict)
-                producer.produce('games', value=player_json)
+                producer.produce('games', value=json.dumps(player_dict))
+
         producer.flush()
 
     fetch_and_process_games_task = PythonOperator(
@@ -124,38 +164,34 @@ with DAG(
         python_callable=fetch_and_process_games,
     )
 
-    create_tables_task >> [kafka_retrieve_teams_task, fetch_and_send_active_players_task, fetch_and_process_games_task]
+    create_tables_task >> [
+        kafka_retrieve_teams_task,
+        fetch_and_send_active_players_task,
+        fetch_and_process_games_task
+    ]
 
-    ### STEP 3: DATA PROCESSING WITH SPARK (RUNS IN PARALLEL) ###
+    # STEP 3: DATA PROCESSING WITH SPARK (RUNS IN PARALLEL)
+    def spark_submit_task(task_id, script_name):
+        return SparkSubmitOperator(
+            task_id=task_id,
+            conn_id="spark_default",
+            application=f"/usr/local/airflow/include/scripts/scripts/{script_name}",
+            packages="org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0",
+            executor_memory="2G",
+            driver_memory="1G",
+            name=task_id.replace("_", " ").title(),
+        )
 
-    spark_kafka_to_postgres_teams = SparkSubmitOperator(
-        task_id="spark_kafka_to_postgres_teams",
-        conn_id="spark_default",
-        application="/usr/local/airflow/include/scripts/scripts/kafka_to_postgres_teams.py",
-        packages="org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0",
-        executor_memory="2G",
-        driver_memory="1G",
-        name="SparkKafkaToPostgresTeams",
+    spark_kafka_to_postgres_teams = spark_submit_task(
+        "spark_kafka_to_postgres_teams", "kafka_to_postgres_teams.py"
     )
 
-    spark_kafka_to_postgres_players = SparkSubmitOperator(
-        task_id="spark_kafka_to_postgres_players",
-        conn_id="spark_default",
-        application="/usr/local/airflow/include/scripts/scripts/kafka_to_postgres_players.py",
-        packages="org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0",
-        executor_memory="2G",
-        driver_memory="1G",
-        name="SparkKafkaToPostgresPlayers",
+    spark_kafka_to_postgres_players = spark_submit_task(
+        "spark_kafka_to_postgres_players", "kafka_to_postgres_players.py"
     )
 
-    spark_kafka_to_postgres_games = SparkSubmitOperator(
-        task_id="spark_kafka_to_postgres_games",
-        conn_id="spark_default",
-        application="/usr/local/airflow/include/scripts/scripts/kafka_to_postgres_games.py",
-        packages="org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0",
-        executor_memory="2G",
-        driver_memory="1G",
-        name="SparkKafkaToPostgresGames",
+    spark_kafka_to_postgres_games = spark_submit_task(
+        "spark_kafka_to_postgres_games", "kafka_to_postgres_games.py"
     )
 
     kafka_retrieve_teams_task >> spark_kafka_to_postgres_teams

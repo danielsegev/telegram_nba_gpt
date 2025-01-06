@@ -1,0 +1,104 @@
+[2025-01-06T17:51:43.322+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.spark_kafka_to_postgres_players manual__2025-01-06T17:51:37.881516+00:00 [queued]>
+[2025-01-06T17:51:43.329+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.spark_kafka_to_postgres_players manual__2025-01-06T17:51:37.881516+00:00 [queued]>
+[2025-01-06T17:51:43.329+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-06T17:51:43.338+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): spark_kafka_to_postgres_players> on 2025-01-06 17:51:37.881516+00:00
+[2025-01-06T17:51:43.341+0000] {standard_task_runner.py:57} INFO - Started process 139 to run task
+[2025-01-06T17:51:43.343+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'spark_kafka_to_postgres_players', 'manual__2025-01-06T17:51:37.881516+00:00', '--job-id', '324', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpkofe7fq3']
+[2025-01-06T17:51:43.347+0000] {standard_task_runner.py:85} INFO - Job 324: Subtask spark_kafka_to_postgres_players
+[2025-01-06T17:51:43.492+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.spark_kafka_to_postgres_players manual__2025-01-06T17:51:37.881516+00:00 [running]> on host d5d0213d0a42
+[2025-01-06T17:51:43.546+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='spark_kafka_to_postgres_players' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T17:51:37.881516+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-06T17:51:37.881516+00:00'
+[2025-01-06T17:51:43.551+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-01-06T17:51:43.552+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name Spark Kafka To Postgres Players --queue root.default --deploy-mode client /usr/local/***/include/scripts/scripts/kafka_to_postgres_players.py
+[2025-01-06T17:51:43.563+0000] {spark_submit.py:490} INFO - /opt/spark/bin/load-spark-env.sh: line 68: ps: command not found
+[2025-01-06T17:51:44.917+0000] {spark_submit.py:490} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-06T17:51:44.968+0000] {spark_submit.py:490} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-01-06T17:51:44.970+0000] {spark_submit.py:490} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-01-06T17:51:44.971+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-01-06T17:51:44.972+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql added as a dependency
+[2025-01-06T17:51:44.972+0000] {spark_submit.py:490} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-c3a246ab-c921-4b7b-86e9-30fc45ded90e;1.0
+[2025-01-06T17:51:44.973+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-01-06T17:51:45.095+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4 in central
+[2025-01-06T17:51:45.128+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4 in central
+[2025-01-06T17:51:45.143+0000] {spark_submit.py:490} INFO - found org.apache.kafka#kafka-clients;3.4.1 in central
+[2025-01-06T17:51:45.160+0000] {spark_submit.py:490} INFO - found org.lz4#lz4-java;1.8.0 in central
+[2025-01-06T17:51:45.180+0000] {spark_submit.py:490} INFO - found org.xerial.snappy#snappy-java;1.1.10.5 in central
+[2025-01-06T17:51:45.197+0000] {spark_submit.py:490} INFO - found org.slf4j#slf4j-api;2.0.7 in central
+[2025-01-06T17:51:45.223+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+[2025-01-06T17:51:45.241+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+[2025-01-06T17:51:45.261+0000] {spark_submit.py:490} INFO - found commons-logging#commons-logging;1.1.3 in central
+[2025-01-06T17:51:45.271+0000] {spark_submit.py:490} INFO - found com.google.code.findbugs#jsr305;3.0.0 in central
+[2025-01-06T17:51:45.281+0000] {spark_submit.py:490} INFO - found org.apache.commons#commons-pool2;2.11.1 in central
+[2025-01-06T17:51:45.290+0000] {spark_submit.py:490} INFO - found org.postgresql#postgresql;42.6.0 in central
+[2025-01-06T17:51:45.300+0000] {spark_submit.py:490} INFO - found org.checkerframework#checker-qual;3.31.0 in central
+[2025-01-06T17:51:45.925+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar ...
+[2025-01-06T17:51:46.101+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.slf4j#slf4j-api;2.0.7!slf4j-api.jar (787ms)
+[2025-01-06T17:51:46.186+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.4/hadoop-client-api-3.3.4.jar ...
+[2025-01-06T17:51:48.221+0000] {spark_submit.py:490} INFO - :: resolution report :: resolve 334ms :: artifacts dl 2914ms
+[2025-01-06T17:51:48.224+0000] {spark_submit.py:490} INFO - :: modules in use:
+[2025-01-06T17:51:48.225+0000] {spark_submit.py:490} INFO - com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+[2025-01-06T17:51:48.226+0000] {spark_submit.py:490} INFO - commons-logging#commons-logging;1.1.3 from central in [default]
+[2025-01-06T17:51:48.226+0000] {spark_submit.py:490} INFO - org.apache.commons#commons-pool2;2.11.1 from central in [default]
+[2025-01-06T17:51:48.228+0000] {spark_submit.py:490} INFO - org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+[2025-01-06T17:51:48.228+0000] {spark_submit.py:490} INFO - org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+[2025-01-06T17:51:48.229+0000] {spark_submit.py:490} INFO - org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+[2025-01-06T17:51:48.231+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4 from central in [default]
+[2025-01-06T17:51:48.233+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4 from central in [default]
+[2025-01-06T17:51:48.233+0000] {spark_submit.py:490} INFO - org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-01-06T17:51:48.234+0000] {spark_submit.py:490} INFO - org.lz4#lz4-java;1.8.0 from central in [default]
+[2025-01-06T17:51:48.234+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-01-06T17:51:48.235+0000] {spark_submit.py:490} INFO - org.slf4j#slf4j-api;2.0.7 from central in [default]
+[2025-01-06T17:51:48.235+0000] {spark_submit.py:490} INFO - org.xerial.snappy#snappy-java;1.1.10.5 from central in [default]
+[2025-01-06T17:51:48.235+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-06T17:51:48.236+0000] {spark_submit.py:490} INFO - |                  |            modules            ||   artifacts   |
+[2025-01-06T17:51:48.237+0000] {spark_submit.py:490} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-01-06T17:51:48.240+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-06T17:51:48.242+0000] {spark_submit.py:490} INFO - |      default     |   13  |   0   |   0   |   0   ||   13  |   1   |
+[2025-01-06T17:51:48.247+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-06T17:51:48.248+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.253+0000] {spark_submit.py:490} INFO - :: problems summary ::
+[2025-01-06T17:51:48.253+0000] {spark_submit.py:490} INFO - :::: WARNINGS
+[2025-01-06T17:51:48.253+0000] {spark_submit.py:490} INFO - [FAILED     ] org.apache.hadoop#hadoop-client-api;3.3.4!hadoop-client-api.jar: Downloaded file size (0) doesn't match expected Content Length (19458635) for https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.4/hadoop-client-api-3.3.4.jar. Please retry. (2107ms)
+[2025-01-06T17:51:48.254+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.255+0000] {spark_submit.py:490} INFO - [FAILED     ] org.apache.hadoop#hadoop-client-api;3.3.4!hadoop-client-api.jar: Downloaded file size (0) doesn't match expected Content Length (19458635) for https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.4/hadoop-client-api-3.3.4.jar. Please retry. (2107ms)
+[2025-01-06T17:51:48.256+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.256+0000] {spark_submit.py:490} INFO - ==== central: tried
+[2025-01-06T17:51:48.256+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.256+0000] {spark_submit.py:490} INFO - https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.4/hadoop-client-api-3.3.4.jar
+[2025-01-06T17:51:48.257+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.257+0000] {spark_submit.py:490} INFO - ::::::::::::::::::::::::::::::::::::::::::::::
+[2025-01-06T17:51:48.258+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.259+0000] {spark_submit.py:490} INFO - ::              FAILED DOWNLOADS            ::
+[2025-01-06T17:51:48.259+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.260+0000] {spark_submit.py:490} INFO - :: ^ see resolution messages for details  ^ ::
+[2025-01-06T17:51:48.260+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.260+0000] {spark_submit.py:490} INFO - ::::::::::::::::::::::::::::::::::::::::::::::
+[2025-01-06T17:51:48.261+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.261+0000] {spark_submit.py:490} INFO - :: org.apache.hadoop#hadoop-client-api;3.3.4!hadoop-client-api.jar
+[2025-01-06T17:51:48.261+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.262+0000] {spark_submit.py:490} INFO - ::::::::::::::::::::::::::::::::::::::::::::::
+[2025-01-06T17:51:48.262+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.263+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.263+0000] {spark_submit.py:490} INFO - 
+[2025-01-06T17:51:48.263+0000] {spark_submit.py:490} INFO - :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+[2025-01-06T17:51:48.263+0000] {spark_submit.py:490} INFO - Exception in thread "main" java.lang.RuntimeException: [download failed: org.apache.hadoop#hadoop-client-api;3.3.4!hadoop-client-api.jar]
+[2025-01-06T17:51:48.264+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmitUtils$.resolveMavenCoordinates(SparkSubmit.scala:1613)
+[2025-01-06T17:51:48.264+0000] {spark_submit.py:490} INFO - at org.apache.spark.util.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:185)
+[2025-01-06T17:51:48.265+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:339)
+[2025-01-06T17:51:48.265+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:969)
+[2025-01-06T17:51:48.266+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:199)
+[2025-01-06T17:51:48.266+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:222)
+[2025-01-06T17:51:48.267+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+[2025-01-06T17:51:48.267+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+[2025-01-06T17:51:48.268+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+[2025-01-06T17:51:48.268+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2025-01-06T17:51:48.287+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 422, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name Spark Kafka To Postgres Players --queue root.default --deploy-mode client /usr/local/***/include/scripts/scripts/kafka_to_postgres_players.py. Error code is: 1.
+[2025-01-06T17:51:48.293+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=nba_data_pipeline, task_id=spark_kafka_to_postgres_players, execution_date=20250106T175137, start_date=20250106T175143, end_date=20250106T175148
+[2025-01-06T17:51:48.311+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 324 for task spark_kafka_to_postgres_players (Cannot execute: spark-submit --master spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name Spark Kafka To Postgres Players --queue root.default --deploy-mode client /usr/local/***/include/scripts/scripts/kafka_to_postgres_players.py. Error code is: 1.; 139)
+[2025-01-06T17:51:48.361+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-06T17:51:48.851+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
