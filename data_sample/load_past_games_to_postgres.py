@@ -4,15 +4,14 @@ import psycopg2
 # Database configuration
 db_config = {
     "dbname": "dwh",
-    "user": "postgres",
-    "password": "postgres",
+    "user": "airflow",
+    "password": "airflow",
     "host": "localhost",
     "port": "5432"
 }
 
 # Directory containing CSV files for games
-games_csv_directory = "./data_sample/nba_season_data"  # Update with your directory path
-
+games_csv_directory = "data_sample/data/nba_season_data"  # Update with your directory path
 
 def load_csv_to_table(table_name, csv_file, connection):
     try:
