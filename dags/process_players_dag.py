@@ -23,7 +23,7 @@ default_args = {
     "retry_delay": timedelta(minutes=5),
 }
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def fetch_player_data(player_id, max_retries=5, base_delay=5):
     """ Fetch player details using the NBA API with retries and backoff """
@@ -32,14 +32,32 @@ def fetch_player_data(player_id, max_retries=5, base_delay=5):
         try:
             logging.info(f"Fetching data for player_id {player_id}, attempt {retries+1}")
             info = commonplayerinfo.CommonPlayerInfo(player_id=player_id, timeout=60)
-            return info.get_data_frames()[0].rename(columns={'PERSON_ID': 'id'})
+            data = info.get_data_frames()
+
+            if not data or len(data) == 0:
+                logging.warning(f"Empty data returned for player_id {player_id}")
+                return None
+
+            logging.info(f"Successfully fetched data for player_id {player_id}")
+            return data[0].rename(columns={'PERSON_ID': 'id'})
+
         except (RequestException, TimeoutError) as e:
-            logging.warning(f"Error fetching data for player_id {player_id}: {e}, retrying...")
+            logging.warning(f"Request error fetching player_id {player_id}: {e}, retrying...")
             time.sleep(base_delay * (2 ** retries) + random.uniform(0, 1))  # Exponential backoff
             retries += 1
-    
+        except Exception as e:
+            logging.error(f"Unexpected error fetching player_id {player_id}: {e}")
+            return None  # Ensure it does not get retried infinitely
+
     logging.error(f"Failed to fetch data for player_id {player_id} after {max_retries} retries.")
     return None
+
+def delivery_report(err, msg):
+    """ Reports Kafka message delivery status """
+    if err is not None:
+        logging.error(f"Message delivery failed: {err}")
+    else:
+        logging.info(f"Message delivered to {msg.topic()} [{msg.partition()}] at offset {msg.offset()}")
 
 def fetch_and_send_players():
     """ Fetch all active players, enrich data, and send to Kafka topic """
@@ -53,9 +71,14 @@ def fetch_and_send_players():
     all_players = players.get_players()
     df_players = pd.DataFrame(all_players)
 
+    logging.info(f"Total players retrieved: {len(df_players)}")
+
     extended_info_list = []
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:  # Reduced concurrency
         results = list(executor.map(fetch_player_data, df_players['id']))
+
+    successful_calls = len([df for df in results if df is not None])
+    logging.info(f"Successfully retrieved {successful_calls} player records.")
 
     extended_info_list = [df for df in results if df is not None]
 
@@ -63,10 +86,19 @@ def fetch_and_send_players():
         df_extended_info = pd.concat(extended_info_list, ignore_index=True)
         df_merged = pd.merge(df_players, df_extended_info, on='id', how='left')
 
+        logging.info(f"Total players ready to be sent to Kafka: {len(df_merged)}")
+
         for _, player_row in df_merged.iterrows():
             player_json = json.dumps(player_row.to_dict())
-            producer.produce('players', value=player_json)
 
+            logging.debug(f"Sending player data to Kafka: {player_json}")
+
+            try:
+                producer.produce('players', value=player_json, callback=delivery_report)
+            except Exception as e:
+                logging.error(f"Failed to send player data to Kafka: {e}")
+
+        logging.info("Flushing Kafka producer...")
         producer.flush()
         logging.info("All active player data sent to 'players' topic in Kafka.")
     else:
@@ -90,6 +122,7 @@ with DAG(
     send_players_task = PythonOperator(
         task_id="fetch_and_send_players",
         python_callable=fetch_and_send_players,
+        execution_timeout=timedelta(minutes=30),  # ✅ Max execution time to avoid infinite runs
     )
 
     spark_ingest_players_task = SparkSubmitOperator(

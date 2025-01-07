@@ -51,7 +51,8 @@ column_mapping = {
     "statistics.turnovers": "statistics_turnovers",
     "statistics.twoPointersAttempted": "statistics_twopointersattempted",
     "statistics.twoPointersMade": "statistics_twopointersmade",
-    "game_id": "game_id"
+    "game_id": "game_id",
+    "game_date": "game_date"
 }
 
 # Columns to exclude

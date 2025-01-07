@@ -94,7 +94,8 @@ CREATE_TABLE_QUERIES = [
         statistics_turnovers INT,
         statistics_twopointersattempted INT,
         statistics_twopointersmade INT,
-        game_id VARCHAR(20)
+        game_id VARCHAR(20),
+        game_date DATE NOT NULL,
         --PRIMARY KEY (game_id, personId) -- Assuming each game_id/personId combination is unique
     );
     """

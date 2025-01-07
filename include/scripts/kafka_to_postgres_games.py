@@ -15,7 +15,7 @@ spark = SparkSession.builder \
 kafka_bootstrap_servers = "kafka-learn:9092"
 kafka_topic = "games"
 
-# Define schema for Kafka messages
+# Define schema for Kafka messages (added game_date)
 schema = StructType([
     StructField("status", StringType(), True),
     StructField("order", IntegerType(), True),
@@ -52,7 +52,8 @@ schema = StructType([
     StructField("statistics.turnovers", IntegerType(), True),
     StructField("statistics.twoPointersAttempted", IntegerType(), True),
     StructField("statistics.twoPointersMade", IntegerType(), True),
-    StructField("game_id", StringType(), True)
+    StructField("game_id", StringType(), True),
+    StructField("game_date", StringType(), True)  # ✅ Added game_date field
 ])
 
 # Read data from Kafka topic
@@ -67,7 +68,7 @@ raw_df = spark.readStream \
 parsed_df = raw_df.selectExpr("CAST(value AS STRING) as json_string") \
     .select(from_json(col("json_string"), schema).alias("data"))
 
-# Select fields explicitly to handle dot notation
+# Select fields explicitly to handle dot notation (added game_date)
 selected_df = parsed_df.select(
     col("data.status").alias("status"),
     col("data.order").alias("order"),
@@ -104,7 +105,8 @@ selected_df = parsed_df.select(
     col("data.`statistics.turnovers`").alias("statistics_turnovers"),
     col("data.`statistics.twoPointersAttempted`").alias("statistics_twopointersattempted"),
     col("data.`statistics.twoPointersMade`").alias("statistics_twopointersmade"),
-    col("data.game_id").alias("game_id")
+    col("data.game_id").alias("game_id"),
+    col("data.game_date").alias("game_date")  # ✅ Added game_date
 )
 
 # Write to PostgreSQL
@@ -117,7 +119,6 @@ def write_to_postgres(batch_df, batch_id):
     }
 
     try:
-        # Check if the batch is empty to avoid unnecessary JDBC calls
         if batch_df.isEmpty():
             print(f"Batch {batch_id}: No data to write.")
             return
@@ -129,7 +130,7 @@ def write_to_postgres(batch_df, batch_id):
         print(f"Batch {batch_id}: Error writing to PostgreSQL: {e}")
 
 # Start the streaming query
-query = None  # Declare query outside the try block
+query = None
 try:
     query = selected_df.writeStream \
         .foreachBatch(write_to_postgres) \
@@ -137,7 +138,7 @@ try:
         .trigger(once=True)  \
         .start()
 
-    query.awaitTermination(timeout=300) # Keep the timeout for safety, although trigger once should make this redundant
+    query.awaitTermination(timeout=300)
 
 except Exception as e:
     print(f"Error starting or awaiting termination of streaming query: {e}")
