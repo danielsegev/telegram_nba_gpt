@@ -1,0 +1,24 @@
+[2025-01-07T15:49:05.513+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline_ns.ingest_games scheduled__2025-01-06T00:00:00+00:00 [queued]>
+[2025-01-07T15:49:05.543+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline_ns.ingest_games scheduled__2025-01-06T00:00:00+00:00 [queued]>
+[2025-01-07T15:49:05.547+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-07T15:49:05.584+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): ingest_games> on 2025-01-06 00:00:00+00:00
+[2025-01-07T15:49:05.594+0000] {standard_task_runner.py:57} INFO - Started process 3430 to run task
+[2025-01-07T15:49:05.612+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline_ns', 'ingest_games', 'scheduled__2025-01-06T00:00:00+00:00', '--job-id', '492', '--raw', '--subdir', 'DAGS_FOLDER/app_start_ns.py', '--cfg-path', '/tmp/tmpxby8_8_i']
+[2025-01-07T15:49:05.617+0000] {standard_task_runner.py:85} INFO - Job 492: Subtask ingest_games
+[2025-01-07T15:49:05.720+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline_ns.ingest_games scheduled__2025-01-06T00:00:00+00:00 [running]> on host 27ff283f09fe
+[2025-01-07T15:49:05.940+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline_ns' AIRFLOW_CTX_TASK_ID='ingest_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-06T00:00:00+00:00'
+[2025-01-07T15:49:06.432+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/app_start_ns.py", line 72, in ingest_games
+    subprocess.run(["python", "/opt/airflow/include/scripts/csv_to_postgres_games.py"], check=True)
+  File "/usr/local/lib/python3.7/subprocess.py", line 512, in run
+    output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['python', '/opt/airflow/include/scripts/csv_to_postgres_games.py']' returned non-zero exit status 1.
+[2025-01-07T15:49:06.459+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=nba_data_pipeline_ns, task_id=ingest_games, execution_date=20250106T000000, start_date=20250107T154905, end_date=20250107T154906
+[2025-01-07T15:49:06.504+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 492 for task ingest_games (Command '['python', '/opt/airflow/include/scripts/csv_to_postgres_games.py']' returned non-zero exit status 1.; 3430)
+[2025-01-07T15:49:06.551+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-07T15:49:06.601+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

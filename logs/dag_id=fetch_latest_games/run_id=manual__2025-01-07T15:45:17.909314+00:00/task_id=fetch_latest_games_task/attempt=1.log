@@ -1,0 +1,25 @@
+[2025-01-07T15:45:20.211+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-07T15:45:17.909314+00:00 [queued]>
+[2025-01-07T15:45:20.223+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-07T15:45:17.909314+00:00 [queued]>
+[2025-01-07T15:45:20.224+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-07T15:45:20.246+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_latest_games_task> on 2025-01-07 15:45:17.909314+00:00
+[2025-01-07T15:45:20.253+0000] {standard_task_runner.py:57} INFO - Started process 3408 to run task
+[2025-01-07T15:45:20.256+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_latest_games', 'fetch_latest_games_task', 'manual__2025-01-07T15:45:17.909314+00:00', '--job-id', '483', '--raw', '--subdir', 'DAGS_FOLDER/process_latest_games_dag.py', '--cfg-path', '/tmp/tmpske7l32y']
+[2025-01-07T15:45:20.262+0000] {standard_task_runner.py:85} INFO - Job 483: Subtask fetch_latest_games_task
+[2025-01-07T15:45:20.313+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-07T15:45:17.909314+00:00 [running]> on host 27ff283f09fe
+[2025-01-07T15:45:20.427+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_latest_games' AIRFLOW_CTX_TASK_ID='fetch_latest_games_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-07T15:45:17.909314+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-07T15:45:17.909314+00:00'
+[2025-01-07T15:45:21.025+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400493
+[2025-01-07T15:45:21.417+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400494
+[2025-01-07T15:45:21.689+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400495
+[2025-01-07T15:45:21.983+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400496
+[2025-01-07T15:45:22.208+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400497
+[2025-01-07T15:45:22.503+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400498
+[2025-01-07T15:45:22.732+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400499
+[2025-01-07T15:45:22.937+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400500
+[2025-01-07T15:45:23.254+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400501
+[2025-01-07T15:47:16.644+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-07T15:47:16.665+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 3408. PIDs of all processes in the group: [3408]
+[2025-01-07T15:47:16.666+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 3408
+[2025-01-07T15:48:16.689+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=3408, name='airflow task ru', status='sleeping', started='15:45:19') did not respond to SIGTERM. Trying SIGKILL
+[2025-01-07T15:48:16.712+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 3408
+[2025-01-07T15:48:16.774+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=3408, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='15:45:19') (3408) terminated with exit code Negsignal.SIGKILL
+[2025-01-07T15:48:16.776+0000] {standard_task_runner.py:174} ERROR - Job 483 was killed before it finished (likely due to running out of memory)

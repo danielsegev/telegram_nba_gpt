@@ -1,0 +1,78 @@
+[2025-01-07T13:13:47.076+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.spark_csv_to_postgres_players manual__2025-01-07T13:13:43.323182+00:00 [queued]>
+[2025-01-07T13:13:47.083+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.spark_csv_to_postgres_players manual__2025-01-07T13:13:43.323182+00:00 [queued]>
+[2025-01-07T13:13:47.087+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-07T13:13:47.096+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): spark_csv_to_postgres_players> on 2025-01-07 13:13:43.323182+00:00
+[2025-01-07T13:13:47.100+0000] {standard_task_runner.py:57} INFO - Started process 1004 to run task
+[2025-01-07T13:13:47.102+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'spark_csv_to_postgres_players', 'manual__2025-01-07T13:13:43.323182+00:00', '--job-id', '384', '--raw', '--subdir', 'DAGS_FOLDER/app_start.py', '--cfg-path', '/tmp/tmptj9owt_c']
+[2025-01-07T13:13:47.106+0000] {standard_task_runner.py:85} INFO - Job 384: Subtask spark_csv_to_postgres_players
+[2025-01-07T13:13:47.141+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.spark_csv_to_postgres_players manual__2025-01-07T13:13:43.323182+00:00 [running]> on host 788ec4c7ac24
+[2025-01-07T13:13:47.215+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='spark_csv_to_postgres_players' AIRFLOW_CTX_EXECUTION_DATE='2025-01-07T13:13:43.323182+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-07T13:13:43.323182+00:00'
+[2025-01-07T13:13:47.223+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-01-07T13:13:47.225+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master spark-master:7077 --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --conf spark.driverEnv.SPARK_HOME=/opt/spark --conf spark.executorEnv.SPARK_HOME=/opt/spark --conf spark.driverEnv.PATH=/opt/spark/bin:/usr/local/bin:/usr/bin:$PATH --conf spark.executorEnv.PATH=/opt/spark/bin:/usr/local/bin:/usr/bin:$PATH --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name Spark Csv To Postgres Players --queue root.default --deploy-mode client /opt/***/include/scripts/{script_name}
+[2025-01-07T13:13:47.239+0000] {spark_submit.py:490} INFO - /opt/spark/bin/load-spark-env.sh: line 68: ps: command not found
+[2025-01-07T13:13:48.685+0000] {spark_submit.py:490} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-07T13:13:48.768+0000] {spark_submit.py:490} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-01-07T13:13:48.769+0000] {spark_submit.py:490} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-01-07T13:13:48.772+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-01-07T13:13:48.774+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql added as a dependency
+[2025-01-07T13:13:48.775+0000] {spark_submit.py:490} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-9f6a5698-ddc3-4f54-b40d-8e3c43aa4196;1.0
+[2025-01-07T13:13:48.777+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-01-07T13:13:48.961+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4 in central
+[2025-01-07T13:13:49.034+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4 in central
+[2025-01-07T13:13:49.062+0000] {spark_submit.py:490} INFO - found org.apache.kafka#kafka-clients;3.4.1 in central
+[2025-01-07T13:13:49.093+0000] {spark_submit.py:490} INFO - found org.lz4#lz4-java;1.8.0 in central
+[2025-01-07T13:13:49.111+0000] {spark_submit.py:490} INFO - found org.xerial.snappy#snappy-java;1.1.10.5 in spark-list
+[2025-01-07T13:13:49.151+0000] {spark_submit.py:490} INFO - found org.slf4j#slf4j-api;2.0.7 in central
+[2025-01-07T13:13:49.190+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+[2025-01-07T13:13:49.243+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+[2025-01-07T13:13:49.312+0000] {spark_submit.py:490} INFO - found commons-logging#commons-logging;1.1.3 in central
+[2025-01-07T13:13:49.342+0000] {spark_submit.py:490} INFO - found com.google.code.findbugs#jsr305;3.0.0 in central
+[2025-01-07T13:13:49.382+0000] {spark_submit.py:490} INFO - found org.apache.commons#commons-pool2;2.11.1 in central
+[2025-01-07T13:13:49.418+0000] {spark_submit.py:490} INFO - found org.postgresql#postgresql;42.6.0 in central
+[2025-01-07T13:13:49.464+0000] {spark_submit.py:490} INFO - found org.checkerframework#checker-qual;3.31.0 in central
+[2025-01-07T13:13:49.543+0000] {spark_submit.py:490} INFO - :: resolution report :: resolve 723ms :: artifacts dl 40ms
+[2025-01-07T13:13:49.553+0000] {spark_submit.py:490} INFO - :: modules in use:
+[2025-01-07T13:13:49.556+0000] {spark_submit.py:490} INFO - com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+[2025-01-07T13:13:49.556+0000] {spark_submit.py:490} INFO - commons-logging#commons-logging;1.1.3 from central in [default]
+[2025-01-07T13:13:49.560+0000] {spark_submit.py:490} INFO - org.apache.commons#commons-pool2;2.11.1 from central in [default]
+[2025-01-07T13:13:49.564+0000] {spark_submit.py:490} INFO - org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+[2025-01-07T13:13:49.566+0000] {spark_submit.py:490} INFO - org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+[2025-01-07T13:13:49.576+0000] {spark_submit.py:490} INFO - org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+[2025-01-07T13:13:49.577+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4 from central in [default]
+[2025-01-07T13:13:49.578+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4 from central in [default]
+[2025-01-07T13:13:49.579+0000] {spark_submit.py:490} INFO - org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-01-07T13:13:49.580+0000] {spark_submit.py:490} INFO - org.lz4#lz4-java;1.8.0 from central in [default]
+[2025-01-07T13:13:49.580+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-01-07T13:13:49.581+0000] {spark_submit.py:490} INFO - org.slf4j#slf4j-api;2.0.7 from central in [default]
+[2025-01-07T13:13:49.589+0000] {spark_submit.py:490} INFO - org.xerial.snappy#snappy-java;1.1.10.5 from spark-list in [default]
+[2025-01-07T13:13:49.591+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-07T13:13:49.593+0000] {spark_submit.py:490} INFO - |                  |            modules            ||   artifacts   |
+[2025-01-07T13:13:49.594+0000] {spark_submit.py:490} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-01-07T13:13:49.598+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-07T13:13:49.599+0000] {spark_submit.py:490} INFO - |      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+[2025-01-07T13:13:49.600+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-01-07T13:13:49.600+0000] {spark_submit.py:490} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-9f6a5698-ddc3-4f54-b40d-8e3c43aa4196
+[2025-01-07T13:13:49.601+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-01-07T13:13:49.601+0000] {spark_submit.py:490} INFO - 0 artifacts copied, 13 already retrieved (0kB/13ms)
+[2025-01-07T13:13:49.900+0000] {spark_submit.py:490} INFO - 25/01/07 13:13:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-01-07T13:13:50.210+0000] {spark_submit.py:490} INFO - Exception in thread "main" org.apache.spark.SparkException: Failed to get main class in JAR with error 'File file:/opt/***/include/scripts/{script_name} does not exist'.  Please specify one with --class.
+[2025-01-07T13:13:50.214+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.error(SparkSubmit.scala:1052)
+[2025-01-07T13:13:50.215+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:533)
+[2025-01-07T13:13:50.216+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:969)
+[2025-01-07T13:13:50.216+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:199)
+[2025-01-07T13:13:50.217+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:222)
+[2025-01-07T13:13:50.217+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+[2025-01-07T13:13:50.217+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+[2025-01-07T13:13:50.217+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+[2025-01-07T13:13:50.217+0000] {spark_submit.py:490} INFO - at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2025-01-07T13:13:50.326+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 422, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark-master:7077 --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --conf spark.driverEnv.SPARK_HOME=/opt/spark --conf spark.executorEnv.SPARK_HOME=/opt/spark --conf spark.driverEnv.PATH=/opt/spark/bin:/usr/local/bin:/usr/bin:$PATH --conf spark.executorEnv.PATH=/opt/spark/bin:/usr/local/bin:/usr/bin:$PATH --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name Spark Csv To Postgres Players --queue root.default --deploy-mode client /opt/***/include/scripts/{script_name}. Error code is: 1.
+[2025-01-07T13:13:50.330+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=nba_data_pipeline, task_id=spark_csv_to_postgres_players, execution_date=20250107T131343, start_date=20250107T131347, end_date=20250107T131350
+[2025-01-07T13:13:50.366+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 384 for task spark_csv_to_postgres_players (Cannot execute: spark-submit --master spark-master:7077 --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=log4j.properties --conf spark.driverEnv.SPARK_HOME=/opt/spark --conf spark.executorEnv.SPARK_HOME=/opt/spark --conf spark.driverEnv.PATH=/opt/spark/bin:/usr/local/bin:/usr/bin:$PATH --conf spark.executorEnv.PATH=/opt/spark/bin:/usr/local/bin:/usr/bin:$PATH --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name Spark Csv To Postgres Players --queue root.default --deploy-mode client /opt/***/include/scripts/{script_name}. Error code is: 1.; 1004)
+[2025-01-07T13:13:50.409+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-07T13:13:50.435+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

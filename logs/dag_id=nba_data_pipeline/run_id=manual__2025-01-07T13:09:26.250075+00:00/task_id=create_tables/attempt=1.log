@@ -1,0 +1,93 @@
+[2025-01-07T13:09:28.407+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline.create_tables manual__2025-01-07T13:09:26.250075+00:00 [queued]>
+[2025-01-07T13:09:28.412+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline.create_tables manual__2025-01-07T13:09:26.250075+00:00 [queued]>
+[2025-01-07T13:09:28.412+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-07T13:09:28.420+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_tables> on 2025-01-07 13:09:26.250075+00:00
+[2025-01-07T13:09:28.422+0000] {standard_task_runner.py:57} INFO - Started process 807 to run task
+[2025-01-07T13:09:28.425+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline', 'create_tables', 'manual__2025-01-07T13:09:26.250075+00:00', '--job-id', '377', '--raw', '--subdir', 'DAGS_FOLDER/app_start.py', '--cfg-path', '/tmp/tmps3fckcd5']
+[2025-01-07T13:09:28.425+0000] {standard_task_runner.py:85} INFO - Job 377: Subtask create_tables
+[2025-01-07T13:09:28.477+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline.create_tables manual__2025-01-07T13:09:26.250075+00:00 [running]> on host 788ec4c7ac24
+[2025-01-07T13:09:28.528+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline' AIRFLOW_CTX_TASK_ID='create_tables' AIRFLOW_CTX_EXECUTION_DATE='2025-01-07T13:09:26.250075+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-07T13:09:26.250075+00:00'
+[2025-01-07T13:09:28.528+0000] {app_start.py:46} INFO - Starting table creation...
+[2025-01-07T13:09:28.530+0000] {logging_mixin.py:150} INFO - Successfully executed query: 
+    CREATE TABLE IF NOT EXISTS nba_teams (
+        team_id INT PRIMARY KEY,
+        abbreviation VARCHAR(100),
+        city VARCHAR(100),
+        full_name VARCHAR(100),
+        state VARCHAR(100),
+        year_founded INT
+    );
+    
+[2025-01-07T13:09:28.531+0000] {logging_mixin.py:150} INFO - Successfully executed query: 
+    CREATE TABLE IF NOT EXISTS nba_players (
+        id INT PRIMARY KEY,
+        full_name VARCHAR(100),
+        birthdate DATE,
+        school VARCHAR(100),
+        country VARCHAR(50),
+        last_affiliation VARCHAR(100),
+        height VARCHAR(10),
+        weight VARCHAR(10),
+        season_exp INT,
+        jersey VARCHAR(10),
+        position VARCHAR(50),
+        roster_status VARCHAR(50),
+        games_played_current_season_flag VARCHAR(10),
+        team_id INT,
+        team_name VARCHAR(100),
+        dleague_flag VARCHAR(1),
+        nba_flag VARCHAR(1),
+        games_played_flag VARCHAR(1),
+        draft_year VARCHAR(10),
+        draft_round VARCHAR(10),
+        draft_number VARCHAR(10),
+        greatest_75_flag VARCHAR(1),
+        is_active BOOLEAN  -- New field added
+    );
+    
+[2025-01-07T13:09:28.531+0000] {logging_mixin.py:150} INFO - Successfully executed query: 
+    CREATE TABLE IF NOT EXISTS nba_games (
+        status VARCHAR(20),
+        "order" INT,
+        personId INT,
+        starter VARCHAR(2),
+        oncourt VARCHAR(2),
+        played VARCHAR(2),
+        statistics_assists INT,
+        statistics_blocks INT,
+        statistics_blocksreceived INT,
+        statistics_fieldgoalsattempted INT,
+        statistics_fieldgoalsmade INT,
+        statistics_foulsoffensive INT,
+        statistics_foulsdrawn INT,
+        statistics_foulspersonal INT,
+        statistics_foulstechnical INT,
+        statistics_freethrowsattempted INT,
+        statistics_freethrowsmade INT,
+        statistics_minus INT,
+        statistics_minutes VARCHAR(50),
+        statistics_minutescalculated VARCHAR(20),
+        statistics_plus INT,
+        statistics_plusminuspoints INT,
+        statistics_points INT,
+        statistics_pointsfastbreak INT,
+        statistics_pointsinthepaint INT,
+        statistics_pointssecondchance INT,
+        statistics_reboundsdefensive INT,
+        statistics_reboundsoffensive INT,
+        statistics_reboundstotal INT,
+        statistics_steals INT,
+        statistics_threepointersattempted INT,
+        statistics_threepointersmade INT,
+        statistics_turnovers INT,
+        statistics_twopointersattempted INT,
+        statistics_twopointersmade INT,
+        game_id VARCHAR(20)
+        --PRIMARY KEY (game_id, personId) -- Assuming each game_id/personId combination is unique
+    );
+    
+[2025-01-07T13:09:28.531+0000] {app_start.py:48} INFO - Table creation completed.
+[2025-01-07T13:09:28.531+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-07T13:09:28.538+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_data_pipeline, task_id=create_tables, execution_date=20250107T130926, start_date=20250107T130928, end_date=20250107T130928
+[2025-01-07T13:09:28.567+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-07T13:09:28.582+0000] {taskinstance.py:2653} INFO - 3 downstream tasks scheduled from follow-on schedule check

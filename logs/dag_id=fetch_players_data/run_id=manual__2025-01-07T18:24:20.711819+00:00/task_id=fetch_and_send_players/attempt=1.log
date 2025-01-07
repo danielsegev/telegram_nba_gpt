@@ -1,0 +1,14 @@
+[2025-01-07T18:24:24.354+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_players_data.fetch_and_send_players manual__2025-01-07T18:24:20.711819+00:00 [queued]>
+[2025-01-07T18:24:24.446+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_players_data.fetch_and_send_players manual__2025-01-07T18:24:20.711819+00:00 [queued]>
+[2025-01-07T18:24:24.446+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-07T18:24:24.454+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_send_players> on 2025-01-07 18:24:20.711819+00:00
+[2025-01-07T18:24:24.457+0000] {standard_task_runner.py:57} INFO - Started process 59 to run task
+[2025-01-07T18:24:24.460+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_players_data', 'fetch_and_send_players', 'manual__2025-01-07T18:24:20.711819+00:00', '--job-id', '526', '--raw', '--subdir', 'DAGS_FOLDER/process_players_dag.py', '--cfg-path', '/tmp/tmpoyetd62l']
+[2025-01-07T18:24:24.461+0000] {standard_task_runner.py:85} INFO - Job 526: Subtask fetch_and_send_players
+[2025-01-07T18:24:24.487+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_players_data.fetch_and_send_players manual__2025-01-07T18:24:20.711819+00:00 [running]> on host 218769c984b4
+[2025-01-07T18:24:24.527+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_players_data' AIRFLOW_CTX_TASK_ID='fetch_and_send_players' AIRFLOW_CTX_EXECUTION_DATE='2025-01-07T18:24:20.711819+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-07T18:24:20.711819+00:00'
+[2025-01-07T18:26:05.627+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-07T18:26:05.634+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 59. PIDs of all processes in the group: [59]
+[2025-01-07T18:26:05.635+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 59
+[2025-01-07T18:26:05.637+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-07T18:26:05.940+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=59, status='terminated', exitcode=0, started='18:24:24') (59) terminated with exit code 0

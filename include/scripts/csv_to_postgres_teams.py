@@ -4,14 +4,14 @@ import pandas as pd
 # Database configuration
 db_config = {
     "dbname": "dwh",
-    "user": "postgres",
-    "password": "postgres",
-    "host": "localhost",
+    "user": "airflow",
+    "password": "airflow",
+    "host": "192.168.64.1",
     "port": "5432"
 }
 
 # Path to the CSV file
-csv_file = "data_sample/nba_teams.csv"  # Update with the correct path
+csv_file = "data_sample/data/nba_teams.csv"  # Update with the correct path
 
 # Mapping CSV fields to database table columns
 column_mapping = {

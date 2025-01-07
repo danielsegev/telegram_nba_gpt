@@ -9,6 +9,10 @@ import pandas as pd
 import json
 from confluent_kafka import Producer
 from concurrent.futures import ThreadPoolExecutor
+import logging
+import time
+import random
+from requests.exceptions import RequestException
 
 # Default DAG arguments
 default_args = {
@@ -19,20 +23,30 @@ default_args = {
     "retry_delay": timedelta(minutes=5),
 }
 
-def fetch_player_data(player_id):
-    """ Fetch player details using the NBA API """
-    try:
-        info = commonplayerinfo.CommonPlayerInfo(player_id=player_id)
-        return info.get_data_frames()[0].rename(columns={'PERSON_ID': 'id'})
-    except Exception as e:
-        print(f"Error fetching data for player_id {player_id}: {e}")
-        return None
+logging.basicConfig(level=logging.INFO)
+
+def fetch_player_data(player_id, max_retries=5, base_delay=5):
+    """ Fetch player details using the NBA API with retries and backoff """
+    retries = 0
+    while retries < max_retries:
+        try:
+            logging.info(f"Fetching data for player_id {player_id}, attempt {retries+1}")
+            info = commonplayerinfo.CommonPlayerInfo(player_id=player_id, timeout=60)
+            return info.get_data_frames()[0].rename(columns={'PERSON_ID': 'id'})
+        except (RequestException, TimeoutError) as e:
+            logging.warning(f"Error fetching data for player_id {player_id}: {e}, retrying...")
+            time.sleep(base_delay * (2 ** retries) + random.uniform(0, 1))  # Exponential backoff
+            retries += 1
+    
+    logging.error(f"Failed to fetch data for player_id {player_id} after {max_retries} retries.")
+    return None
 
 def fetch_and_send_players():
+    """ Fetch all active players, enrich data, and send to Kafka topic """
     conf = {
         'bootstrap.servers': 'kafka-learn:9092',
-        'linger.ms': 100,  # Wait up to 100ms before sending messages in a batch
-        'batch.num.messages': 1000  # Send up to 1000 messages per batch
+        'linger.ms': 100,
+        'batch.num.messages': 1000
     }
     producer = Producer(conf)
 
@@ -40,20 +54,23 @@ def fetch_and_send_players():
     df_players = pd.DataFrame(all_players)
 
     extended_info_list = []
-    with ThreadPoolExecutor(max_workers=10) as executor:  # Run 10 threads in parallel
+    with ThreadPoolExecutor(max_workers=5) as executor:
         results = list(executor.map(fetch_player_data, df_players['id']))
 
     extended_info_list = [df for df in results if df is not None]
 
-    df_extended_info = pd.concat(extended_info_list, ignore_index=True) if extended_info_list else pd.DataFrame()
-    df_merged = pd.merge(df_players, df_extended_info, on='id', how='left')
+    if extended_info_list:
+        df_extended_info = pd.concat(extended_info_list, ignore_index=True)
+        df_merged = pd.merge(df_players, df_extended_info, on='id', how='left')
 
-    for _, player_row in df_merged.iterrows():
-        player_json = json.dumps(player_row.to_dict())
-        producer.produce('players', value=player_json)
+        for _, player_row in df_merged.iterrows():
+            player_json = json.dumps(player_row.to_dict())
+            producer.produce('players', value=player_json)
 
-    producer.flush()
-    print("All active player data sent to 'players' topic in Kafka.")
+        producer.flush()
+        logging.info("All active player data sent to 'players' topic in Kafka.")
+    else:
+        logging.warning("No player data fetched successfully, skipping Kafka ingestion.")
 
 # Define the DAG
 with DAG(
