@@ -135,6 +135,7 @@ services:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./data_sample/data:/opt/airflow/data_sample/data
     ports:
       - "8080:8080"
     command: ["airflow", "webserver"]
@@ -166,6 +167,7 @@ services:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./data_sample/data:/opt/airflow/data_sample/data
     command: ["airflow", "scheduler"]
     depends_on:
       airflow-webserver:
@@ -196,6 +198,7 @@ services:
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./include:/usr/local/airflow/include/scripts/
+      - ./data_sample/data:/opt/airflow/data_sample/data
     command: ["airflow", "celery", "worker"]
     depends_on:
       postgres:

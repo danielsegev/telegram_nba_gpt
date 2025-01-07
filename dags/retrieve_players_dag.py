@@ -22,7 +22,7 @@ def fetch_and_send_players():
             print(f"Message delivered to {msg.topic()} [{msg.partition()}]")
 
     all_players = players.get_players()
-    active_players = [p for p in all_players if p['is_active']]
+    active_players = [p for p in all_players]
     df_players = pd.DataFrame(active_players)
     extended_info_list = []
 
