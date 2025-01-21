@@ -1,0 +1,35 @@
+[2025-01-20T15:10:56.997+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_etl_dag.create_postgres_db scheduled__2025-01-19T00:00:00+00:00 [queued]>
+[2025-01-20T15:10:57.005+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_etl_dag.create_postgres_db scheduled__2025-01-19T00:00:00+00:00 [queued]>
+[2025-01-20T15:10:57.005+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-20T15:10:57.017+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_postgres_db> on 2025-01-19 00:00:00+00:00
+[2025-01-20T15:10:57.022+0000] {standard_task_runner.py:57} INFO - Started process 77 to run task
+[2025-01-20T15:10:57.024+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_etl_dag', 'create_postgres_db', 'scheduled__2025-01-19T00:00:00+00:00', '--job-id', '1052', '--raw', '--subdir', 'DAGS_FOLDER/nba_etl_dag.py', '--cfg-path', '/tmp/tmptqy7yz5w']
+[2025-01-20T15:10:57.032+0000] {standard_task_runner.py:85} INFO - Job 1052: Subtask create_postgres_db
+[2025-01-20T15:10:57.076+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_etl_dag.create_postgres_db scheduled__2025-01-19T00:00:00+00:00 [running]> on host 01a7935ebd09
+[2025-01-20T15:10:57.141+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_etl_dag' AIRFLOW_CTX_TASK_ID='create_postgres_db' AIRFLOW_CTX_EXECUTION_DATE='2025-01-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-19T00:00:00+00:00'
+[2025-01-20T15:10:57.142+0000] {create_postgres_db.py:19} INFO - Connecting to database dwh at postgres:5432 as postgres...
+[2025-01-20T15:10:57.147+0000] {create_postgres_db.py:125} ERROR - Failed to create database tables.
+Traceback (most recent call last):
+  File "/opt/airflow/include/tasks/create_postgres_db.py", line 27, in create_postgres_db
+    port=port,
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.18.0.3), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[2025-01-20T15:10:57.149+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/include/tasks/create_postgres_db.py", line 27, in create_postgres_db
+    port=port,
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.18.0.3), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[2025-01-20T15:10:57.155+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=nba_etl_dag, task_id=create_postgres_db, execution_date=20250119T000000, start_date=20250120T151056, end_date=20250120T151057
+[2025-01-20T15:10:57.166+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 1052 for task create_postgres_db (connection to server at "postgres" (172.18.0.3), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+; 77)
+[2025-01-20T15:10:57.206+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-20T15:10:57.230+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

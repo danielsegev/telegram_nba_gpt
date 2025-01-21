@@ -1,0 +1,13 @@
+[2025-01-08T10:11:12.402+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_historical_data_pipeline.ingest_games manual__2025-01-08T10:11:08.770786+00:00 [queued]>
+[2025-01-08T10:11:12.426+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_historical_data_pipeline.ingest_games manual__2025-01-08T10:11:08.770786+00:00 [queued]>
+[2025-01-08T10:11:12.427+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-08T10:11:12.460+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): ingest_games> on 2025-01-08 10:11:08.770786+00:00
+[2025-01-08T10:11:12.467+0000] {standard_task_runner.py:57} INFO - Started process 64 to run task
+[2025-01-08T10:11:12.472+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_historical_data_pipeline', 'ingest_games', 'manual__2025-01-08T10:11:08.770786+00:00', '--job-id', '641', '--raw', '--subdir', 'DAGS_FOLDER/app_start_ns.py', '--cfg-path', '/tmp/tmpcyp38n7r']
+[2025-01-08T10:11:12.474+0000] {standard_task_runner.py:85} INFO - Job 641: Subtask ingest_games
+[2025-01-08T10:11:12.587+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_historical_data_pipeline.ingest_games manual__2025-01-08T10:11:08.770786+00:00 [running]> on host 35decd18236b
+[2025-01-08T10:11:12.763+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_historical_data_pipeline' AIRFLOW_CTX_TASK_ID='ingest_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T10:11:08.770786+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-08T10:11:08.770786+00:00'
+[2025-01-08T10:11:24.928+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-08T10:11:24.983+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_historical_data_pipeline, task_id=ingest_games, execution_date=20250108T101108, start_date=20250108T101112, end_date=20250108T101124
+[2025-01-08T10:11:25.062+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-08T10:11:25.104+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

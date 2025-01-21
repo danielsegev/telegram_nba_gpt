@@ -1,0 +1,16 @@
+[2025-01-08T15:37:22.800+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_historical_data_pipeline.create_kafka_topic manual__2025-01-08T15:37:18.907141+00:00 [queued]>
+[2025-01-08T15:37:22.826+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_historical_data_pipeline.create_kafka_topic manual__2025-01-08T15:37:18.907141+00:00 [queued]>
+[2025-01-08T15:37:22.827+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-08T15:37:22.863+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_kafka_topic> on 2025-01-08 15:37:18.907141+00:00
+[2025-01-08T15:37:22.870+0000] {standard_task_runner.py:57} INFO - Started process 62 to run task
+[2025-01-08T15:37:22.877+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_historical_data_pipeline', 'create_kafka_topic', 'manual__2025-01-08T15:37:18.907141+00:00', '--job-id', '724', '--raw', '--subdir', 'DAGS_FOLDER/app_start_ns.py', '--cfg-path', '/tmp/tmph_btviw4']
+[2025-01-08T15:37:22.878+0000] {standard_task_runner.py:85} INFO - Job 724: Subtask create_kafka_topic
+[2025-01-08T15:37:22.964+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_historical_data_pipeline.create_kafka_topic manual__2025-01-08T15:37:18.907141+00:00 [running]> on host bad0859697a7
+[2025-01-08T15:37:23.226+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_historical_data_pipeline' AIRFLOW_CTX_TASK_ID='create_kafka_topic' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T15:37:18.907141+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-08T15:37:18.907141+00:00'
+[2025-01-08T15:37:23.232+0000] {app_start_ns.py:87} INFO - Ensuring Kafka topic exists before ingestion...
+[2025-01-08T15:37:24.995+0000] {app_start_ns.py:95} INFO - Kafka topic creation output:
+
+[2025-01-08T15:37:24.997+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-08T15:37:25.047+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_historical_data_pipeline, task_id=create_kafka_topic, execution_date=20250108T153718, start_date=20250108T153722, end_date=20250108T153725
+[2025-01-08T15:37:25.121+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-08T15:37:25.168+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

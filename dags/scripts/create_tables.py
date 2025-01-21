@@ -21,7 +21,7 @@ new_db_config = {
 # SQL scripts to create tables
 CREATE_TABLE_QUERIES = [
     """
-    CREATE TABLE IF NOT EXISTS nba_teams (
+    CREATE TABLE IF NOT EXISTS dim_team (
         team_id INT PRIMARY KEY,
         abbreviation VARCHAR(100),
         city VARCHAR(100),
@@ -31,7 +31,7 @@ CREATE_TABLE_QUERIES = [
     );
     """,
     """
-    CREATE TABLE IF NOT EXISTS nba_players (
+    CREATE TABLE IF NOT EXISTS dim_player (
         id INT PRIMARY KEY,
         full_name VARCHAR(100),
         birthdate DATE,
@@ -58,7 +58,7 @@ CREATE_TABLE_QUERIES = [
     );
     """,
     """
-    CREATE TABLE IF NOT EXISTS nba_games (
+    CREATE TABLE IF NOT EXISTS fact_game (
         status VARCHAR(20),
         "order" INT,
         personId INT,
@@ -95,6 +95,7 @@ CREATE_TABLE_QUERIES = [
         statistics_twopointersattempted INT,
         statistics_twopointersmade INT,
         game_id VARCHAR(20)
+        ,game_date DATE NOT NULL
         --PRIMARY KEY (game_id, personId) -- Assuming each game_id/personId combination is unique
     );
     """

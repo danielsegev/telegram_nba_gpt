@@ -1,0 +1,16 @@
+[2025-01-08T11:30:13.871+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_teams_data.truncate_nba_teams manual__2025-01-08T11:30:12.274323+00:00 [queued]>
+[2025-01-08T11:30:13.885+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_teams_data.truncate_nba_teams manual__2025-01-08T11:30:12.274323+00:00 [queued]>
+[2025-01-08T11:30:13.885+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-08T11:30:13.902+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): truncate_nba_teams> on 2025-01-08 11:30:12.274323+00:00
+[2025-01-08T11:30:13.908+0000] {standard_task_runner.py:57} INFO - Started process 798 to run task
+[2025-01-08T11:30:13.913+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_teams_data', 'truncate_nba_teams', 'manual__2025-01-08T11:30:12.274323+00:00', '--job-id', '650', '--raw', '--subdir', 'DAGS_FOLDER/process_teams_dag.py', '--cfg-path', '/tmp/tmprchqjmxr']
+[2025-01-08T11:30:13.918+0000] {standard_task_runner.py:85} INFO - Job 650: Subtask truncate_nba_teams
+[2025-01-08T11:30:13.975+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_teams_data.truncate_nba_teams manual__2025-01-08T11:30:12.274323+00:00 [running]> on host 35decd18236b
+[2025-01-08T11:30:14.658+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_teams_data' AIRFLOW_CTX_TASK_ID='truncate_nba_teams' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T11:30:12.274323+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-08T11:30:12.274323+00:00'
+[2025-01-08T11:30:14.659+0000] {sql.py:265} INFO - Executing: TRUNCATE TABLE nba_teams;
+[2025-01-08T11:30:14.673+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-01-08T11:30:14.805+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-01-08T11:30:14.813+0000] {sql.py:375} INFO - Running statement: TRUNCATE TABLE nba_teams;, parameters: None
+[2025-01-08T11:30:14.840+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=fetch_teams_data, task_id=truncate_nba_teams, execution_date=20250108T113012, start_date=20250108T113013, end_date=20250108T113014
+[2025-01-08T11:30:14.877+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-08T11:30:15.066+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

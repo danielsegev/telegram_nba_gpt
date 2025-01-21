@@ -55,7 +55,7 @@ def write_to_postgres(batch_df, batch_id):
     }
 
     insert_query = """
-    INSERT INTO nba_teams (team_id, abbreviation, city, full_name, state, year_founded)
+    INSERT INTO dim_team (team_id, abbreviation, city, full_name, state, year_founded)
     VALUES (%s, %s, %s, %s, %s, %s)
     ON CONFLICT (team_id) DO NOTHING;
     """
@@ -71,7 +71,7 @@ def write_to_postgres(batch_df, batch_id):
             with conn.cursor() as cursor:
                 cursor.executemany(insert_query, data_list)
                 conn.commit()
-                print(f"Batch {batch_id}: Successfully inserted {len(data_list)} rows into 'nba_teams'.")
+                print(f"Batch {batch_id}: Successfully inserted {len(data_list)} rows into 'dim_team'.")
 
     except Exception as e:
         print(f"Batch {batch_id}: Error inserting data into PostgreSQL: {e}")

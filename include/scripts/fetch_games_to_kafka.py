@@ -7,9 +7,12 @@ from datetime import datetime
 
 # Kafka producer configuration
 producer_conf = {
-    'bootstrap.servers': 'localhost:29092'  # Adjust if necessary
+    'bootstrap.servers': 'kafka-learn:9092'  # Adjust if necessary
 }
 producer = Producer(producer_conf)
+
+# Number of partitions (set based on Kafka topic configuration)
+NUM_PARTITIONS = 3  # Adjust this according to your Kafka topic setup
 
 # Function to fetch all games for the given season and their dates
 def fetch_season_games(season: str):
@@ -25,6 +28,15 @@ def fetch_season_games(season: str):
     games_data['GAME_DATE'] = pd.to_datetime(games_data['GAME_DATE']).dt.strftime('%Y-%m-%d')
 
     return list(zip(games_data['GAME_ID'], games_data['GAME_DATE']))
+
+# Function to determine Kafka partition
+def get_partition(game_id: str):
+    """
+    Determine the partition for a given game_id using hash function.
+    :param game_id: ID of the game to process.
+    :return: Partition number.
+    """
+    return hash(game_id) % NUM_PARTITIONS  # Distributes data across partitions
 
 # Function to process game data and send to Kafka
 def process_game_data(game_id: str, game_date: str):
@@ -57,13 +69,16 @@ def process_game_data(game_id: str, game_date: str):
         df['game_id'] = game_id
         df['game_date'] = game_date
 
+        # Determine partition for this game
+        partition = get_partition(game_id)
+
         # Produce each player's record as a JSON message to the 'games' topic
         for _, player_row in df.iterrows():
             player_dict = player_row.to_dict()
             player_json = json.dumps(player_dict)
-            producer.produce('games', value=player_json)
+            producer.produce('games', value=player_json, partition=partition)
 
-        print(f"Game {game_id} from {game_date} processed successfully.")
+        print(f"Game {game_id} from {game_date} processed successfully (Partition {partition}).")
 
     except Exception as e:
         print(f"Error processing game {game_id}: {e}")

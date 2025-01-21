@@ -1,0 +1,19 @@
+[2025-01-20T15:22:08.603+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_etl_dag.kafka_producer_teams manual__2025-01-20T15:22:04.640839+00:00 [queued]>
+[2025-01-20T15:22:08.612+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_etl_dag.kafka_producer_teams manual__2025-01-20T15:22:04.640839+00:00 [queued]>
+[2025-01-20T15:22:08.612+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-20T15:22:08.625+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): kafka_producer_teams> on 2025-01-20 15:22:04.640839+00:00
+[2025-01-20T15:22:08.632+0000] {standard_task_runner.py:57} INFO - Started process 100 to run task
+[2025-01-20T15:22:08.636+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_etl_dag', 'kafka_producer_teams', 'manual__2025-01-20T15:22:04.640839+00:00', '--job-id', '1058', '--raw', '--subdir', 'DAGS_FOLDER/nba_etl_dag.py', '--cfg-path', '/tmp/tmpis91b938']
+[2025-01-20T15:22:08.640+0000] {standard_task_runner.py:85} INFO - Job 1058: Subtask kafka_producer_teams
+[2025-01-20T15:22:08.700+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_etl_dag.kafka_producer_teams manual__2025-01-20T15:22:04.640839+00:00 [running]> on host 928a7e1c1adc
+[2025-01-20T15:22:08.771+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_etl_dag' AIRFLOW_CTX_TASK_ID='kafka_producer_teams' AIRFLOW_CTX_EXECUTION_DATE='2025-01-20T15:22:04.640839+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-20T15:22:04.640839+00:00'
+[2025-01-20T15:22:08.780+0000] {kafka_producer_teams.py:22} INFO - Fetching all NBA teams...
+[2025-01-20T15:22:08.783+0000] {kafka_producer_teams.py:29} INFO - Found 30 teams.
+[2025-01-20T15:22:08.783+0000] {kafka_producer_teams.py:32} INFO - Producing team data to Kafka topic 'teams'...
+[2025-01-20T15:22:49.062+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-20T15:22:49.069+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 100. PIDs of all processes in the group: [100]
+[2025-01-20T15:22:49.069+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 100
+[2025-01-20T15:23:49.074+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=100, name='airflow task ru', status='sleeping', started='15:22:08') did not respond to SIGTERM. Trying SIGKILL
+[2025-01-20T15:23:49.086+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 100
+[2025-01-20T15:23:49.094+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=100, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='15:22:08') (100) terminated with exit code Negsignal.SIGKILL
+[2025-01-20T15:23:49.095+0000] {standard_task_runner.py:174} ERROR - Job 1058 was killed before it finished (likely due to running out of memory)

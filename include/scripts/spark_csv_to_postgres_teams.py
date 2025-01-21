@@ -24,6 +24,6 @@ teams_df = spark.read.csv(teams_csv, header=True, inferSchema=True)
 teams_df = teams_df.selectExpr("id as team_id", "full_name", "city", "state", "abbreviation", "year_founded")
 
 # Write to PostgreSQL
-teams_df.write.jdbc(url=db_url, table="nba_teams", mode="overwrite", properties=db_properties)
+teams_df.write.jdbc(url=db_url, table="dim_team", mode="overwrite", properties=db_properties)
 
 print("Teams data successfully ingested into PostgreSQL.")

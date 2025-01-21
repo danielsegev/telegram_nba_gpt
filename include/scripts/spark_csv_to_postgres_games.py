@@ -28,6 +28,6 @@ if not games_files:
 games_df = spark.read.csv(games_files, header=True, inferSchema=True)
 
 # Write to PostgreSQL
-games_df.write.jdbc(url=db_url, table="nba_games", mode="overwrite", properties=db_properties)
+games_df.write.jdbc(url=db_url, table="fact_game", mode="overwrite", properties=db_properties)
 
 print("Games data successfully ingested into PostgreSQL.")

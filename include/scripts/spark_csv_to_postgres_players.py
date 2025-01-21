@@ -32,6 +32,6 @@ players_df = players_df.selectExpr(
 )
 
 # Write to PostgreSQL
-players_df.write.jdbc(url=db_url, table="nba_players", mode="overwrite", properties=db_properties)
+players_df.write.jdbc(url=db_url, table="dim_player", mode="overwrite", properties=db_properties)
 
 print("Players data successfully ingested into PostgreSQL.")

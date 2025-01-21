@@ -1,0 +1,16 @@
+[2025-01-08T06:57:44.586+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_historical_data_pipeline.ingest_season_games manual__2025-01-08T06:57:40.458530+00:00 [queued]>
+[2025-01-08T06:57:44.591+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_historical_data_pipeline.ingest_season_games manual__2025-01-08T06:57:40.458530+00:00 [queued]>
+[2025-01-08T06:57:44.591+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-08T06:57:44.598+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): ingest_season_games> on 2025-01-08 06:57:40.458530+00:00
+[2025-01-08T06:57:44.601+0000] {standard_task_runner.py:57} INFO - Started process 65 to run task
+[2025-01-08T06:57:44.602+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_historical_data_pipeline', 'ingest_season_games', 'manual__2025-01-08T06:57:40.458530+00:00', '--job-id', '570', '--raw', '--subdir', 'DAGS_FOLDER/app_start_ns.py', '--cfg-path', '/tmp/tmphtt66uqq']
+[2025-01-08T06:57:44.603+0000] {standard_task_runner.py:85} INFO - Job 570: Subtask ingest_season_games
+[2025-01-08T06:57:44.626+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_historical_data_pipeline.ingest_season_games manual__2025-01-08T06:57:40.458530+00:00 [running]> on host 1ea1284d250e
+[2025-01-08T06:57:44.664+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_historical_data_pipeline' AIRFLOW_CTX_TASK_ID='ingest_season_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T06:57:40.458530+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-08T06:57:40.458530+00:00'
+[2025-01-08T06:57:44.664+0000] {app_start_ns.py:102} INFO - Starting Kafka producer for season games...
+[2025-01-08T07:00:00.778+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-08T07:00:00.784+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 65. PIDs of all processes in the group: [66, 65]
+[2025-01-08T07:00:00.784+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 65
+[2025-01-08T07:00:00.787+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-08T07:00:00.802+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=66, status='terminated', started='06:57:43') (66) terminated with exit code None
+[2025-01-08T07:00:00.863+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=65, status='terminated', exitcode=0, started='06:57:43') (65) terminated with exit code 0

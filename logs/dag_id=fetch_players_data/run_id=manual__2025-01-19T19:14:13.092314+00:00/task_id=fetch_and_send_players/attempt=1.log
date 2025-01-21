@@ -1,0 +1,409 @@
+[2025-01-19T19:14:16.481+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_players_data.fetch_and_send_players manual__2025-01-19T19:14:13.092314+00:00 [queued]>
+[2025-01-19T19:14:16.661+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_players_data.fetch_and_send_players manual__2025-01-19T19:14:13.092314+00:00 [queued]>
+[2025-01-19T19:14:16.661+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-19T19:14:16.671+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_send_players> on 2025-01-19 19:14:13.092314+00:00
+[2025-01-19T19:14:16.675+0000] {standard_task_runner.py:57} INFO - Started process 648 to run task
+[2025-01-19T19:14:16.678+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_players_data', 'fetch_and_send_players', 'manual__2025-01-19T19:14:13.092314+00:00', '--job-id', '900', '--raw', '--subdir', 'DAGS_FOLDER/process_players_dag.py', '--cfg-path', '/tmp/tmpujt3p9uq']
+[2025-01-19T19:14:16.681+0000] {standard_task_runner.py:85} INFO - Job 900: Subtask fetch_and_send_players
+[2025-01-19T19:14:16.720+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_players_data.fetch_and_send_players manual__2025-01-19T19:14:13.092314+00:00 [running]> on host 71110fea890c
+[2025-01-19T19:14:16.769+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_players_data' AIRFLOW_CTX_TASK_ID='fetch_and_send_players' AIRFLOW_CTX_EXECUTION_DATE='2025-01-19T19:14:13.092314+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-19T19:14:13.092314+00:00'
+[2025-01-19T19:14:16.790+0000] {process_players_dag.py:74} INFO - Total players retrieved: 4831
+[2025-01-19T19:14:16.792+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76001, attempt 1
+[2025-01-19T19:14:16.796+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76002, attempt 1
+[2025-01-19T19:14:16.797+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76003, attempt 1
+[2025-01-19T19:14:17.196+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76001
+[2025-01-19T19:14:17.197+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 51, attempt 1
+[2025-01-19T19:14:17.232+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76002
+[2025-01-19T19:14:17.233+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1505, attempt 1
+[2025-01-19T19:14:17.251+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76003
+[2025-01-19T19:14:17.258+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 949, attempt 1
+[2025-01-19T19:14:17.589+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 51
+[2025-01-19T19:14:17.589+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76005, attempt 1
+[2025-01-19T19:14:17.635+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 949
+[2025-01-19T19:14:17.636+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76006, attempt 1
+[2025-01-19T19:14:17.722+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1505
+[2025-01-19T19:14:17.723+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76007, attempt 1
+[2025-01-19T19:14:17.953+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76005
+[2025-01-19T19:14:17.954+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203518, attempt 1
+[2025-01-19T19:14:18.060+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76006
+[2025-01-19T19:14:18.061+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1630173, attempt 1
+[2025-01-19T19:14:18.119+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76007
+[2025-01-19T19:14:18.119+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 101165, attempt 1
+[2025-01-19T19:14:18.338+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203518
+[2025-01-19T19:14:18.339+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76008, attempt 1
+[2025-01-19T19:14:18.438+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1630173
+[2025-01-19T19:14:18.438+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76009, attempt 1
+[2025-01-19T19:14:18.505+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 101165
+[2025-01-19T19:14:18.506+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76010, attempt 1
+[2025-01-19T19:14:18.714+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76008
+[2025-01-19T19:14:18.714+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203112, attempt 1
+[2025-01-19T19:14:18.823+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76009
+[2025-01-19T19:14:18.824+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76011, attempt 1
+[2025-01-19T19:14:18.916+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76010
+[2025-01-19T19:14:18.916+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76012, attempt 1
+[2025-01-19T19:14:19.093+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203112
+[2025-01-19T19:14:19.094+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200801, attempt 1
+[2025-01-19T19:14:19.246+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76011
+[2025-01-19T19:14:19.247+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1629121, attempt 1
+[2025-01-19T19:14:19.319+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76012
+[2025-01-19T19:14:19.321+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203919, attempt 1
+[2025-01-19T19:14:19.511+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 200801
+[2025-01-19T19:14:19.512+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 149, attempt 1
+[2025-01-19T19:14:19.641+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1629121
+[2025-01-19T19:14:19.642+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203500, attempt 1
+[2025-01-19T19:14:19.709+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203919
+[2025-01-19T19:14:19.709+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 912, attempt 1
+[2025-01-19T19:14:19.985+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 149
+[2025-01-19T19:14:19.986+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628389, attempt 1
+[2025-01-19T19:14:20.052+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203500
+[2025-01-19T19:14:20.055+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1629061, attempt 1
+[2025-01-19T19:14:20.114+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 912
+[2025-01-19T19:14:20.114+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76015, attempt 1
+[2025-01-19T19:14:20.281+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628389
+[2025-01-19T19:14:20.282+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202399, attempt 1
+[2025-01-19T19:14:20.463+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1629061
+[2025-01-19T19:14:20.474+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201167, attempt 1
+[2025-01-19T19:14:20.492+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76015
+[2025-01-19T19:14:20.493+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1630534, attempt 1
+[2025-01-19T19:14:20.713+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202399
+[2025-01-19T19:14:20.714+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200772, attempt 1
+[2025-01-19T19:14:20.890+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1630534
+[2025-01-19T19:14:20.890+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76016, attempt 1
+[2025-01-19T19:14:21.068+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201167
+[2025-01-19T19:14:21.068+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201336, attempt 1
+[2025-01-19T19:14:21.119+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 200772
+[2025-01-19T19:14:21.121+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76017, attempt 1
+[2025-01-19T19:14:21.465+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201336
+[2025-01-19T19:14:21.465+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201582, attempt 1
+[2025-01-19T19:14:21.853+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201582
+[2025-01-19T19:14:21.854+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76018, attempt 1
+[2025-01-19T19:15:21.121+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76016: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:15:21.337+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76017: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:15:22.057+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76018: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:15:26.507+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76017, attempt 2
+[2025-01-19T19:15:26.697+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76016, attempt 2
+[2025-01-19T19:15:26.956+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76017
+[2025-01-19T19:15:26.960+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203006, attempt 1
+[2025-01-19T19:15:27.103+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76016
+[2025-01-19T19:15:27.104+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1629152, attempt 1
+[2025-01-19T19:15:27.473+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203006
+[2025-01-19T19:15:27.474+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202374, attempt 1
+[2025-01-19T19:15:27.540+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1629152
+[2025-01-19T19:15:27.540+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76019, attempt 1
+[2025-01-19T19:15:27.859+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76018, attempt 2
+[2025-01-19T19:15:27.937+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202374
+[2025-01-19T19:15:27.938+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76020, attempt 1
+[2025-01-19T19:15:27.949+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76019
+[2025-01-19T19:15:27.949+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1630583, attempt 1
+[2025-01-19T19:15:28.227+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76018
+[2025-01-19T19:15:28.228+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203128, attempt 1
+[2025-01-19T19:15:28.326+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1630583
+[2025-01-19T19:15:28.327+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202332, attempt 1
+[2025-01-19T19:15:28.345+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76020
+[2025-01-19T19:15:28.346+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200746, attempt 1
+[2025-01-19T19:15:28.657+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203128
+[2025-01-19T19:15:28.659+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76021, attempt 1
+[2025-01-19T19:15:28.705+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 200746
+[2025-01-19T19:15:28.706+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1626146, attempt 1
+[2025-01-19T19:15:28.716+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202332
+[2025-01-19T19:15:29.026+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 724, attempt 1
+[2025-01-19T19:15:29.341+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76021
+[2025-01-19T19:15:29.343+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1626146
+[2025-01-19T19:15:29.343+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2042, attempt 1
+[2025-01-19T19:15:29.344+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76022, attempt 1
+[2025-01-19T19:15:29.407+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 724
+[2025-01-19T19:15:29.408+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201570, attempt 1
+[2025-01-19T19:15:29.720+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2042
+[2025-01-19T19:15:29.722+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1629734, attempt 1
+[2025-01-19T19:15:29.751+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76022
+[2025-01-19T19:15:29.752+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1630234, attempt 1
+[2025-01-19T19:15:29.812+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201570
+[2025-01-19T19:15:29.813+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2349, attempt 1
+[2025-01-19T19:15:30.089+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1629734
+[2025-01-19T19:15:30.089+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1629638, attempt 1
+[2025-01-19T19:15:30.118+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1630234
+[2025-01-19T19:15:30.118+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76024, attempt 1
+[2025-01-19T19:15:30.195+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2349
+[2025-01-19T19:15:30.198+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628959, attempt 1
+[2025-01-19T19:15:30.455+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1629638
+[2025-01-19T19:15:30.456+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76028, attempt 1
+[2025-01-19T19:15:30.491+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76024
+[2025-01-19T19:15:30.492+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628960, attempt 1
+[2025-01-19T19:15:30.876+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628960
+[2025-01-19T19:15:30.877+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628386, attempt 1
+[2025-01-19T19:15:30.889+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628959
+[2025-01-19T19:15:30.890+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 706, attempt 1
+[2025-01-19T19:15:30.896+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76028
+[2025-01-19T19:15:30.897+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628443, attempt 1
+[2025-01-19T19:15:31.256+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628386
+[2025-01-19T19:15:31.257+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202730, attempt 1
+[2025-01-19T19:15:31.287+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628443
+[2025-01-19T19:15:31.288+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76027, attempt 1
+[2025-01-19T19:15:31.356+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 706
+[2025-01-19T19:15:31.357+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2124, attempt 1
+[2025-01-19T19:15:31.648+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202730
+[2025-01-19T19:15:31.649+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76025, attempt 1
+[2025-01-19T19:15:31.656+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76027
+[2025-01-19T19:15:31.656+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 951, attempt 1
+[2025-01-19T19:15:31.736+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2124
+[2025-01-19T19:15:31.740+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2754, attempt 1
+[2025-01-19T19:15:32.054+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 951
+[2025-01-19T19:15:32.059+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76029, attempt 1
+[2025-01-19T19:15:32.060+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76025
+[2025-01-19T19:15:32.063+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200984, attempt 1
+[2025-01-19T19:15:32.111+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2754
+[2025-01-19T19:15:32.112+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76030, attempt 1
+[2025-01-19T19:15:32.427+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76029
+[2025-01-19T19:15:32.428+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201165, attempt 1
+[2025-01-19T19:16:29.031+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76030: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), retrying...
+[2025-01-19T19:16:32.304+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 200984: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:16:32.673+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 201165: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:16:34.605+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76030, attempt 2
+[2025-01-19T19:16:37.624+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200984, attempt 2
+[2025-01-19T19:16:37.976+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201165, attempt 2
+[2025-01-19T19:16:38.383+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201165
+[2025-01-19T19:16:38.386+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 308, attempt 1
+[2025-01-19T19:16:38.799+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 308
+[2025-01-19T19:16:38.800+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1747, attempt 1
+[2025-01-19T19:17:33.661+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76030: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), retrying...
+[2025-01-19T19:17:37.861+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 200984: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:17:38.991+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 1747: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:17:44.146+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76030, attempt 3
+[2025-01-19T19:17:44.498+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1747, attempt 2
+[2025-01-19T19:17:48.506+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200984, attempt 3
+[2025-01-19T19:18:44.414+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76030: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:18:44.719+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 1747: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:18:48.771+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 200984: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:18:55.053+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1747, attempt 3
+[2025-01-19T19:18:55.640+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1747
+[2025-01-19T19:18:55.644+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1824, attempt 1
+[2025-01-19T19:18:56.382+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1824
+[2025-01-19T19:18:56.383+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1630631, attempt 1
+[2025-01-19T19:18:56.849+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1630631
+[2025-01-19T19:18:56.851+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 680, attempt 1
+[2025-01-19T19:18:57.374+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 680
+[2025-01-19T19:18:57.374+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 732, attempt 1
+[2025-01-19T19:18:57.813+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 732
+[2025-01-19T19:18:57.815+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202329, attempt 1
+[2025-01-19T19:18:58.225+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202329
+[2025-01-19T19:18:58.226+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200811, attempt 1
+[2025-01-19T19:18:58.624+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 200811
+[2025-01-19T19:18:58.626+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76034, attempt 1
+[2025-01-19T19:18:59.040+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76034
+[2025-01-19T19:18:59.041+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2365, attempt 1
+[2025-01-19T19:18:59.437+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2365
+[2025-01-19T19:18:59.437+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2431, attempt 1
+[2025-01-19T19:18:59.961+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2431
+[2025-01-19T19:18:59.962+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 101187, attempt 1
+[2025-01-19T19:19:00.411+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 101187
+[2025-01-19T19:19:00.412+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202079, attempt 1
+[2025-01-19T19:19:00.816+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202079
+[2025-01-19T19:19:00.816+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76035, attempt 1
+[2025-01-19T19:19:01.224+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76035
+[2025-01-19T19:19:01.226+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76036, attempt 1
+[2025-01-19T19:19:01.636+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76036
+[2025-01-19T19:19:01.637+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1507, attempt 1
+[2025-01-19T19:19:02.073+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1507
+[2025-01-19T19:19:02.075+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76037, attempt 1
+[2025-01-19T19:19:02.490+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76037
+[2025-01-19T19:19:02.491+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 944, attempt 1
+[2025-01-19T19:19:03.034+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 944
+[2025-01-19T19:19:03.035+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 246, attempt 1
+[2025-01-19T19:19:03.521+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 246
+[2025-01-19T19:19:03.522+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202341, attempt 1
+[2025-01-19T19:19:03.928+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202341
+[2025-01-19T19:19:03.929+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76040, attempt 1
+[2025-01-19T19:19:04.378+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76040
+[2025-01-19T19:19:04.378+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1626147, attempt 1
+[2025-01-19T19:19:04.567+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76030, attempt 4
+[2025-01-19T19:19:04.798+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1626147
+[2025-01-19T19:19:04.799+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 72, attempt 1
+[2025-01-19T19:19:04.991+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76030
+[2025-01-19T19:19:04.992+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76041, attempt 1
+[2025-01-19T19:19:05.319+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 72
+[2025-01-19T19:19:05.320+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203937, attempt 1
+[2025-01-19T19:19:05.436+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76041
+[2025-01-19T19:19:05.437+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76042, attempt 1
+[2025-01-19T19:19:05.849+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203937
+[2025-01-19T19:19:05.850+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76043, attempt 1
+[2025-01-19T19:19:05.993+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76042
+[2025-01-19T19:19:05.994+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 98, attempt 1
+[2025-01-19T19:19:06.502+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 98
+[2025-01-19T19:19:06.504+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76045, attempt 1
+[2025-01-19T19:19:06.686+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76043
+[2025-01-19T19:19:06.687+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76046, attempt 1
+[2025-01-19T19:19:07.074+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76045
+[2025-01-19T19:19:07.075+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201583, attempt 1
+[2025-01-19T19:19:07.195+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76046
+[2025-01-19T19:19:07.197+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1000, attempt 1
+[2025-01-19T19:19:07.560+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201583
+[2025-01-19T19:19:07.561+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 335, attempt 1
+[2025-01-19T19:19:08.057+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1000
+[2025-01-19T19:19:08.058+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76048, attempt 1
+[2025-01-19T19:19:08.068+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 335
+[2025-01-19T19:19:08.069+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 101149, attempt 1
+[2025-01-19T19:19:08.876+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200984, attempt 4
+[2025-01-19T19:19:08.877+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 101149
+[2025-01-19T19:19:08.880+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76049, attempt 1
+[2025-01-19T19:19:08.943+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76048
+[2025-01-19T19:19:08.944+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628387, attempt 1
+[2025-01-19T19:19:09.343+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 200984
+[2025-01-19T19:19:09.344+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76050, attempt 1
+[2025-01-19T19:19:09.362+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76049
+[2025-01-19T19:19:09.363+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1512, attempt 1
+[2025-01-19T19:19:09.428+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628387
+[2025-01-19T19:19:09.428+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203507, attempt 1
+[2025-01-19T19:19:09.818+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76050
+[2025-01-19T19:19:09.819+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628961, attempt 1
+[2025-01-19T19:19:09.858+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1512
+[2025-01-19T19:19:09.859+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203648, attempt 1
+[2025-01-19T19:19:09.930+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203507
+[2025-01-19T19:19:09.931+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2546, attempt 1
+[2025-01-19T19:19:10.225+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628961
+[2025-01-19T19:19:10.225+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1630175, attempt 1
+[2025-01-19T19:19:10.338+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203648
+[2025-01-19T19:19:10.341+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 21, attempt 1
+[2025-01-19T19:19:10.577+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2546
+[2025-01-19T19:19:10.578+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201202, attempt 1
+[2025-01-19T19:19:10.673+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1630175
+[2025-01-19T19:19:10.674+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203544, attempt 1
+[2025-01-19T19:19:10.747+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 21
+[2025-01-19T19:19:10.747+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628384, attempt 1
+[2025-01-19T19:19:11.193+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201202
+[2025-01-19T19:19:11.194+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203951, attempt 1
+[2025-01-19T19:19:11.201+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628384
+[2025-01-19T19:19:11.205+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2737, attempt 1
+[2025-01-19T19:19:11.206+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203544
+[2025-01-19T19:19:11.208+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76053, attempt 1
+[2025-01-19T19:19:11.744+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76053
+[2025-01-19T19:19:11.746+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76054, attempt 1
+[2025-01-19T19:19:11.749+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203951
+[2025-01-19T19:19:11.752+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2425, attempt 1
+[2025-01-19T19:19:11.774+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2737
+[2025-01-19T19:19:11.775+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1627853, attempt 1
+[2025-01-19T19:19:12.257+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76054
+[2025-01-19T19:19:12.259+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1627853
+[2025-01-19T19:19:12.263+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2240, attempt 1
+[2025-01-19T19:19:12.261+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76055, attempt 1
+[2025-01-19T19:19:12.266+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2425
+[2025-01-19T19:19:12.272+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2772, attempt 1
+[2025-01-19T19:19:12.770+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2240
+[2025-01-19T19:19:12.771+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76056, attempt 1
+[2025-01-19T19:19:12.789+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76055
+[2025-01-19T19:19:12.790+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76057, attempt 1
+[2025-01-19T19:19:12.798+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2772
+[2025-01-19T19:19:12.799+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 769, attempt 1
+[2025-01-19T19:19:13.293+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76056
+[2025-01-19T19:19:13.297+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76061, attempt 1
+[2025-01-19T19:19:13.298+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76057
+[2025-01-19T19:19:13.300+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2220, attempt 1
+[2025-01-19T19:19:13.391+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 769
+[2025-01-19T19:19:13.394+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 353, attempt 1
+[2025-01-19T19:19:13.826+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2220
+[2025-01-19T19:19:13.827+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200756, attempt 1
+[2025-01-19T19:19:14.347+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 200756
+[2025-01-19T19:19:14.348+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76060, attempt 1
+[2025-01-19T19:20:13.631+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76061: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:20:13.703+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 353: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:20:14.667+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76060: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:20:18.793+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 353, attempt 2
+[2025-01-19T19:20:19.396+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76061, attempt 2
+[2025-01-19T19:20:19.865+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76060, attempt 2
+[2025-01-19T19:20:19.891+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76061
+[2025-01-19T19:20:19.893+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76059, attempt 1
+[2025-01-19T19:20:20.289+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76060
+[2025-01-19T19:20:20.293+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76062, attempt 1
+[2025-01-19T19:20:20.715+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76062
+[2025-01-19T19:20:20.717+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76063, attempt 1
+[2025-01-19T19:20:21.160+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76063
+[2025-01-19T19:20:21.161+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76064, attempt 1
+[2025-01-19T19:21:19.079+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 353: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:21:20.108+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76059: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:21:21.413+0000] {process_players_dag.py:45} WARNING - Request error fetching player_id 76064: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=60), retrying...
+[2025-01-19T19:21:25.916+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76059, attempt 2
+[2025-01-19T19:21:26.408+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76059
+[2025-01-19T19:21:26.410+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2306, attempt 1
+[2025-01-19T19:21:26.884+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2306
+[2025-01-19T19:21:26.885+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201589, attempt 1
+[2025-01-19T19:21:27.290+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76064, attempt 2
+[2025-01-19T19:21:27.621+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201589
+[2025-01-19T19:21:27.622+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76065, attempt 1
+[2025-01-19T19:21:27.998+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76064
+[2025-01-19T19:21:27.999+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628503, attempt 1
+[2025-01-19T19:21:28.391+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76065
+[2025-01-19T19:21:28.392+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201600, attempt 1
+[2025-01-19T19:21:28.776+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628503
+[2025-01-19T19:21:28.777+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 355, attempt 1
+[2025-01-19T19:21:28.801+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201600
+[2025-01-19T19:21:28.802+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 173, attempt 1
+[2025-01-19T19:21:29.187+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 355
+[2025-01-19T19:21:29.189+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76068, attempt 1
+[2025-01-19T19:21:29.214+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 353, attempt 3
+[2025-01-19T19:21:29.254+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 173
+[2025-01-19T19:21:29.255+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76069, attempt 1
+[2025-01-19T19:21:29.602+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76068
+[2025-01-19T19:21:29.603+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1088, attempt 1
+[2025-01-19T19:21:29.624+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 353
+[2025-01-19T19:21:29.625+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76070, attempt 1
+[2025-01-19T19:21:29.706+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76069
+[2025-01-19T19:21:29.707+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76071, attempt 1
+[2025-01-19T19:21:30.088+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1088
+[2025-01-19T19:21:30.089+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 278, attempt 1
+[2025-01-19T19:21:30.102+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76070
+[2025-01-19T19:21:30.104+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201571, attempt 1
+[2025-01-19T19:21:30.132+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76071
+[2025-01-19T19:21:30.132+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 200788, attempt 1
+[2025-01-19T19:21:30.518+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 278
+[2025-01-19T19:21:30.521+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1134, attempt 1
+[2025-01-19T19:21:30.525+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201571
+[2025-01-19T19:21:30.528+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76073, attempt 1
+[2025-01-19T19:21:30.575+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 200788
+[2025-01-19T19:21:30.576+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76074, attempt 1
+[2025-01-19T19:21:30.964+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76073
+[2025-01-19T19:21:30.966+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1630166, attempt 1
+[2025-01-19T19:21:30.991+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1134
+[2025-01-19T19:21:30.992+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 138, attempt 1
+[2025-01-19T19:21:31.015+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76074
+[2025-01-19T19:21:31.016+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76076, attempt 1
+[2025-01-19T19:21:31.424+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 138
+[2025-01-19T19:21:31.425+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1895, attempt 1
+[2025-01-19T19:21:31.446+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1630166
+[2025-01-19T19:21:31.446+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76076
+[2025-01-19T19:21:31.447+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76078, attempt 1
+[2025-01-19T19:21:31.447+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1630555, attempt 1
+[2025-01-19T19:21:31.825+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1895
+[2025-01-19T19:21:31.825+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202970, attempt 1
+[2025-01-19T19:21:31.864+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76078
+[2025-01-19T19:21:31.865+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 201965, attempt 1
+[2025-01-19T19:21:31.869+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1630555
+[2025-01-19T19:21:31.869+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1629028, attempt 1
+[2025-01-19T19:21:32.286+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202970
+[2025-01-19T19:21:32.287+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 101235, attempt 1
+[2025-01-19T19:21:32.319+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1629028
+[2025-01-19T19:21:32.320+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628962, attempt 1
+[2025-01-19T19:21:32.333+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 201965
+[2025-01-19T19:21:32.334+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 203569, attempt 1
+[2025-01-19T19:21:32.755+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628962
+[2025-01-19T19:21:32.756+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 202337, attempt 1
+[2025-01-19T19:21:32.769+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 203569
+[2025-01-19T19:21:32.771+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76079, attempt 1
+[2025-01-19T19:21:32.774+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 101235
+[2025-01-19T19:21:32.777+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76080, attempt 1
+[2025-01-19T19:21:33.182+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76080
+[2025-01-19T19:21:33.184+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628407, attempt 1
+[2025-01-19T19:21:33.208+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76079
+[2025-01-19T19:21:33.209+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76081, attempt 1
+[2025-01-19T19:21:33.224+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 202337
+[2025-01-19T19:21:33.225+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 2053, attempt 1
+[2025-01-19T19:21:33.598+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 1628407
+[2025-01-19T19:21:33.599+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76082, attempt 1
+[2025-01-19T19:21:33.625+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 2053
+[2025-01-19T19:21:33.626+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 1628963, attempt 1
+[2025-01-19T19:21:33.699+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76081
+[2025-01-19T19:21:33.703+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76084, attempt 1
+[2025-01-19T19:21:34.141+0000] {process_players_dag.py:41} INFO - Successfully fetched data for player_id 76084
+[2025-01-19T19:21:34.142+0000] {process_players_dag.py:33} INFO - Fetching data for player_id 76083, attempt 1
+[2025-01-19T19:22:10.680+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-19T19:22:10.689+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 648. PIDs of all processes in the group: [648]
+[2025-01-19T19:22:10.690+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 648
+[2025-01-19T19:22:10.692+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.

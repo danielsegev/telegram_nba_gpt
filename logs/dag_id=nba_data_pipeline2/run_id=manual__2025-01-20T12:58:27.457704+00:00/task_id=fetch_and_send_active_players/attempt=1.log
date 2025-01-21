@@ -1,0 +1,50 @@
+[2025-01-20T12:58:31.606+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline2.fetch_and_send_active_players manual__2025-01-20T12:58:27.457704+00:00 [queued]>
+[2025-01-20T12:58:31.616+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline2.fetch_and_send_active_players manual__2025-01-20T12:58:27.457704+00:00 [queued]>
+[2025-01-20T12:58:31.616+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-20T12:58:31.630+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_send_active_players> on 2025-01-20 12:58:27.457704+00:00
+[2025-01-20T12:58:31.634+0000] {standard_task_runner.py:57} INFO - Started process 68 to run task
+[2025-01-20T12:58:31.638+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline2', 'fetch_and_send_active_players', 'manual__2025-01-20T12:58:27.457704+00:00', '--job-id', '957', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmplc_i9mv2']
+[2025-01-20T12:58:31.640+0000] {standard_task_runner.py:85} INFO - Job 957: Subtask fetch_and_send_active_players
+[2025-01-20T12:58:31.686+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline2.fetch_and_send_active_players manual__2025-01-20T12:58:27.457704+00:00 [running]> on host 8a3106e83a83
+[2025-01-20T12:58:31.774+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline2' AIRFLOW_CTX_TASK_ID='fetch_and_send_active_players' AIRFLOW_CTX_EXECUTION_DATE='2025-01-20T12:58:27.457704+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-20T12:58:27.457704+00:00'
+[2025-01-20T12:58:31.789+0000] {logging_mixin.py:150} INFO - Processing active player 1/582 with ID 1630173
+[2025-01-20T12:58:35.890+0000] {logging_mixin.py:150} INFO - Processing active player 11/582 with ID 203507
+[2025-01-20T12:58:40.168+0000] {logging_mixin.py:150} INFO - Processing active player 21/582 with ID 1631116
+[2025-01-20T12:58:44.037+0000] {logging_mixin.py:150} INFO - Processing active player 31/582 with ID 1630567
+[2025-01-20T12:58:48.242+0000] {logging_mixin.py:150} INFO - Processing active player 41/582 with ID 1630699
+[2025-01-20T12:58:52.339+0000] {logging_mixin.py:150} INFO - Processing active player 51/582 with ID 203992
+[2025-01-20T12:58:56.634+0000] {logging_mixin.py:150} INFO - Processing active player 61/582 with ID 1628396
+[2025-01-20T12:59:01.529+0000] {logging_mixin.py:150} INFO - Processing active player 71/582 with ID 1631112
+[2025-01-20T12:59:06.260+0000] {logging_mixin.py:150} INFO - Processing active player 81/582 with ID 1630215
+[2025-01-20T12:59:10.514+0000] {logging_mixin.py:150} INFO - Processing active player 91/582 with ID 1627936
+[2025-01-20T12:59:15.329+0000] {logging_mixin.py:150} INFO - Processing active player 101/582 with ID 1629634
+[2025-01-20T12:59:19.704+0000] {logging_mixin.py:150} INFO - Processing active player 111/582 with ID 203496
+[2025-01-20T12:59:24.356+0000] {logging_mixin.py:150} INFO - Processing active player 121/582 with ID 203076
+[2025-01-20T12:59:28.554+0000] {logging_mixin.py:150} INFO - Processing active player 131/582 with ID 1629603
+[2025-01-20T12:59:32.647+0000] {logging_mixin.py:150} INFO - Processing active player 141/582 with ID 1630288
+[2025-01-20T12:59:37.395+0000] {logging_mixin.py:150} INFO - Processing active player 151/582 with ID 1630162
+[2025-01-20T12:59:42.052+0000] {logging_mixin.py:150} INFO - Processing active player 161/582 with ID 1630201
+[2025-01-20T12:59:46.196+0000] {logging_mixin.py:150} INFO - Processing active player 171/582 with ID 1629655
+[2025-01-20T12:59:47.709+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-20T12:59:47.716+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 68. PIDs of all processes in the group: [68]
+[2025-01-20T12:59:47.716+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 68
+[2025-01-20T12:59:47.717+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-20T12:59:47.717+0000] {logging_mixin.py:150} INFO - Error fetching data for player_id 1630585: Task received SIGTERM signal
+[2025-01-20T12:59:49.556+0000] {logging_mixin.py:150} INFO - Processing active player 181/582 with ID 1630581
+[2025-01-20T12:59:53.601+0000] {logging_mixin.py:150} INFO - Processing active player 191/582 with ID 203924
+[2025-01-20T12:59:57.902+0000] {logging_mixin.py:150} INFO - Processing active player 201/582 with ID 1631100
+[2025-01-20T13:00:01.773+0000] {logging_mixin.py:150} INFO - Processing active player 211/582 with ID 201935
+[2025-01-20T13:00:06.454+0000] {logging_mixin.py:150} INFO - Processing active player 221/582 with ID 1628404
+[2025-01-20T13:00:10.924+0000] {logging_mixin.py:150} INFO - Processing active player 231/582 with ID 1627741
+[2025-01-20T13:00:15.288+0000] {logging_mixin.py:150} INFO - Processing active player 241/582 with ID 201143
+[2025-01-20T13:00:19.554+0000] {logging_mixin.py:150} INFO - Processing active player 251/582 with ID 1630538
+[2025-01-20T13:00:23.489+0000] {logging_mixin.py:150} INFO - Processing active player 261/582 with ID 1628382
+[2025-01-20T13:00:27.663+0000] {logging_mixin.py:150} INFO - Processing active player 271/582 with ID 1629661
+[2025-01-20T13:00:31.989+0000] {logging_mixin.py:150} INFO - Processing active player 281/582 with ID 1630539
+[2025-01-20T13:00:35.994+0000] {logging_mixin.py:150} INFO - Processing active player 291/582 with ID 1631211
+[2025-01-20T13:00:40.175+0000] {logging_mixin.py:150} INFO - Processing active player 301/582 with ID 1629723
+[2025-01-20T13:00:44.435+0000] {logging_mixin.py:150} INFO - Processing active player 311/582 with ID 1629641
+[2025-01-20T13:00:47.698+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=68, name='airflow task ru', status='sleeping', started='12:58:31') did not respond to SIGTERM. Trying SIGKILL
+[2025-01-20T13:00:47.704+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 68
+[2025-01-20T13:00:47.722+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=68, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='12:58:31') (68) terminated with exit code Negsignal.SIGKILL
+[2025-01-20T13:00:47.726+0000] {standard_task_runner.py:174} ERROR - Job 957 was killed before it finished (likely due to running out of memory)

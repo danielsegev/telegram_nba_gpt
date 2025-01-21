@@ -41,7 +41,7 @@ with DAG(
     truncate_teams_table = PostgresOperator(
         task_id="truncate_nba_teams",
         postgres_conn_id="postgres_default",
-        sql="TRUNCATE TABLE nba_teams;",
+        sql="TRUNCATE TABLE public.nba_teams;",
     )
 
     kafka_teams_task = PythonOperator(

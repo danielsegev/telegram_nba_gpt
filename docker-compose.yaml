@@ -52,6 +52,9 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_MESSAGE_MAX_BYTES: 200000000  # Increase message size to 200MB
+      KAFKA_REPLICA_FETCH_MAX_BYTES: 200000000
+      KAFKA_SOCKET_REQUEST_MAX_BYTES: 200000000
     healthcheck:
       test: ["CMD-SHELL", "echo 'test' | nc -w 1 localhost 9092 || exit 1"]
       interval: 10s
@@ -95,7 +98,8 @@ services:
       - "8081:8081"
       - "7077:7077"
     volumes:
-      - spark-data:/bitnami
+      - spark-data:/bitnam
+      - ./include:/usr/local/airflow/include/scripts/i
     networks:
       - airflow_net
 
@@ -109,7 +113,7 @@ services:
       - SPARK_WORKER_CORES=2
     volumes:
       - spark-data:/bitnami
-      - ./include:/usr/local/airflow/include/scripts/
+      - ./include:/usr/local/airflow/include/scripts
     depends_on:
       - spark-master
     networks:
@@ -131,6 +135,7 @@ services:
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
       AIRFLOW__CORE__FERNET_KEY: ''
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      PYTHONPATH: /opt/airflow/include
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -164,6 +169,7 @@ services:
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
       AIRFLOW__CORE__FERNET_KEY: ''
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      PYTHONPATH: /opt/airflow/include
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -195,6 +201,7 @@ services:
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
       AIRFLOW__CORE__FERNET_KEY: ''
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      PYTHONPATH: /opt/airflow/include
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs

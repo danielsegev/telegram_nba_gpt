@@ -1,0 +1,94 @@
+[2025-01-20T15:22:06.499+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_etl_dag.create_postgres_db manual__2025-01-20T15:22:04.640839+00:00 [queued]>
+[2025-01-20T15:22:06.506+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_etl_dag.create_postgres_db manual__2025-01-20T15:22:04.640839+00:00 [queued]>
+[2025-01-20T15:22:06.506+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-20T15:22:06.517+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_postgres_db> on 2025-01-20 15:22:04.640839+00:00
+[2025-01-20T15:22:06.522+0000] {standard_task_runner.py:57} INFO - Started process 65 to run task
+[2025-01-20T15:22:06.525+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_etl_dag', 'create_postgres_db', 'manual__2025-01-20T15:22:04.640839+00:00', '--job-id', '1056', '--raw', '--subdir', 'DAGS_FOLDER/nba_etl_dag.py', '--cfg-path', '/tmp/tmp4nko6np3']
+[2025-01-20T15:22:06.528+0000] {standard_task_runner.py:85} INFO - Job 1056: Subtask create_postgres_db
+[2025-01-20T15:22:06.559+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_etl_dag.create_postgres_db manual__2025-01-20T15:22:04.640839+00:00 [running]> on host 928a7e1c1adc
+[2025-01-20T15:22:06.602+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_etl_dag' AIRFLOW_CTX_TASK_ID='create_postgres_db' AIRFLOW_CTX_EXECUTION_DATE='2025-01-20T15:22:04.640839+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-20T15:22:04.640839+00:00'
+[2025-01-20T15:22:06.603+0000] {create_postgres_db.py:19} INFO - Connecting to database dwh at postgres:5432 as ***...
+[2025-01-20T15:22:06.605+0000] {create_postgres_db.py:115} INFO - Executing query: 
+            CREATE TABLE IF NOT EXISTS dim_team (
+                team_id INT PRIMARY KEY,
+                abbreviation VARCHAR(100),
+                city VARCHAR(100),
+                full_name VARCHAR(100),
+                state VARCHAR(100),
+                year_founded INT
+            );
+            
+[2025-01-20T15:22:06.607+0000] {create_postgres_db.py:115} INFO - Executing query: 
+            CREATE TABLE IF NOT EXISTS dim_player (
+                id INT PRIMARY KEY,
+                full_name VARCHAR(100),
+                birthdate DATE,
+                school VARCHAR(100),
+                country VARCHAR(50),
+                last_affiliation VARCHAR(100),
+                height VARCHAR(10),
+                weight VARCHAR(10),
+                season_exp INT,
+                jersey VARCHAR(10),
+                position VARCHAR(50),
+                roster_status VARCHAR(50),
+                games_played_current_season_flag VARCHAR(10),
+                team_id INT,
+                team_name VARCHAR(100),
+                dleague_flag VARCHAR(1),
+                nba_flag VARCHAR(1),
+                games_played_flag VARCHAR(1),
+                draft_year VARCHAR(10),
+                draft_round VARCHAR(10),
+                draft_number VARCHAR(10),
+                greatest_75_flag VARCHAR(1),
+                is_active BOOLEAN  -- New field added
+            );
+            
+[2025-01-20T15:22:06.607+0000] {create_postgres_db.py:115} INFO - Executing query: 
+            CREATE TABLE IF NOT EXISTS fact_game (
+                status VARCHAR(20),
+                "order" INT,
+                personId INT,
+                starter VARCHAR(2),
+                oncourt VARCHAR(2),
+                played VARCHAR(2),
+                statistics_assists INT,
+                statistics_blocks INT,
+                statistics_blocksreceived INT,
+                statistics_fieldgoalsattempted INT,
+                statistics_fieldgoalsmade INT,
+                statistics_foulsoffensive INT,
+                statistics_foulsdrawn INT,
+                statistics_foulspersonal INT,
+                statistics_foulstechnical INT,
+                statistics_freethrowsattempted INT,
+                statistics_freethrowsmade INT,
+                statistics_minus INT,
+                statistics_minutes VARCHAR(50),
+                statistics_minutescalculated VARCHAR(20),
+                statistics_plus INT,
+                statistics_plusminuspoints INT,
+                statistics_points INT,
+                statistics_pointsfastbreak INT,
+                statistics_pointsinthepaint INT,
+                statistics_pointssecondchance INT,
+                statistics_reboundsdefensive INT,
+                statistics_reboundsoffensive INT,
+                statistics_reboundstotal INT,
+                statistics_steals INT,
+                statistics_threepointersattempted INT,
+                statistics_threepointersmade INT,
+                statistics_turnovers INT,
+                statistics_twopointersattempted INT,
+                statistics_twopointersmade INT,
+                game_id VARCHAR(20)
+                ,game_date DATE NOT NULL
+                --PRIMARY KEY (game_id, personId) -- Assuming each game_id/personId combination is unique
+            );
+            
+[2025-01-20T15:22:06.608+0000] {create_postgres_db.py:122} INFO - Database tables created successfully.
+[2025-01-20T15:22:06.608+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-20T15:22:06.614+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_etl_dag, task_id=create_postgres_db, execution_date=20250120T152204, start_date=20250120T152206, end_date=20250120T152206
+[2025-01-20T15:22:06.663+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-20T15:22:06.685+0000] {taskinstance.py:2653} INFO - 3 downstream tasks scheduled from follow-on schedule check

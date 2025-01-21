@@ -157,7 +157,7 @@ def main():
         conn = psycopg2.connect(**db_config)
 
         # Load all CSV files in the directory into the nba_games table
-        load_all_games_files(games_csv_directory, "nba_games", conn)
+        load_all_games_files(games_csv_directory, "fact_game", conn)
 
     except Exception as e:
         print(f"❌ Error connecting to the database: {e}")

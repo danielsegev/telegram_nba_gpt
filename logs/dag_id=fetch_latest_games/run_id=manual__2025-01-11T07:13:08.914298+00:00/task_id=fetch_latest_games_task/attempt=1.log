@@ -1,0 +1,16 @@
+[2025-01-11T07:13:10.684+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-11T07:13:08.914298+00:00 [queued]>
+[2025-01-11T07:13:10.692+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-11T07:13:08.914298+00:00 [queued]>
+[2025-01-11T07:13:10.692+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-11T07:13:10.705+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_latest_games_task> on 2025-01-11 07:13:08.914298+00:00
+[2025-01-11T07:13:10.716+0000] {standard_task_runner.py:57} INFO - Started process 227 to run task
+[2025-01-11T07:13:10.719+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_latest_games', 'fetch_latest_games_task', 'manual__2025-01-11T07:13:08.914298+00:00', '--job-id', '758', '--raw', '--subdir', 'DAGS_FOLDER/process_latest_games_dag.py', '--cfg-path', '/tmp/tmpkxa45tn4']
+[2025-01-11T07:13:10.724+0000] {standard_task_runner.py:85} INFO - Job 758: Subtask fetch_latest_games_task
+[2025-01-11T07:13:10.783+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-11T07:13:08.914298+00:00 [running]> on host d381297f06ce
+[2025-01-11T07:13:11.187+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_latest_games' AIRFLOW_CTX_TASK_ID='fetch_latest_games_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-11T07:13:08.914298+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-11T07:13:08.914298+00:00'
+[2025-01-11T07:13:11.315+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400525
+[2025-01-11T07:13:11.470+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400526
+[2025-01-11T07:13:11.704+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400527
+[2025-01-11T07:13:11.860+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400528
+[2025-01-11T07:13:12.017+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400529
+[2025-01-11T07:13:12.238+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400530
+[2025-01-11T07:13:12.393+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400531

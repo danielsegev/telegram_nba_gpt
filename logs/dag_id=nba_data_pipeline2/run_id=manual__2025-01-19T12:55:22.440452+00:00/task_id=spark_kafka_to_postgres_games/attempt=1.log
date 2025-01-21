@@ -1,0 +1,40 @@
+[2025-01-19T12:56:54.733+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline2.spark_kafka_to_postgres_games manual__2025-01-19T12:55:22.440452+00:00 [queued]>
+[2025-01-19T12:56:54.739+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline2.spark_kafka_to_postgres_games manual__2025-01-19T12:55:22.440452+00:00 [queued]>
+[2025-01-19T12:56:54.739+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-19T12:56:54.748+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): spark_kafka_to_postgres_games> on 2025-01-19 12:55:22.440452+00:00
+[2025-01-19T12:56:54.751+0000] {standard_task_runner.py:57} INFO - Started process 145 to run task
+[2025-01-19T12:56:54.753+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline2', 'spark_kafka_to_postgres_games', 'manual__2025-01-19T12:55:22.440452+00:00', '--job-id', '848', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpzup21wdm']
+[2025-01-19T12:56:54.755+0000] {standard_task_runner.py:85} INFO - Job 848: Subtask spark_kafka_to_postgres_games
+[2025-01-19T12:56:54.783+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline2.spark_kafka_to_postgres_games manual__2025-01-19T12:55:22.440452+00:00 [running]> on host 79fc0fc423b7
+[2025-01-19T12:56:54.967+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline2' AIRFLOW_CTX_TASK_ID='spark_kafka_to_postgres_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-19T12:55:22.440452+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-19T12:55:22.440452+00:00'
+[2025-01-19T12:56:54.972+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-01-19T12:56:54.973+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master spark://spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name Spark Kafka To Postgres Games --queue root.default --deploy-mode client /opt/***/include/scripts/kafka_to_postgres_games.py
+[2025-01-19T12:56:54.987+0000] {spark_submit.py:490} INFO - /opt/spark/bin/load-spark-env.sh: line 68: ps: command not found
+[2025-01-19T12:56:56.099+0000] {spark_submit.py:490} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-19T12:56:56.157+0000] {spark_submit.py:490} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-01-19T12:56:56.158+0000] {spark_submit.py:490} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-01-19T12:56:56.163+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-01-19T12:56:56.163+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql added as a dependency
+[2025-01-19T12:56:56.164+0000] {spark_submit.py:490} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-feb796eb-d50d-498c-9973-e45ffa1fb441;1.0
+[2025-01-19T12:56:56.164+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-01-19T12:56:56.262+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4 in central
+[2025-01-19T12:56:56.292+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4 in central
+[2025-01-19T12:56:56.306+0000] {spark_submit.py:490} INFO - found org.apache.kafka#kafka-clients;3.4.1 in central
+[2025-01-19T12:56:56.322+0000] {spark_submit.py:490} INFO - found org.lz4#lz4-java;1.8.0 in central
+[2025-01-19T12:56:56.333+0000] {spark_submit.py:490} INFO - found org.xerial.snappy#snappy-java;1.1.10.5 in central
+[2025-01-19T12:56:56.342+0000] {spark_submit.py:490} INFO - found org.slf4j#slf4j-api;2.0.7 in central
+[2025-01-19T12:56:56.354+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+[2025-01-19T12:56:56.370+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+[2025-01-19T12:56:56.385+0000] {spark_submit.py:490} INFO - found commons-logging#commons-logging;1.1.3 in central
+[2025-01-19T12:56:56.392+0000] {spark_submit.py:490} INFO - found com.google.code.findbugs#jsr305;3.0.0 in central
+[2025-01-19T12:56:56.402+0000] {spark_submit.py:490} INFO - found org.apache.commons#commons-pool2;2.11.1 in central
+[2025-01-19T12:56:56.408+0000] {spark_submit.py:490} INFO - found org.postgresql#postgresql;42.6.0 in central
+[2025-01-19T12:56:56.415+0000] {spark_submit.py:490} INFO - found org.checkerframework#checker-qual;3.31.0 in central
+[2025-01-19T12:56:57.095+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar ...
+[2025-01-19T12:58:21.161+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-runtime/3.3.4/hadoop-client-runtime-3.3.4.jar ...
+[2025-01-19T12:59:26.209+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-19T12:59:26.219+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 145. PIDs of all processes in the group: [146, 145]
+[2025-01-19T12:59:26.220+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 145
+[2025-01-19T12:59:26.223+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-19T12:59:26.231+0000] {spark_submit.py:615} INFO - Sending kill signal to spark-submit
+[2025-01-19T12:59:26.753+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=145, status='terminated', exitcode=0, started='12:56:54') (145) terminated with exit code 0

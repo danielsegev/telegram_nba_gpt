@@ -82,7 +82,7 @@ json_df = json_df.withColumnRenamed("BIRTHDATE", "birthdate") \
 def write_to_postgres(batch_df, batch_id):
     valid_rows = batch_df.filter(col("id").isNotNull())
 
-    if valid_rows.count() == 0:
+    if valid_rows.isEmpty():
         print(f"Batch {batch_id}: No valid rows to insert.")
         return
 
@@ -90,19 +90,18 @@ def write_to_postgres(batch_df, batch_id):
         "dbname": "dwh",
         "user": "airflow",
         "password": "airflow",
-        "host": "192.168.64.1",
+        "host": "postgres",
         "port": "5432"
     }
 
     insert_query = """
-    INSERT INTO nba_players (id, full_name, birthdate, school, country, last_affiliation, height, weight, season_exp,
+    INSERT INTO dim_player (id, full_name, birthdate, school, country, last_affiliation, height, weight, season_exp,
     jersey, position, roster_status, games_played_current_season_flag, team_id, team_name, dleague_flag, nba_flag,
     games_played_flag, draft_year, draft_round, draft_number, greatest_75_flag, is_active)
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     ON CONFLICT (id) DO NOTHING;
     """
 
-    data_to_insert = valid_rows.collect()
     data_list = [
         (
             row["id"], row["full_name"], row["birthdate"], row["school"], row["country"], row["last_affiliation"],
@@ -111,7 +110,7 @@ def write_to_postgres(batch_df, batch_id):
             row["nba_flag"], row["games_played_flag"], row["draft_year"], row["draft_round"], row["draft_number"],
             row["greatest_75_flag"], row["is_active"]
         )
-        for row in data_to_insert
+        for row in valid_rows.collect()
     ]
 
     conn = None
@@ -121,7 +120,7 @@ def write_to_postgres(batch_df, batch_id):
         cursor = conn.cursor()
         cursor.executemany(insert_query, data_list)
         conn.commit()
-        print(f"Batch {batch_id}: Successfully inserted {len(data_list)} rows into 'nba_players' table.")
+        print(f"Batch {batch_id}: Successfully inserted {len(data_list)} rows into 'dim_player' table.")
 
     except Exception as e:
         print(f"Batch {batch_id}: Error inserting data into PostgreSQL:", e)
@@ -132,9 +131,11 @@ def write_to_postgres(batch_df, batch_id):
         if conn:
             conn.close()
 
+# WriteStream configuration with a trigger to process and terminate
 query = json_df.writeStream \
     .foreachBatch(write_to_postgres) \
     .outputMode("append") \
+    .trigger(availableNow=True) \
     .start()
 
 query.awaitTermination()

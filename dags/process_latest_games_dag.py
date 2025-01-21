@@ -81,7 +81,7 @@ with DAG(
     spark_ingest_task = SparkSubmitOperator(
         task_id="spark_ingest_kafka_to_postgres",
         conn_id="spark_default",
-        application="/opt/airflow/include/scripts/kafka_to_postgres_games.py",
+        application="/opt/airflow/include/scripts/kafka_to_postgres_latest_games.py",
         packages="org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0",
         executor_memory="2G",
         driver_memory="1G",

@@ -1,0 +1,21 @@
+[2025-01-08T06:05:54.275+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_latest_games.fetch_latest_games_task scheduled__2025-01-07T03:00:00+00:00 [queued]>
+[2025-01-08T06:05:54.293+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_latest_games.fetch_latest_games_task scheduled__2025-01-07T03:00:00+00:00 [queued]>
+[2025-01-08T06:05:54.294+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-08T06:05:54.306+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_latest_games_task> on 2025-01-07 03:00:00+00:00
+[2025-01-08T06:05:54.310+0000] {standard_task_runner.py:57} INFO - Started process 56 to run task
+[2025-01-08T06:05:54.313+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_latest_games', 'fetch_latest_games_task', 'scheduled__2025-01-07T03:00:00+00:00', '--job-id', '537', '--raw', '--subdir', 'DAGS_FOLDER/process_latest_games_dag.py', '--cfg-path', '/tmp/tmpka4s2stl']
+[2025-01-08T06:05:54.317+0000] {standard_task_runner.py:85} INFO - Job 537: Subtask fetch_latest_games_task
+[2025-01-08T06:05:54.361+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_latest_games.fetch_latest_games_task scheduled__2025-01-07T03:00:00+00:00 [running]> on host 39b6821e1f43
+[2025-01-08T06:05:54.419+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_latest_games' AIRFLOW_CTX_TASK_ID='fetch_latest_games_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-07T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-07T03:00:00+00:00'
+[2025-01-08T06:05:54.628+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400502
+[2025-01-08T06:05:54.851+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400503
+[2025-01-08T06:05:55.012+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400504
+[2025-01-08T06:05:55.203+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400505
+[2025-01-08T06:05:55.361+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400506
+[2025-01-08T06:05:55.536+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400507
+[2025-01-08T06:05:55.790+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400508
+[2025-01-08T06:10:56.153+0000] {logging_mixin.py:150} INFO - All finished games data for today have been sent to 'games' topic in Kafka.
+[2025-01-08T06:10:56.166+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-08T06:10:56.199+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=fetch_latest_games, task_id=fetch_latest_games_task, execution_date=20250107T030000, start_date=20250108T060554, end_date=20250108T061056
+[2025-01-08T06:10:56.277+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-08T06:10:56.308+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

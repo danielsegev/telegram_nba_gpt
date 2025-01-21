@@ -1,0 +1,15 @@
+[2025-01-08T06:57:43.546+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_historical_data_pipeline.ingest_teams manual__2025-01-08T06:57:40.458530+00:00 [queued]>
+[2025-01-08T06:57:43.553+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_historical_data_pipeline.ingest_teams manual__2025-01-08T06:57:40.458530+00:00 [queued]>
+[2025-01-08T06:57:43.553+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-08T06:57:43.563+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): ingest_teams> on 2025-01-08 06:57:40.458530+00:00
+[2025-01-08T06:57:43.569+0000] {standard_task_runner.py:57} INFO - Started process 62 to run task
+[2025-01-08T06:57:43.574+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_historical_data_pipeline', 'ingest_teams', 'manual__2025-01-08T06:57:40.458530+00:00', '--job-id', '568', '--raw', '--subdir', 'DAGS_FOLDER/app_start_ns.py', '--cfg-path', '/tmp/tmp7c8xb2_n']
+[2025-01-08T06:57:43.577+0000] {standard_task_runner.py:85} INFO - Job 568: Subtask ingest_teams
+[2025-01-08T06:57:43.628+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_historical_data_pipeline.ingest_teams manual__2025-01-08T06:57:40.458530+00:00 [running]> on host 1ea1284d250e
+[2025-01-08T06:57:43.682+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_historical_data_pipeline' AIRFLOW_CTX_TASK_ID='ingest_teams' AIRFLOW_CTX_EXECUTION_DATE='2025-01-08T06:57:40.458530+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-08T06:57:40.458530+00:00'
+[2025-01-08T06:57:43.682+0000] {app_start_ns.py:67} INFO - Starting CSV ingestion from /opt/***/include/data/teams using csv_to_postgres_teams.py
+[2025-01-08T06:57:43.683+0000] {app_start_ns.py:79} ERROR - Error ingesting CSV files from /opt/***/include/data/teams: [Errno 2] No such file or directory: '/opt/***/include/data/teams'
+[2025-01-08T06:57:43.684+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-08T06:57:43.690+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_historical_data_pipeline, task_id=ingest_teams, execution_date=20250108T065740, start_date=20250108T065743, end_date=20250108T065743
+[2025-01-08T06:57:43.715+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-08T06:57:43.725+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

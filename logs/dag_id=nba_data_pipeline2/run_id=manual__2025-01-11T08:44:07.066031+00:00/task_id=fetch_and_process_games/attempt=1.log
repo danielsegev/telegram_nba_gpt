@@ -1,0 +1,36 @@
+[2025-01-11T08:44:11.795+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_data_pipeline2.fetch_and_process_games manual__2025-01-11T08:44:07.066031+00:00 [queued]>
+[2025-01-11T08:44:11.817+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_data_pipeline2.fetch_and_process_games manual__2025-01-11T08:44:07.066031+00:00 [queued]>
+[2025-01-11T08:44:11.817+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-11T08:44:11.847+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_process_games> on 2025-01-11 08:44:07.066031+00:00
+[2025-01-11T08:44:11.863+0000] {standard_task_runner.py:57} INFO - Started process 67 to run task
+[2025-01-11T08:44:11.869+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_data_pipeline2', 'fetch_and_process_games', 'manual__2025-01-11T08:44:07.066031+00:00', '--job-id', '764', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmp2k1bv66e']
+[2025-01-11T08:44:11.875+0000] {standard_task_runner.py:85} INFO - Job 764: Subtask fetch_and_process_games
+[2025-01-11T08:44:11.968+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_data_pipeline2.fetch_and_process_games manual__2025-01-11T08:44:07.066031+00:00 [running]> on host fad25223cfa4
+[2025-01-11T08:44:12.435+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_data_pipeline2' AIRFLOW_CTX_TASK_ID='fetch_and_process_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-11T08:44:07.066031+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-11T08:44:07.066031+00:00'
+[2025-01-11T08:44:13.870+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/full_nba_data_pipeline.py", line 146, in fetch_and_process_games
+    live_game = boxscore.BoxScore(game_id=game_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/nba_api/live/nba/endpoints/boxscore.py", line 33, in __init__
+    self.get_request()
+  File "/home/airflow/.local/lib/python3.7/site-packages/nba_api/live/nba/endpoints/boxscore.py", line 43, in get_request
+    self.load_response()
+  File "/home/airflow/.local/lib/python3.7/site-packages/nba_api/live/nba/endpoints/boxscore.py", line 46, in load_response
+    data_sets = self.nba_response.get_dict()
+  File "/home/airflow/.local/lib/python3.7/site-packages/nba_api/library/http.py", line 41, in get_dict
+    return json.loads(self._response)
+  File "/usr/local/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2025-01-11T08:44:13.881+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=nba_data_pipeline2, task_id=fetch_and_process_games, execution_date=20250111T084407, start_date=20250111T084411, end_date=20250111T084413
+[2025-01-11T08:44:13.890+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 764 for task fetch_and_process_games (Expecting value: line 1 column 1 (char 0); 67)
+[2025-01-11T08:44:13.909+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-11T08:44:14.084+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

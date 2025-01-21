@@ -1,0 +1,1806 @@
+[2025-01-21T18:38:13.190+0000] {processor.py:157} INFO - Started process (PID=29) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:38:13.194+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:38:13.198+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:38:13.196+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:38:13.224+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:38:13.219+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:38:13.226+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:38:13.331+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.157 seconds
+[2025-01-21T18:38:43.696+0000] {processor.py:157} INFO - Started process (PID=68) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:38:43.698+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:38:43.699+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:38:43.699+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:38:43.713+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:38:43.711+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:38:43.714+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:38:43.747+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.065 seconds
+[2025-01-21T18:39:14.317+0000] {processor.py:157} INFO - Started process (PID=107) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:39:14.318+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:39:14.319+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:39:14.319+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:39:14.325+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:39:14.324+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:39:14.326+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:39:14.346+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.033 seconds
+[2025-01-21T18:39:45.031+0000] {processor.py:157} INFO - Started process (PID=151) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:39:45.034+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:39:45.037+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:39:45.036+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:39:45.055+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:39:45.051+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:39:45.057+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:39:45.108+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.083 seconds
+[2025-01-21T18:40:15.719+0000] {processor.py:157} INFO - Started process (PID=190) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:40:15.722+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:40:15.725+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:40:15.723+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:40:15.739+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:40:15.733+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:40:15.740+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:40:15.772+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.063 seconds
+[2025-01-21T18:40:46.493+0000] {processor.py:157} INFO - Started process (PID=229) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:40:46.495+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:40:46.496+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:40:46.495+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:40:46.504+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:40:46.502+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:40:46.505+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:40:46.534+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.045 seconds
+[2025-01-21T18:41:17.000+0000] {processor.py:157} INFO - Started process (PID=268) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:41:17.001+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:41:17.002+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:41:17.002+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:41:17.008+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:41:17.007+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:41:17.009+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:41:17.032+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.040 seconds
+[2025-01-21T18:41:47.511+0000] {processor.py:157} INFO - Started process (PID=307) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:41:47.513+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:41:47.515+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:41:47.514+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:41:47.528+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:41:47.524+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:41:47.529+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:41:47.561+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.062 seconds
+[2025-01-21T18:42:18.044+0000] {processor.py:157} INFO - Started process (PID=346) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:42:18.047+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:42:18.049+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:42:18.049+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:42:18.063+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:42:18.061+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:42:18.064+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:42:18.100+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.061 seconds
+[2025-01-21T18:42:48.588+0000] {processor.py:157} INFO - Started process (PID=385) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:42:48.592+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:42:48.596+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:42:48.593+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:42:48.609+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:42:48.607+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:42:48.610+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:42:48.660+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.081 seconds
+[2025-01-21T18:43:19.087+0000] {processor.py:157} INFO - Started process (PID=424) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:43:19.090+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:43:19.091+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:43:19.090+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:43:19.101+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:43:19.099+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:43:19.101+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:43:19.169+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.088 seconds
+[2025-01-21T18:43:49.521+0000] {processor.py:157} INFO - Started process (PID=463) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:43:49.522+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:43:49.523+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:43:49.523+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:43:49.530+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:43:49.528+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:43:49.530+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:43:49.552+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.037 seconds
+[2025-01-21T18:44:20.054+0000] {processor.py:157} INFO - Started process (PID=502) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:44:20.056+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:44:20.058+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:44:20.057+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:44:20.094+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:44:20.089+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:44:20.095+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:44:20.131+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.086 seconds
+[2025-01-21T18:44:50.770+0000] {processor.py:157} INFO - Started process (PID=541) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:44:50.772+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:44:50.773+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:44:50.772+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:44:50.779+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:44:50.778+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:44:50.780+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:44:50.819+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.055 seconds
+[2025-01-21T18:45:21.551+0000] {processor.py:157} INFO - Started process (PID=580) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:45:21.553+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:45:21.554+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:45:21.553+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:45:21.575+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:45:21.573+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:45:21.575+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:45:21.624+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.083 seconds
+[2025-01-21T18:45:52.152+0000] {processor.py:157} INFO - Started process (PID=619) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:45:52.159+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:45:52.161+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:45:52.161+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:45:52.168+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:45:52.167+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:45:52.168+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:45:52.205+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.067 seconds
+[2025-01-21T18:46:23.075+0000] {processor.py:157} INFO - Started process (PID=658) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:46:23.077+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:46:23.078+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:46:23.078+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:46:23.092+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:46:23.090+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:46:23.092+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:46:23.140+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.075 seconds
+[2025-01-21T18:46:53.758+0000] {processor.py:157} INFO - Started process (PID=697) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:46:53.760+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:46:53.760+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:46:53.760+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:46:53.778+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:46:53.775+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:46:53.779+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:46:53.807+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.055 seconds
+[2025-01-21T18:47:24.149+0000] {processor.py:157} INFO - Started process (PID=736) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:47:24.151+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:47:24.152+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:47:24.151+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:47:24.170+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:47:24.168+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:47:24.171+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:47:24.198+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.055 seconds
+[2025-01-21T18:47:54.754+0000] {processor.py:157} INFO - Started process (PID=775) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:47:54.756+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:47:54.759+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:47:54.758+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:47:54.780+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:47:54.775+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:47:54.781+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:47:54.830+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.081 seconds
+[2025-01-21T18:48:25.327+0000] {processor.py:157} INFO - Started process (PID=814) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:48:25.329+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:48:25.331+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:48:25.330+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:48:25.340+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:48:25.339+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:48:25.341+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:48:25.370+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.051 seconds
+[2025-01-21T18:48:55.705+0000] {processor.py:157} INFO - Started process (PID=853) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:48:55.706+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:48:55.707+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:48:55.707+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:48:55.715+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:48:55.713+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:48:55.715+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:48:55.741+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.041 seconds
+[2025-01-21T18:49:26.417+0000] {processor.py:157} INFO - Started process (PID=892) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:49:26.418+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:49:26.419+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:49:26.419+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:49:26.424+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:49:26.423+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:49:26.424+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:49:26.446+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.033 seconds
+[2025-01-21T18:49:56.981+0000] {processor.py:157} INFO - Started process (PID=931) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:49:56.983+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:49:56.984+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:49:56.984+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:49:56.998+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:49:56.991+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:49:56.999+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:49:57.030+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.058 seconds
+[2025-01-21T18:51:50.152+0000] {processor.py:157} INFO - Started process (PID=29) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:51:50.155+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:51:50.156+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:51:50.155+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:51:50.167+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:51:50.165+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:51:50.168+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:51:50.200+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.052 seconds
+[2025-01-21T18:52:21.095+0000] {processor.py:157} INFO - Started process (PID=68) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:52:21.097+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:52:21.098+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:52:21.098+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:52:21.108+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:52:21.106+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:52:21.108+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:52:21.134+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.046 seconds
+[2025-01-21T18:52:51.746+0000] {processor.py:157} INFO - Started process (PID=107) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:52:51.748+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:52:51.749+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:52:51.749+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:52:51.762+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:52:51.760+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:52:51.763+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:52:51.796+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.054 seconds
+[2025-01-21T18:53:22.071+0000] {processor.py:157} INFO - Started process (PID=151) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:53:22.072+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:53:22.073+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:53:22.073+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:53:22.079+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:53:22.078+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:53:22.080+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:53:22.111+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.045 seconds
+[2025-01-21T18:53:52.508+0000] {processor.py:157} INFO - Started process (PID=190) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:53:52.511+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:53:52.514+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:53:52.514+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:53:52.526+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:53:52.524+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:53:52.527+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:53:52.621+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.118 seconds
+[2025-01-21T18:54:22.984+0000] {processor.py:157} INFO - Started process (PID=229) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:54:22.987+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:54:22.988+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:54:22.988+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:54:23.000+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:54:22.997+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:54:23.001+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:54:23.037+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.069 seconds
+[2025-01-21T18:54:53.592+0000] {processor.py:157} INFO - Started process (PID=268) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:54:53.594+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:54:53.596+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:54:53.595+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:54:53.605+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:54:53.602+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:54:53.605+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:54:53.630+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.044 seconds
+[2025-01-21T18:55:24.134+0000] {processor.py:157} INFO - Started process (PID=307) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:55:24.136+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:55:24.137+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:55:24.137+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:55:24.160+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:55:24.158+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:55:24.161+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:55:24.193+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.066 seconds
+[2025-01-21T18:55:54.620+0000] {processor.py:157} INFO - Started process (PID=346) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:55:54.622+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:55:54.624+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:55:54.623+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:55:54.632+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:55:54.630+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:55:54.633+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:55:54.654+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.040 seconds
+[2025-01-21T18:56:25.209+0000] {processor.py:157} INFO - Started process (PID=385) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:56:25.211+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:56:25.213+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:56:25.213+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:56:25.225+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:56:25.222+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:56:25.225+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:56:25.250+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.056 seconds
+[2025-01-21T18:56:55.797+0000] {processor.py:157} INFO - Started process (PID=424) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:56:55.800+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:56:55.802+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:56:55.802+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:56:55.819+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:56:55.815+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:56:55.819+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:56:55.866+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.079 seconds
+[2025-01-21T18:57:26.366+0000] {processor.py:157} INFO - Started process (PID=541) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:57:26.368+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:57:26.369+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:57:26.369+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:57:26.382+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:57:26.379+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:57:26.382+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:57:26.409+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.053 seconds
+[2025-01-21T18:57:56.606+0000] {processor.py:157} INFO - Started process (PID=720) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:57:56.607+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:57:56.608+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:57:56.608+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:57:56.621+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:57:56.618+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:57:56.622+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:57:56.651+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.051 seconds
+[2025-01-21T18:58:27.317+0000] {processor.py:157} INFO - Started process (PID=759) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:58:27.319+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:58:27.320+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:58:27.319+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:58:27.331+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:58:27.328+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:58:27.331+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:58:27.368+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.059 seconds
+[2025-01-21T18:58:57.816+0000] {processor.py:157} INFO - Started process (PID=798) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:58:57.819+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:58:57.820+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:58:57.820+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:58:57.827+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:58:57.825+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:58:57.827+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:58:57.852+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.043 seconds
+[2025-01-21T18:59:28.474+0000] {processor.py:157} INFO - Started process (PID=837) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:59:28.478+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:59:28.479+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:59:28.479+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:59:28.495+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:59:28.493+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:59:28.495+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:59:28.550+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.084 seconds
+[2025-01-21T18:59:58.812+0000] {processor.py:157} INFO - Started process (PID=876) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:59:58.814+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T18:59:58.815+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:59:58.815+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:59:58.825+0000] {logging_mixin.py:150} INFO - [2025-01-21T18:59:58.824+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T18:59:58.826+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T18:59:58.855+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.048 seconds
+[2025-01-21T19:00:29.585+0000] {processor.py:157} INFO - Started process (PID=915) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:00:29.588+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:00:29.589+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:00:29.588+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:00:29.597+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:00:29.596+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:00:29.598+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:00:29.634+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.059 seconds
+[2025-01-21T19:00:59.734+0000] {processor.py:157} INFO - Started process (PID=954) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:00:59.736+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:00:59.737+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:00:59.737+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:00:59.747+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:00:59.745+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:00:59.747+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:00:59.788+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.060 seconds
+[2025-01-21T19:04:54.077+0000] {processor.py:157} INFO - Started process (PID=28) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:04:54.080+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:04:54.081+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:04:54.081+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:04:54.100+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:04:54.098+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:04:54.101+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:04:54.145+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.076 seconds
+[2025-01-21T19:05:24.829+0000] {processor.py:157} INFO - Started process (PID=67) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:05:24.830+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:05:24.831+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:05:24.831+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:05:24.838+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:05:24.836+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:05:24.838+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:05:24.857+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.033 seconds
+[2025-01-21T19:05:54.931+0000] {processor.py:157} INFO - Started process (PID=106) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:05:54.936+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:05:54.938+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:05:54.938+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:05:54.958+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:05:54.949+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:05:54.959+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:05:55.006+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.085 seconds
+[2025-01-21T19:06:25.411+0000] {processor.py:157} INFO - Started process (PID=150) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:06:25.413+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:06:25.415+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:06:25.414+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:06:25.428+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:06:25.423+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:06:25.429+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:06:25.460+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.059 seconds
+[2025-01-21T19:06:56.048+0000] {processor.py:157} INFO - Started process (PID=189) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:06:56.051+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:06:56.052+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:06:56.051+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:06:56.066+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:06:56.064+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:06:56.067+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:06:56.108+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.068 seconds
+[2025-01-21T19:09:51.674+0000] {processor.py:157} INFO - Started process (PID=28) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:09:51.681+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:09:51.686+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:09:51.685+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:09:51.696+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:09:51.690+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:09:51.697+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:09:51.743+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.074 seconds
+[2025-01-21T19:10:22.118+0000] {processor.py:157} INFO - Started process (PID=67) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:10:22.122+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:10:22.124+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:10:22.123+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:10:22.135+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:10:22.132+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:10:22.135+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:10:22.160+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.049 seconds
+[2025-01-21T19:10:52.504+0000] {processor.py:157} INFO - Started process (PID=111) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:10:52.505+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:10:52.506+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:10:52.505+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:10:52.512+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:10:52.510+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:10:52.513+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:10:52.537+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.036 seconds
+[2025-01-21T19:11:22.987+0000] {processor.py:157} INFO - Started process (PID=150) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:11:22.989+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:11:22.990+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:11:22.990+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:11:23.001+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:11:22.997+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:11:23.002+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:11:23.032+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.050 seconds
+[2025-01-21T19:11:53.283+0000] {processor.py:157} INFO - Started process (PID=189) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:11:53.285+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:11:53.288+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:11:53.287+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:11:53.297+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:11:53.295+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:11:53.305+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:11:53.371+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.101 seconds
+[2025-01-21T19:12:23.699+0000] {processor.py:157} INFO - Started process (PID=228) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:12:23.700+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:12:23.701+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:12:23.700+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:12:23.708+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:12:23.707+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:12:23.709+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:12:23.861+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.165 seconds
+[2025-01-21T19:12:54.009+0000] {processor.py:157} INFO - Started process (PID=267) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:12:54.011+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:12:54.012+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:12:54.012+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:12:54.020+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:12:54.018+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:12:54.021+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:12:54.051+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.050 seconds
+[2025-01-21T19:13:24.416+0000] {processor.py:157} INFO - Started process (PID=306) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:13:24.417+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:13:24.418+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:13:24.418+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:13:24.425+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:13:24.424+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:13:24.426+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:13:24.461+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.049 seconds
+[2025-01-21T19:13:55.216+0000] {processor.py:157} INFO - Started process (PID=352) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:13:55.218+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:13:55.219+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:13:55.218+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:13:55.230+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:13:55.226+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:13:55.231+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:13:55.263+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.056 seconds
+[2025-01-21T19:14:26.060+0000] {processor.py:157} INFO - Started process (PID=468) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:14:26.062+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:14:26.063+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:14:26.063+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:14:26.070+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:14:26.068+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:14:26.071+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:14:26.092+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.037 seconds
+[2025-01-21T19:14:57.009+0000] {processor.py:157} INFO - Started process (PID=644) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:14:57.012+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:14:57.013+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:14:57.013+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:14:57.023+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:14:57.021+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:14:57.023+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:14:57.054+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.057 seconds
+[2025-01-21T19:15:27.724+0000] {processor.py:157} INFO - Started process (PID=683) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:15:27.727+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:15:27.728+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:15:27.728+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:15:27.742+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:15:27.735+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:15:27.743+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:15:27.769+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.053 seconds
+[2025-01-21T19:15:58.272+0000] {processor.py:157} INFO - Started process (PID=722) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:15:58.276+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:15:58.277+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:15:58.276+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:15:58.287+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:15:58.284+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:15:58.288+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:15:58.316+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.055 seconds
+[2025-01-21T19:16:28.765+0000] {processor.py:157} INFO - Started process (PID=761) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:16:28.768+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:16:28.769+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:16:28.768+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:16:28.784+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:16:28.781+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:16:28.784+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:16:28.818+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.059 seconds
+[2025-01-21T19:16:59.316+0000] {processor.py:157} INFO - Started process (PID=800) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:16:59.318+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:16:59.319+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:16:59.319+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:16:59.324+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:16:59.323+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:16:59.325+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:16:59.347+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.040 seconds
+[2025-01-21T19:17:29.729+0000] {processor.py:157} INFO - Started process (PID=839) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:17:29.740+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:17:29.742+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:17:29.741+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:17:29.753+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:17:29.749+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:17:29.753+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:17:29.785+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.064 seconds
+[2025-01-21T19:18:00.270+0000] {processor.py:157} INFO - Started process (PID=878) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:18:00.276+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:18:00.277+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:18:00.277+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:18:00.287+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:18:00.285+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:18:00.287+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:18:00.314+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.055 seconds
+[2025-01-21T19:18:30.773+0000] {processor.py:157} INFO - Started process (PID=917) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:18:30.776+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:18:30.778+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:18:30.777+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:18:30.785+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:18:30.784+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:18:30.786+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:18:30.824+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.064 seconds
+[2025-01-21T19:22:48.556+0000] {processor.py:157} INFO - Started process (PID=29) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:22:48.560+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:22:48.565+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:22:48.564+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:22:48.583+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:22:48.579+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:22:48.584+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:22:48.675+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.125 seconds
+[2025-01-21T19:23:19.091+0000] {processor.py:157} INFO - Started process (PID=68) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:23:19.095+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:23:19.097+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:23:19.096+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:23:19.115+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:23:19.111+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:23:19.116+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:23:19.155+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.075 seconds
+[2025-01-21T19:23:49.559+0000] {processor.py:157} INFO - Started process (PID=112) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:23:49.560+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:23:49.561+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:23:49.561+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:23:49.571+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:23:49.567+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:23:49.572+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:23:49.592+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.044 seconds
+[2025-01-21T19:24:20.185+0000] {processor.py:157} INFO - Started process (PID=151) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:24:20.187+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:24:20.190+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:24:20.189+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:24:20.202+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:24:20.198+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:24:20.202+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:24:20.227+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.047 seconds
+[2025-01-21T19:24:50.708+0000] {processor.py:157} INFO - Started process (PID=190) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:24:50.711+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:24:50.712+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:24:50.712+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:24:50.719+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:24:50.717+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:24:50.719+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:24:50.739+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.036 seconds
+[2025-01-21T19:25:21.016+0000] {processor.py:157} INFO - Started process (PID=229) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:25:21.018+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:25:21.018+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:25:21.018+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:25:21.025+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:25:21.023+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:25:21.025+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:25:21.042+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.030 seconds
+[2025-01-21T19:25:51.618+0000] {processor.py:157} INFO - Started process (PID=268) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:25:51.620+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:25:51.621+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:25:51.621+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:25:51.631+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:25:51.628+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:25:51.631+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:25:51.655+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.043 seconds
+[2025-01-21T19:26:21.986+0000] {processor.py:157} INFO - Started process (PID=307) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:26:21.990+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:26:21.993+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:26:21.992+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:26:22.002+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:26:22.000+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:26:22.003+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:26:22.035+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.054 seconds
+[2025-01-21T19:26:52.479+0000] {processor.py:157} INFO - Started process (PID=346) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:26:52.483+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:26:52.485+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:26:52.484+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:26:52.500+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:26:52.499+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:26:52.501+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:26:52.523+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.052 seconds
+[2025-01-21T19:27:23.198+0000] {processor.py:157} INFO - Started process (PID=385) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:27:23.200+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:27:23.201+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:27:23.201+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:27:23.209+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:27:23.208+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:27:23.210+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:27:23.252+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.063 seconds
+[2025-01-21T19:27:53.480+0000] {processor.py:157} INFO - Started process (PID=424) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:27:53.483+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:27:53.484+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:27:53.484+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:27:53.494+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:27:53.492+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:27:53.495+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:27:53.523+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.050 seconds
+[2025-01-21T19:28:23.833+0000] {processor.py:157} INFO - Started process (PID=463) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:28:23.836+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:28:23.838+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:28:23.838+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:28:23.853+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:28:23.851+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:28:23.854+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:28:23.902+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.076 seconds
+[2025-01-21T19:28:54.917+0000] {processor.py:157} INFO - Started process (PID=502) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:28:54.919+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:28:54.921+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:28:54.920+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:28:54.932+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:28:54.929+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:28:54.932+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:28:54.966+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.056 seconds
+[2025-01-21T19:29:25.390+0000] {processor.py:157} INFO - Started process (PID=541) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:29:25.392+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:29:25.405+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:29:25.404+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:29:25.415+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:29:25.412+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:29:25.415+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:29:25.442+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.059 seconds
+[2025-01-21T19:29:55.781+0000] {processor.py:157} INFO - Started process (PID=580) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:29:55.785+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:29:55.786+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:29:55.786+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:29:55.796+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:29:55.794+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:29:55.797+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:29:55.821+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.052 seconds
+[2025-01-21T19:30:26.357+0000] {processor.py:157} INFO - Started process (PID=619) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:30:26.359+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:30:26.361+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:30:26.360+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:30:26.370+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:30:26.368+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:30:26.370+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:30:26.416+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.063 seconds
+[2025-01-21T19:30:56.787+0000] {processor.py:157} INFO - Started process (PID=658) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:30:56.793+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:30:56.796+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:30:56.795+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:30:56.815+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:30:56.813+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:30:56.816+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:30:56.844+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.071 seconds
+[2025-01-21T19:31:27.547+0000] {processor.py:157} INFO - Started process (PID=697) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:31:27.551+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:31:27.553+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:31:27.552+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:31:27.563+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:31:27.560+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:31:27.563+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:31:27.588+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.049 seconds
+[2025-01-21T19:31:58.107+0000] {processor.py:157} INFO - Started process (PID=736) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:31:58.110+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:31:58.112+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:31:58.111+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:31:58.121+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:31:58.119+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:31:58.121+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:31:58.143+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.043 seconds
+[2025-01-21T19:32:28.751+0000] {processor.py:157} INFO - Started process (PID=775) to work on /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:32:28.754+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/nba_etl_dag.py for tasks to queue
+[2025-01-21T19:32:28.756+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:32:28.755+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:32:28.769+0000] {logging_mixin.py:150} INFO - [2025-01-21T19:32:28.767+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/nba_etl_dag.py
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nba_etl_dag.py", line 29, in <module>
+    from create_postgres_db import create_postgres_db
+ModuleNotFoundError: No module named 'create_postgres_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/nba_etl_dag.py", line 35, in <module>
+    raise ImportError(f"Error importing module: {e}")
+ImportError: Error importing module: No module named 'create_postgres_db'
+[2025-01-21T19:32:28.770+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/nba_etl_dag.py
+[2025-01-21T19:32:28.803+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/nba_etl_dag.py took 0.059 seconds

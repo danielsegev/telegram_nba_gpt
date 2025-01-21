@@ -116,7 +116,7 @@ with DAG(
     truncate_players_table = PostgresOperator(
         task_id="truncate_nba_players",
         postgres_conn_id="postgres_default",
-        sql="TRUNCATE TABLE nba_players;",
+        sql="TRUNCATE TABLE public.nba_players;",
     )
 
     send_players_task = PythonOperator(
