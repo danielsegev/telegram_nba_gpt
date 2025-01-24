@@ -1,0 +1,26 @@
+[2025-01-22T18:21:35.971+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_full_data_pipeline.fetch_and_send_active_players manual__2025-01-22T18:21:28.847047+00:00 [queued]>
+[2025-01-22T18:21:35.985+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_full_data_pipeline.fetch_and_send_active_players manual__2025-01-22T18:21:28.847047+00:00 [queued]>
+[2025-01-22T18:21:35.986+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-22T18:21:35.996+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_and_send_active_players> on 2025-01-22 18:21:28.847047+00:00
+[2025-01-22T18:21:36.005+0000] {standard_task_runner.py:57} INFO - Started process 323 to run task
+[2025-01-22T18:21:36.014+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_full_data_pipeline', 'fetch_and_send_active_players', 'manual__2025-01-22T18:21:28.847047+00:00', '--job-id', '1177', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmp3w0fn7w_']
+[2025-01-22T18:21:36.021+0000] {standard_task_runner.py:85} INFO - Job 1177: Subtask fetch_and_send_active_players
+[2025-01-22T18:21:36.400+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_full_data_pipeline.fetch_and_send_active_players manual__2025-01-22T18:21:28.847047+00:00 [running]> on host 056f74f53b7d
+[2025-01-22T18:21:36.479+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_full_data_pipeline' AIRFLOW_CTX_TASK_ID='fetch_and_send_active_players' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T18:21:28.847047+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-22T18:21:28.847047+00:00'
+[2025-01-22T18:21:36.499+0000] {logging_mixin.py:150} INFO - Processing active player 1/582 with ID 1630173
+[2025-01-22T18:21:39.916+0000] {logging_mixin.py:150} INFO - Processing active player 11/582 with ID 203507
+[2025-01-22T18:21:43.131+0000] {logging_mixin.py:150} INFO - Processing active player 21/582 with ID 1631116
+[2025-01-22T18:21:46.749+0000] {logging_mixin.py:150} INFO - Processing active player 31/582 with ID 1630567
+[2025-01-22T18:21:50.215+0000] {logging_mixin.py:150} INFO - Processing active player 41/582 with ID 1630699
+[2025-01-22T18:21:53.527+0000] {logging_mixin.py:150} INFO - Processing active player 51/582 with ID 203992
+[2025-01-22T18:21:57.075+0000] {logging_mixin.py:150} INFO - Processing active player 61/582 with ID 1628396
+[2025-01-22T18:22:00.706+0000] {logging_mixin.py:150} INFO - Processing active player 71/582 with ID 1631112
+[2025-01-22T18:22:32.229+0000] {logging_mixin.py:150} INFO - Error fetching data for player_id 1628972: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=30)
+[2025-01-22T18:23:02.493+0000] {logging_mixin.py:150} INFO - Error fetching data for player_id 1628973: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=30)
+[2025-01-22T18:23:32.771+0000] {logging_mixin.py:150} INFO - Error fetching data for player_id 1628418: HTTPSConnectionPool(host='stats.nba.com', port=443): Read timed out. (read timeout=30)
+[2025-01-22T18:23:58.006+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2025-01-22T18:23:58.014+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 323. PIDs of all processes in the group: [323]
+[2025-01-22T18:23:58.014+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 323
+[2025-01-22T18:23:58.016+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-22T18:23:58.023+0000] {logging_mixin.py:150} INFO - Error fetching data for player_id 203493: Task received SIGTERM signal
+[2025-01-22T18:23:58.808+0000] {logging_mixin.py:150} INFO - Processing active player 81/582 with ID 1630215

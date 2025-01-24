@@ -1,0 +1,62 @@
+[2025-01-22T18:08:42.431+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_full_data_pipeline.spark_kafka_to_postgres_teams manual__2025-01-22T18:06:29.130090+00:00 [queued]>
+[2025-01-22T18:08:42.438+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_full_data_pipeline.spark_kafka_to_postgres_teams manual__2025-01-22T18:06:29.130090+00:00 [queued]>
+[2025-01-22T18:08:42.438+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-22T18:08:42.446+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): spark_kafka_to_postgres_teams> on 2025-01-22 18:06:29.130090+00:00
+[2025-01-22T18:08:42.449+0000] {standard_task_runner.py:57} INFO - Started process 126 to run task
+[2025-01-22T18:08:42.452+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_full_data_pipeline', 'spark_kafka_to_postgres_teams', 'manual__2025-01-22T18:06:29.130090+00:00', '--job-id', '1159', '--raw', '--subdir', 'DAGS_FOLDER/full_nba_data_pipeline.py', '--cfg-path', '/tmp/tmpjvqefjut']
+[2025-01-22T18:08:42.454+0000] {standard_task_runner.py:85} INFO - Job 1159: Subtask spark_kafka_to_postgres_teams
+[2025-01-22T18:08:42.516+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_full_data_pipeline.spark_kafka_to_postgres_teams manual__2025-01-22T18:06:29.130090+00:00 [running]> on host b30f4c1b701b
+[2025-01-22T18:08:42.623+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_full_data_pipeline' AIRFLOW_CTX_TASK_ID='spark_kafka_to_postgres_teams' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T18:06:29.130090+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-22T18:06:29.130090+00:00'
+[2025-01-22T18:08:42.642+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-01-22T18:08:42.644+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master spark://spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.postgresql:postgresql:42.6.0 --executor-memory 2G --driver-memory 1G --name Spark Kafka To Postgres Teams --queue root.default --deploy-mode client /opt/***/include/scripts/kafka_to_postgres_teams.py
+[2025-01-22T18:08:42.663+0000] {spark_submit.py:490} INFO - /opt/spark/bin/load-spark-env.sh: line 68: ps: command not found
+[2025-01-22T18:08:46.313+0000] {spark_submit.py:490} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-01-22T18:08:46.398+0000] {spark_submit.py:490} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-01-22T18:08:46.399+0000] {spark_submit.py:490} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-01-22T18:08:46.402+0000] {spark_submit.py:490} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2025-01-22T18:08:46.402+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql added as a dependency
+[2025-01-22T18:08:46.403+0000] {spark_submit.py:490} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-43d05f14-ae32-4325-8e26-053ab0a3416a;1.0
+[2025-01-22T18:08:46.403+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-01-22T18:08:49.282+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4 in central
+[2025-01-22T18:08:49.853+0000] {spark_submit.py:490} INFO - found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4 in central
+[2025-01-22T18:08:50.057+0000] {spark_submit.py:490} INFO - found org.apache.kafka#kafka-clients;3.4.1 in central
+[2025-01-22T18:08:50.226+0000] {spark_submit.py:490} INFO - found org.lz4#lz4-java;1.8.0 in central
+[2025-01-22T18:08:50.395+0000] {spark_submit.py:490} INFO - found org.xerial.snappy#snappy-java;1.1.10.5 in central
+[2025-01-22T18:08:51.437+0000] {spark_submit.py:490} INFO - found org.slf4j#slf4j-api;2.0.7 in central
+[2025-01-22T18:08:53.426+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+[2025-01-22T18:08:53.623+0000] {spark_submit.py:490} INFO - found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+[2025-01-22T18:08:54.589+0000] {spark_submit.py:490} INFO - found commons-logging#commons-logging;1.1.3 in central
+[2025-01-22T18:08:54.774+0000] {spark_submit.py:490} INFO - found com.google.code.findbugs#jsr305;3.0.0 in central
+[2025-01-22T18:08:56.461+0000] {spark_submit.py:490} INFO - found org.apache.commons#commons-pool2;2.11.1 in central
+[2025-01-22T18:08:56.626+0000] {spark_submit.py:490} INFO - found org.postgresql#postgresql;42.6.0 in central
+[2025-01-22T18:08:56.876+0000] {spark_submit.py:490} INFO - found org.checkerframework#checker-qual;3.31.0 in central
+[2025-01-22T18:08:56.992+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.4/spark-sql-kafka-0-10_2.12-3.5.4.jar ...
+[2025-01-22T18:08:57.263+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.4!spark-sql-kafka-0-10_2.12.jar (356ms)
+[2025-01-22T18:08:57.387+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar ...
+[2025-01-22T18:08:57.917+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.postgresql#postgresql;42.6.0!postgresql.jar (653ms)
+[2025-01-22T18:08:57.993+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.5.4/spark-token-provider-kafka-0-10_2.12-3.5.4.jar ...
+[2025-01-22T18:08:58.093+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.4!spark-token-provider-kafka-0-10_2.12.jar (174ms)
+[2025-01-22T18:08:58.169+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar ...
+[2025-01-22T18:08:59.909+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.apache.kafka#kafka-clients;3.4.1!kafka-clients.jar (1813ms)
+[2025-01-22T18:09:00.011+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar ...
+[2025-01-22T18:09:00.094+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] com.google.code.findbugs#jsr305;3.0.0!jsr305.jar (181ms)
+[2025-01-22T18:09:00.170+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar ...
+[2025-01-22T18:09:00.279+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.apache.commons#commons-pool2;2.11.1!commons-pool2.jar (184ms)
+[2025-01-22T18:09:00.358+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-runtime/3.3.4/hadoop-client-runtime-3.3.4.jar ...
+[2025-01-22T18:09:09.224+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.apache.hadoop#hadoop-client-runtime;3.3.4!hadoop-client-runtime.jar (8942ms)
+[2025-01-22T18:09:09.306+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar ...
+[2025-01-22T18:09:09.553+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.lz4#lz4-java;1.8.0!lz4-java.jar (325ms)
+[2025-01-22T18:09:09.637+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar ...
+[2025-01-22T18:09:10.152+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.10.5!snappy-java.jar(bundle) (594ms)
+[2025-01-22T18:09:10.231+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar ...
+[2025-01-22T18:09:10.316+0000] {spark_submit.py:490} INFO - [SUCCESSFUL ] org.slf4j#slf4j-api;2.0.7!slf4j-api.jar (159ms)
+[2025-01-22T18:09:10.401+0000] {spark_submit.py:490} INFO - downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.4/hadoop-client-api-3.3.4.jar ...
+[2025-01-22T18:09:12.855+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to removed. Terminating instance.
+[2025-01-22T18:09:12.863+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 126. PIDs of all processes in the group: [127, 126]
+[2025-01-22T18:09:12.863+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 126
+[2025-01-22T18:09:12.865+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-22T18:09:12.868+0000] {spark_submit.py:615} INFO - Sending kill signal to spark-submit
+[2025-01-22T18:09:13.014+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=126, status='terminated', exitcode=0, started='18:08:41') (126) terminated with exit code 0
+[2025-01-22T18:10:12.894+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=127, name='java', status='zombie', started='18:08:42') did not respond to SIGTERM. Trying SIGKILL
+[2025-01-22T18:10:12.913+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 126
+[2025-01-22T18:11:12.939+0000] {process_utils.py:160} ERROR - Process psutil.Process(pid=127, name='java', status='zombie', started='18:08:42') (127) could not be killed. Giving up.

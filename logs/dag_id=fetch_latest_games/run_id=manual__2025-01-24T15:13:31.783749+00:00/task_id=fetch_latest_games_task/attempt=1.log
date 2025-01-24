@@ -1,0 +1,23 @@
+[2025-01-24T15:13:33.341+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-24T15:13:31.783749+00:00 [queued]>
+[2025-01-24T15:13:33.347+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-24T15:13:31.783749+00:00 [queued]>
+[2025-01-24T15:13:33.349+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-01-24T15:13:33.373+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_latest_games_task> on 2025-01-24 15:13:31.783749+00:00
+[2025-01-24T15:13:33.387+0000] {standard_task_runner.py:57} INFO - Started process 792 to run task
+[2025-01-24T15:13:33.391+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'fetch_latest_games', 'fetch_latest_games_task', 'manual__2025-01-24T15:13:31.783749+00:00', '--job-id', '1211', '--raw', '--subdir', 'DAGS_FOLDER/process_latest_games_dag.py', '--cfg-path', '/tmp/tmp2alkhk6z']
+[2025-01-24T15:13:33.394+0000] {standard_task_runner.py:85} INFO - Job 1211: Subtask fetch_latest_games_task
+[2025-01-24T15:13:33.459+0000] {task_command.py:410} INFO - Running <TaskInstance: fetch_latest_games.fetch_latest_games_task manual__2025-01-24T15:13:31.783749+00:00 [running]> on host 782090682c1f
+[2025-01-24T15:13:33.817+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_latest_games' AIRFLOW_CTX_TASK_ID='fetch_latest_games_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T15:13:31.783749+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-24T15:13:31.783749+00:00'
+[2025-01-24T15:13:33.998+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400621
+[2025-01-24T15:13:34.184+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400622
+[2025-01-24T15:13:34.444+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400623
+[2025-01-24T15:13:34.704+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400625
+[2025-01-24T15:13:34.952+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400624
+[2025-01-24T15:13:35.280+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400626
+[2025-01-24T15:13:35.444+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400628
+[2025-01-24T15:13:35.643+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400629
+[2025-01-24T15:13:35.807+0000] {logging_mixin.py:150} INFO - Processing finished game: 0022400983
+[2025-01-24T15:18:21.176+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-24T15:18:21.223+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 792. PIDs of all processes in the group: [792]
+[2025-01-24T15:18:21.225+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 792
+[2025-01-24T15:18:36.385+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-24T15:18:36.496+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=792, status='terminated', exitcode=0, started='15:13:32') (792) terminated with exit code 0

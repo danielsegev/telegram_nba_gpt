@@ -1,0 +1,19 @@
+[2025-01-22T18:20:59.890+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_teams manual__2025-01-22T18:20:27.495856+00:00 [queued]>
+[2025-01-22T18:21:00.148+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_teams manual__2025-01-22T18:20:27.495856+00:00 [queued]>
+[2025-01-22T18:21:00.149+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-22T18:21:00.160+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): kafka_producer_teams> on 2025-01-22 18:20:27.495856+00:00
+[2025-01-22T18:21:00.165+0000] {standard_task_runner.py:57} INFO - Started process 119 to run task
+[2025-01-22T18:21:00.167+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_full_data_pipeline_from_tasks', 'kafka_producer_teams', 'manual__2025-01-22T18:20:27.495856+00:00', '--job-id', '1172', '--raw', '--subdir', 'DAGS_FOLDER/nba_etl_dag.py', '--cfg-path', '/tmp/tmpeaf_9398']
+[2025-01-22T18:21:00.169+0000] {standard_task_runner.py:85} INFO - Job 1172: Subtask kafka_producer_teams
+[2025-01-22T18:21:00.222+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_teams manual__2025-01-22T18:20:27.495856+00:00 [running]> on host 056f74f53b7d
+[2025-01-22T18:21:00.303+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_full_data_pipeline_from_tasks' AIRFLOW_CTX_TASK_ID='kafka_producer_teams' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T18:20:27.495856+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-22T18:20:27.495856+00:00'
+[2025-01-22T18:21:00.305+0000] {kafka_producer_teams.py:22} INFO - Fetching all NBA teams...
+[2025-01-22T18:21:00.307+0000] {kafka_producer_teams.py:29} INFO - Found 30 teams.
+[2025-01-22T18:21:00.308+0000] {kafka_producer_teams.py:32} INFO - Producing team data to Kafka topic 'teams'...
+[2025-01-22T18:21:30.505+0000] {local_task_job_runner.py:292} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-22T18:21:30.521+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 119. PIDs of all processes in the group: [119]
+[2025-01-22T18:21:30.529+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 119
+[2025-01-22T18:22:30.490+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=119, name='airflow task ru', status='sleeping', started='18:20:59') did not respond to SIGTERM. Trying SIGKILL
+[2025-01-22T18:22:30.496+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 119
+[2025-01-22T18:22:30.507+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=119, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='18:20:59') (119) terminated with exit code Negsignal.SIGKILL
+[2025-01-22T18:22:30.509+0000] {standard_task_runner.py:174} ERROR - Job 1172 was killed before it finished (likely due to running out of memory)

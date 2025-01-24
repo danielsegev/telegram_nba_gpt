@@ -7,9 +7,16 @@ import logging
 import sys
 import subprocess
 
-sys.path.append("/opt/airflow/include/scripts")
+# Ensure Airflow can find the include/scripts directory
+dag_folder = os.path.dirname(os.path.abspath(__file__))
+include_path = os.path.join(dag_folder, "include", "scripts")
+tasks_path = os.path.join(dag_folder, "include", "tasks")
 
-from include.scripts.create_tables import create_database, create_tables
+for path in [include_path, tasks_path]:
+    if path not in sys.path:
+        sys.path.insert(0, path)
+
+from tasks.create_tables import create_database, create_tables  # Updated import path
 
 # Default DAG arguments
 default_args = {

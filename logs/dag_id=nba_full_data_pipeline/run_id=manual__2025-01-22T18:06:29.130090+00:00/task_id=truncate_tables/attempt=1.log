@@ -1,0 +1,28 @@
+[2025-01-22T18:07:02.828+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_full_data_pipeline.truncate_tables manual__2025-01-22T18:06:29.130090+00:00 [queued]>
+[2025-01-22T18:07:02.834+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_full_data_pipeline.truncate_tables manual__2025-01-22T18:06:29.130090+00:00 [queued]>
+[2025-01-22T18:07:02.834+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-22T18:07:02.843+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): truncate_tables> on 2025-01-22 18:06:29.130090+00:00
+[2025-01-22T18:07:02.849+0000] {standard_task_runner.py:57} INFO - Started process 75 to run task
+[2025-01-22T18:07:02.851+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_full_data_pipeline', 'truncate_tables', 'manual__2025-01-22T18:06:29.130090+00:00', '--job-id', '1152', '--raw', '--subdir', 'DAGS_FOLDER/nba_etl_dag.py', '--cfg-path', '/tmp/tmpyujrxajh']
+[2025-01-22T18:07:03.011+0000] {standard_task_runner.py:85} INFO - Job 1152: Subtask truncate_tables
+[2025-01-22T18:07:03.036+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_full_data_pipeline.truncate_tables manual__2025-01-22T18:06:29.130090+00:00 [running]> on host b30f4c1b701b
+[2025-01-22T18:07:03.080+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_full_data_pipeline' AIRFLOW_CTX_TASK_ID='truncate_tables' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T18:06:29.130090+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-22T18:06:29.130090+00:00'
+[2025-01-22T18:07:03.083+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/include/tasks/truncate_postgres_tables.py", line 10, in truncate_postgres_tables
+    port=os.getenv("5432")
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+[2025-01-22T18:07:03.097+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=nba_full_data_pipeline, task_id=truncate_tables, execution_date=20250122T180629, start_date=20250122T180702, end_date=20250122T180703
+[2025-01-22T18:07:03.102+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 1152 for task truncate_tables (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+; 75)
+[2025-01-22T18:07:03.122+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-22T18:07:03.299+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

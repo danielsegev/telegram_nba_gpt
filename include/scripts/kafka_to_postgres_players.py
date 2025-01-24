@@ -41,8 +41,8 @@ schema = StructType([
     StructField("is_active", BooleanType(), True)
 ])
 
-# Read data from Kafka topic
-raw_df = spark.readStream \
+# Read Kafka data in batch mode
+raw_df = spark.read \
     .format("kafka") \
     .option("kafka.bootstrap.servers", kafka_bootstrap_servers) \
     .option("subscribe", kafka_topic) \
@@ -78,64 +78,48 @@ json_df = json_df.withColumnRenamed("BIRTHDATE", "birthdate") \
     .withColumn("birthdate", col("birthdate").cast(DateType())) \
     .withColumn("weight", col("weight").cast(IntegerType()))  # Cast weight to IntegerType
 
-# Function to write data to PostgreSQL
-def write_to_postgres(batch_df, batch_id):
-    valid_rows = batch_df.filter(col("id").isNotNull())
+# Write data to PostgreSQL
+db_config = {
+    "dbname": "dwh",
+    "user": "airflow",
+    "password": "airflow",
+    "host": "postgres",
+    "port": "5432"
+}
 
-    if valid_rows.isEmpty():
-        print(f"Batch {batch_id}: No valid rows to insert.")
-        return
+insert_query = """
+INSERT INTO dim_player (id, full_name, birthdate, school, country, last_affiliation, height, weight, season_exp,
+jersey, position, roster_status, games_played_current_season_flag, team_id, team_name, dleague_flag, nba_flag,
+games_played_flag, draft_year, draft_round, draft_number, greatest_75_flag, is_active)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+ON CONFLICT (id) DO NOTHING;
+"""
 
-    db_config = {
-        "dbname": "dwh",
-        "user": "airflow",
-        "password": "airflow",
-        "host": "postgres",
-        "port": "5432"
-    }
+data_list = [
+    (
+        row["id"], row["full_name"], row["birthdate"], row["school"], row["country"], row["last_affiliation"],
+        row["height"], row["weight"], row["season_exp"], row["jersey"], row["position"], row["roster_status"],
+        row["games_played_current_season_flag"], row["team_id"], row["team_name"], row["dleague_flag"],
+        row["nba_flag"], row["games_played_flag"], row["draft_year"], row["draft_round"], row["draft_number"],
+        row["greatest_75_flag"], row["is_active"]
+    )
+    for row in json_df.collect()
+]
 
-    insert_query = """
-    INSERT INTO dim_player (id, full_name, birthdate, school, country, last_affiliation, height, weight, season_exp,
-    jersey, position, roster_status, games_played_current_season_flag, team_id, team_name, dleague_flag, nba_flag,
-    games_played_flag, draft_year, draft_round, draft_number, greatest_75_flag, is_active)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-    ON CONFLICT (id) DO NOTHING;
-    """
+conn = None
+cursor = None
+try:
+    conn = psycopg2.connect(**db_config)
+    cursor = conn.cursor()
+    cursor.executemany(insert_query, data_list)
+    conn.commit()
+    print(f"✅ Successfully inserted {len(data_list)} rows into 'dim_player' table.")
+except Exception as e:
+    print(f"❌ Error inserting data into PostgreSQL:", e)
+finally:
+    if cursor:
+        cursor.close()
+    if conn:
+        conn.close()
 
-    data_list = [
-        (
-            row["id"], row["full_name"], row["birthdate"], row["school"], row["country"], row["last_affiliation"],
-            row["height"], row["weight"], row["season_exp"], row["jersey"], row["position"], row["roster_status"],
-            row["games_played_current_season_flag"], row["team_id"], row["team_name"], row["dleague_flag"],
-            row["nba_flag"], row["games_played_flag"], row["draft_year"], row["draft_round"], row["draft_number"],
-            row["greatest_75_flag"], row["is_active"]
-        )
-        for row in valid_rows.collect()
-    ]
-
-    conn = None
-    cursor = None
-    try:
-        conn = psycopg2.connect(**db_config)
-        cursor = conn.cursor()
-        cursor.executemany(insert_query, data_list)
-        conn.commit()
-        print(f"Batch {batch_id}: Successfully inserted {len(data_list)} rows into 'dim_player' table.")
-
-    except Exception as e:
-        print(f"Batch {batch_id}: Error inserting data into PostgreSQL:", e)
-
-    finally:
-        if cursor:
-            cursor.close()
-        if conn:
-            conn.close()
-
-# WriteStream configuration with a trigger to process and terminate
-query = json_df.writeStream \
-    .foreachBatch(write_to_postgres) \
-    .outputMode("append") \
-    .trigger(availableNow=True) \
-    .start()
-
-query.awaitTermination()
+print("✅ Finished processing Kafka messages. Exiting.")

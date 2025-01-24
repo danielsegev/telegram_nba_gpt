@@ -1,0 +1,36 @@
+[2025-01-24T14:48:15.356+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_games manual__2025-01-24T14:47:28.595251+00:00 [queued]>
+[2025-01-24T14:48:15.367+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_games manual__2025-01-24T14:47:28.595251+00:00 [queued]>
+[2025-01-24T14:48:15.368+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-24T14:48:15.390+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): kafka_producer_games> on 2025-01-24 14:47:28.595251+00:00
+[2025-01-24T14:48:15.394+0000] {standard_task_runner.py:57} INFO - Started process 81 to run task
+[2025-01-24T14:48:15.396+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_full_data_pipeline_from_tasks', 'kafka_producer_games', 'manual__2025-01-24T14:47:28.595251+00:00', '--job-id', '1187', '--raw', '--subdir', 'DAGS_FOLDER/nba_etl_dag.py', '--cfg-path', '/tmp/tmprhwnsvtm']
+[2025-01-24T14:48:15.399+0000] {standard_task_runner.py:85} INFO - Job 1187: Subtask kafka_producer_games
+[2025-01-24T14:48:15.660+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_games manual__2025-01-24T14:47:28.595251+00:00 [running]> on host a947c2d39ca5
+[2025-01-24T14:48:15.723+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_full_data_pipeline_from_tasks' AIRFLOW_CTX_TASK_ID='kafka_producer_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T14:47:28.595251+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-24T14:47:28.595251+00:00'
+[2025-01-24T14:48:17.371+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/include/tasks/kafka_producer_games.py", line 18, in fetch_and_process_games
+    live_game = boxscore.BoxScore(game_id=game_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/nba_api/live/nba/endpoints/boxscore.py", line 33, in __init__
+    self.get_request()
+  File "/home/airflow/.local/lib/python3.7/site-packages/nba_api/live/nba/endpoints/boxscore.py", line 43, in get_request
+    self.load_response()
+  File "/home/airflow/.local/lib/python3.7/site-packages/nba_api/live/nba/endpoints/boxscore.py", line 46, in load_response
+    data_sets = self.nba_response.get_dict()
+  File "/home/airflow/.local/lib/python3.7/site-packages/nba_api/library/http.py", line 41, in get_dict
+    return json.loads(self._response)
+  File "/usr/local/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:48:17.382+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=nba_full_data_pipeline_from_tasks, task_id=kafka_producer_games, execution_date=20250124T144728, start_date=20250124T144815, end_date=20250124T144817
+[2025-01-24T14:48:17.391+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 1187 for task kafka_producer_games (Expecting value: line 1 column 1 (char 0); 81)
+[2025-01-24T14:48:17.430+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-01-24T14:48:17.639+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

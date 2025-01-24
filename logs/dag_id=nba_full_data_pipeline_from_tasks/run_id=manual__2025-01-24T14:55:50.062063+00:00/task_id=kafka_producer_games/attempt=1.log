@@ -1,0 +1,59 @@
+[2025-01-24T14:55:55.608+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_games manual__2025-01-24T14:55:50.062063+00:00 [queued]>
+[2025-01-24T14:55:55.778+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_games manual__2025-01-24T14:55:50.062063+00:00 [queued]>
+[2025-01-24T14:55:55.779+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-24T14:55:55.790+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): kafka_producer_games> on 2025-01-24 14:55:50.062063+00:00
+[2025-01-24T14:55:55.798+0000] {standard_task_runner.py:57} INFO - Started process 74 to run task
+[2025-01-24T14:55:55.800+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_full_data_pipeline_from_tasks', 'kafka_producer_games', 'manual__2025-01-24T14:55:50.062063+00:00', '--job-id', '1197', '--raw', '--subdir', 'DAGS_FOLDER/nba_etl_dag.py', '--cfg-path', '/tmp/tmplo6fmjae']
+[2025-01-24T14:55:55.804+0000] {standard_task_runner.py:85} INFO - Job 1197: Subtask kafka_producer_games
+[2025-01-24T14:55:55.858+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_full_data_pipeline_from_tasks.kafka_producer_games manual__2025-01-24T14:55:50.062063+00:00 [running]> on host 9a51aa141345
+[2025-01-24T14:55:55.924+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_full_data_pipeline_from_tasks' AIRFLOW_CTX_TASK_ID='kafka_producer_games' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T14:55:50.062063+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-24T14:55:50.062063+00:00'
+[2025-01-24T14:55:59.515+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400165: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:00.265+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400161: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:00.510+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400162: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:01.310+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400161: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:01.630+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400160: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:01.937+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400162: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:02.171+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400165: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:02.401+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400163: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:02.668+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400160: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:02.962+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400163: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:03.194+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400164: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:03.435+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400164: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:03.936+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400154: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:04.441+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400154: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:04.685+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400155: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:05.095+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400153: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:05.320+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400153: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:05.559+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400156: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:06.225+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400156: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:06.459+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400158: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:06.695+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400158: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:07.190+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400157: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:07.585+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400159: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:08.267+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400157: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:09.346+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400155: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:09.624+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400159: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:09.909+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400152: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:10.996+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400150: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:11.245+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400151: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:11.998+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400150: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:12.239+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400149: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:12.805+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400151: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:13.124+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400152: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:13.532+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400149: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:13.772+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400146: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:14.795+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400143: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:16.003+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400148: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:16.244+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400145: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:16.519+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400144: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:16.936+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400147: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:17.604+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400145: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:18.038+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400148: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:18.342+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400147: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:18.591+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400144: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:18.921+0000] {kafka_producer_games.py:44} ERROR - JSONDecodeError for game_id 2022400146: Expecting value: line 1 column 1 (char 0)
+[2025-01-24T14:56:18.936+0000] {kafka_producer_games.py:51} INFO - ✅ Games data successfully sent to Kafka topic 'games'.
+[2025-01-24T14:56:18.965+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-24T14:56:18.982+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_full_data_pipeline_from_tasks, task_id=kafka_producer_games, execution_date=20250124T145550, start_date=20250124T145555, end_date=20250124T145618
+[2025-01-24T14:56:19.139+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-24T14:56:19.163+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

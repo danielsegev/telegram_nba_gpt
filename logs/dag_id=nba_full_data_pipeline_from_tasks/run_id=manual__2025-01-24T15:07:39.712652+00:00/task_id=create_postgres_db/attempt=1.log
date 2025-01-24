@@ -1,0 +1,14 @@
+[2025-01-24T15:07:43.214+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_full_data_pipeline_from_tasks.create_postgres_db manual__2025-01-24T15:07:39.712652+00:00 [queued]>
+[2025-01-24T15:07:43.220+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_full_data_pipeline_from_tasks.create_postgres_db manual__2025-01-24T15:07:39.712652+00:00 [queued]>
+[2025-01-24T15:07:43.220+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-24T15:07:43.227+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_postgres_db> on 2025-01-24 15:07:39.712652+00:00
+[2025-01-24T15:07:43.230+0000] {standard_task_runner.py:57} INFO - Started process 59 to run task
+[2025-01-24T15:07:43.232+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_full_data_pipeline_from_tasks', 'create_postgres_db', 'manual__2025-01-24T15:07:39.712652+00:00', '--job-id', '1203', '--raw', '--subdir', 'DAGS_FOLDER/nba_etl_dag.py', '--cfg-path', '/tmp/tmproz9z78n']
+[2025-01-24T15:07:43.233+0000] {standard_task_runner.py:85} INFO - Job 1203: Subtask create_postgres_db
+[2025-01-24T15:07:43.398+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_full_data_pipeline_from_tasks.create_postgres_db manual__2025-01-24T15:07:39.712652+00:00 [running]> on host 782090682c1f
+[2025-01-24T15:07:43.437+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_full_data_pipeline_from_tasks' AIRFLOW_CTX_TASK_ID='create_postgres_db' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T15:07:39.712652+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-24T15:07:39.712652+00:00'
+[2025-01-24T15:07:43.439+0000] {logging_mixin.py:150} INFO - Database 'dwh' already exists.
+[2025-01-24T15:07:43.439+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-24T15:07:43.444+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_full_data_pipeline_from_tasks, task_id=create_postgres_db, execution_date=20250124T150739, start_date=20250124T150743, end_date=20250124T150743
+[2025-01-24T15:07:43.459+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-24T15:07:43.563+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check
