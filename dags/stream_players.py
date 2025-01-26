@@ -27,6 +27,7 @@ default_args = {
 # Import external scripts
 try:
     from tasks.kafka_producer_players import fetch_and_send_players
+    from tasks.truncate_postgres_tables import truncate_postgres_table  # Import the function
 except ImportError as e:
     raise ImportError(f"Error importing module: {e}")
 
@@ -39,8 +40,14 @@ with DAG(
     catchup=False,
 ) as dag:
 
+    # Task: Truncate `dim_player` table
+    truncate_dim_player_task = PythonOperator(
+        task_id="truncate_dim_player",
+        python_callable=truncate_postgres_table,
+        op_args=["dim_player"],  # Pass 'dim_player' as the table name
+    )
 
-    # Task 4: Produce player data to Kafka
+    # Task: Produce player data to Kafka
     kafka_producer_players_task = PythonOperator(
         task_id="kafka_producer_players",
         python_callable=fetch_and_send_players,
@@ -58,9 +65,10 @@ with DAG(
             name=task_id.replace("_", " ").title(),
         )
 
-    # Task 7: Process player data from Kafka to PostgreSQL
+    # Task: Process player data from Kafka to PostgreSQL
     spark_process_players_task = spark_submit_task(
         "spark_process_players", "kafka_to_postgres_players.py"
     )
 
-    kafka_producer_players_task >> spark_process_players_task
+    # Define task dependencies
+    truncate_dim_player_task >> kafka_producer_players_task >> spark_process_players_task

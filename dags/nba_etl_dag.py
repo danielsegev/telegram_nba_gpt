@@ -27,11 +27,9 @@ default_args = {
 # Import external scripts
 try:
     from tasks.create_tables import create_database, create_tables
-    from tasks.truncate_postgres_tables import truncate_postgres_tables
     from tasks.kafka_producer_games import fetch_and_process_games
     from tasks.kafka_producer_players import fetch_and_send_players
     from tasks.kafka_producer_teams import send_teams_to_kafka
-    from tasks.truncate_postgres_tables import truncate_postgres_tables
 except ImportError as e:
     raise ImportError(f"Error importing module: {e}")
 
@@ -42,12 +40,6 @@ with DAG(
     schedule_interval=None,
     catchup=False,
 ) as dag:
-
-    # Task 1: Truncate PostgreSQL tables
-    truncate_tables_task = PythonOperator(
-        task_id="truncate_tables",
-        python_callable=truncate_postgres_tables,
-    )
 
     # Task 2: Create PostgreSQL database
     create_postgres_db_task = PythonOperator(

@@ -1,0 +1,14 @@
+[2025-01-26T09:48:36.299+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_stream_teams.kafka_producer_teams manual__2025-01-26T09:48:32.890568+00:00 [queued]>
+[2025-01-26T09:48:36.304+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_stream_teams.kafka_producer_teams manual__2025-01-26T09:48:32.890568+00:00 [queued]>
+[2025-01-26T09:48:36.305+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2025-01-26T09:48:36.312+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): kafka_producer_teams> on 2025-01-26 09:48:32.890568+00:00
+[2025-01-26T09:48:36.314+0000] {standard_task_runner.py:57} INFO - Started process 58 to run task
+[2025-01-26T09:48:36.316+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'nba_stream_teams', 'kafka_producer_teams', 'manual__2025-01-26T09:48:32.890568+00:00', '--job-id', '1215', '--raw', '--subdir', 'DAGS_FOLDER/stream_teams.py', '--cfg-path', '/tmp/tmpgyea_xus']
+[2025-01-26T09:48:36.317+0000] {standard_task_runner.py:85} INFO - Job 1215: Subtask kafka_producer_teams
+[2025-01-26T09:48:36.341+0000] {task_command.py:410} INFO - Running <TaskInstance: nba_stream_teams.kafka_producer_teams manual__2025-01-26T09:48:32.890568+00:00 [running]> on host 497eb36dbcdf
+[2025-01-26T09:48:36.386+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_stream_teams' AIRFLOW_CTX_TASK_ID='kafka_producer_teams' AIRFLOW_CTX_EXECUTION_DATE='2025-01-26T09:48:32.890568+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-26T09:48:32.890568+00:00'
+[2025-01-26T09:48:37.524+0000] {logging_mixin.py:150} INFO - ✅ Teams data successfully sent to Kafka topic 'teams'.
+[2025-01-26T09:48:37.526+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-01-26T09:48:37.541+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=nba_stream_teams, task_id=kafka_producer_teams, execution_date=20250126T094832, start_date=20250126T094836, end_date=20250126T094837
+[2025-01-26T09:48:37.561+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-01-26T09:48:37.605+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

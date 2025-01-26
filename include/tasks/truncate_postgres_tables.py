@@ -1,11 +1,12 @@
 import psycopg2
 import os
 import logging
+import sys
 
-def truncate_postgres_tables():
+def truncate_postgres_table(table_name):
     # Configure logging
     logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger("truncate_postgres_tables")
+    logger = logging.getLogger("truncate_postgres_table")
 
     # Fetch environment variables
     dbname = os.getenv("dwh")
@@ -16,6 +17,10 @@ def truncate_postgres_tables():
 
     if not all([dbname, user, password, host, port]):
         logger.error("❌ One or more environment variables are not set. Check 'dwh', 'airflow', 'postgres', and '5432'.")
+        return
+
+    if not table_name:
+        logger.error("❌ Table name must be provided as a parameter.")
         return
 
     try:
@@ -30,19 +35,13 @@ def truncate_postgres_tables():
         cur = conn.cursor()
         logger.info("✅ Successfully connected to PostgreSQL.")
 
-        # Truncate tables
-        truncate_queries = [
-            "TRUNCATE TABLE public.dim_team RESTART IDENTITY CASCADE;",
-            "TRUNCATE TABLE public.dim_player RESTART IDENTITY CASCADE;",
-            "TRUNCATE TABLE public.fact_game RESTART IDENTITY CASCADE;"
-        ]
-
-        for query in truncate_queries:
-            cur.execute(query)
-            logger.info(f"✅ Executed: {query}")
+        # Truncate the specified table
+        truncate_query = f"TRUNCATE TABLE public.{table_name} RESTART IDENTITY CASCADE;"
+        cur.execute(truncate_query)
+        logger.info(f"✅ Executed: {truncate_query}")
 
         conn.commit()
-        logger.info("✅ All tables truncated successfully.")
+        logger.info(f"✅ Table '{table_name}' truncated successfully.")
 
     except psycopg2.Error as e:
         logger.error(f"❌ PostgreSQL error: {e}")
@@ -59,4 +58,8 @@ def truncate_postgres_tables():
 
 
 if __name__ == "__main__":
-    truncate_postgres_tables()
+    if len(sys.argv) != 2:
+        print("Usage: python truncate_postgres_table.py <table_name>")
+    else:
+        table_name = sys.argv[1]
+        truncate_postgres_table(table_name)

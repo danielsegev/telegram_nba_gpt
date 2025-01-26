@@ -27,20 +27,27 @@ default_args = {
 # Import external scripts
 try:
     from tasks.kafka_producer_teams import send_teams_to_kafka
+    from tasks.truncate_postgres_tables import truncate_postgres_table
 except ImportError as e:
     raise ImportError(f"Error importing module: {e}")
 
 # Initialize DAG
 with DAG(
-    "nba_full_data_pipeline_from_tasks",
+    "nba_stream_teams",
     default_args=default_args,
     schedule_interval="0 0 1 9 *",  # Runs annually on September 1st at midnight
     start_date=datetime(2023, 9, 1),
     catchup=False,
 ) as dag:
 
+    # Task: Truncate `dim_team` table
+    truncate_dim_team_task = PythonOperator(
+        task_id="truncate_dim_team",
+        python_callable=truncate_postgres_table,
+        op_args=["dim_team"], 
+    )
 
-    # Task 5: Produce team data to Kafka
+    # Task: Produce team data to Kafka
     kafka_producer_teams_task = PythonOperator(
         task_id="kafka_producer_teams",
         python_callable=send_teams_to_kafka,
@@ -58,9 +65,10 @@ with DAG(
             name=task_id.replace("_", " ").title(),
         )
 
-    # Task 8: Process team data from Kafka to PostgreSQL
+    # Task: Process team data from Kafka to PostgreSQL
     spark_process_teams_task = spark_submit_task(
         "spark_process_teams", "kafka_to_postgres_teams.py"
     )
 
-    kafka_producer_teams_task >> spark_process_teams_task
+    # Define task dependencies
+    truncate_dim_team_task >> kafka_producer_teams_task >> spark_process_teams_task
